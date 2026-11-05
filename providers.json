@@ -1,6 +1,6 @@
 {
   "app": "specialty-provider-directory",
-  "exportedAt": "2026-11-05T23:15:30.732Z",
+  "exportedAt": "2026-11-05T23:40:59.503Z",
   "providers": [
     {
       "id": "mw17vvayh700d",
@@ -7270,14 +7270,40 @@
       "id": "mw45yoymoce0x",
       "name": "UCSF Liver Disease Parnassus",
       "specialty": "Hepatology",
+      "icon": "",
       "specialties": [
         "Hepatology"
       ],
-      "icon": "",
       "phone": "415-353-2407",
       "fax": "415-353-2407",
       "npi": "",
       "address": "400 Parnassus Ave., Fl. 7, San Francisco, CA 94143",
+      "accepted": [
+        "Medi-Cal",
+        "Medicare",
+        "Partnership",
+        "Private"
+      ],
+      "notAccepted": [],
+      "services": [],
+      "locations": [],
+      "notes": "",
+      "status": "open",
+      "createdAt": "2026-11-05T23:15:26.301Z",
+      "updatedAt": "2026-11-05T23:15:26.301Z"
+    },
+    {
+      "id": "mw46vc87vdc16",
+      "name": "UC Davis Pediatric Urology",
+      "specialty": "Pediatric Urology",
+      "specialties": [
+        "Pediatric Urology"
+      ],
+      "icon": "",
+      "phone": "916-734-2222",
+      "fax": "916-734-7422",
+      "npi": "",
+      "address": "4860 Y St., Ste. 200, Sacramento, CA, 95817",
       "locations": [],
       "accepted": [
         "Medi-Cal",
@@ -7287,10 +7313,10 @@
       ],
       "notAccepted": [],
       "services": [],
-      "notes": "",
+      "notes": "Referrals must be submitted electronically or via portal.",
       "status": "open",
-      "updatedAt": "2026-11-05T23:15:26.301Z",
-      "createdAt": "2026-11-05T23:15:26.301Z"
+      "updatedAt": "2026-11-05T23:40:49.447Z",
+      "createdAt": "2026-11-05T23:40:49.447Z"
     }
   ]
 }
