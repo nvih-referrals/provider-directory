@@ -1,0 +1,1283 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Specialty Provider Directory</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Atkinson+Hyperlegible:wght@400;700&family=Nunito:wght@300;400;500;600;700&family=Lato:wght@300;400;700&family=Source+Sans+3:wght@300;400;500;600;700&family=Roboto+Flex:wght@300;400;500;600;700&family=Source+Serif+4:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@24,400,1,0&display=block" rel="stylesheet">
+<style>
+  :root{
+    --bg:#f4f6f8; --card:#fff; --ink:#1c2430; --muted:#5d6b7a; --line:#e1e6eb;
+    --brand:#1f6f78; --brand-ink:#fff; --brand-soft:#e3f1f2;
+    --ok:#1e7a46; --ok-soft:#e5f4ea; --no:#a8322d; --no-soft:#fbe9e8;
+    --warn:#8a5a00; --warn-soft:#fff4dc; --radius:12px;
+    --field:#fff; --hover-line:#c6ced6; --cp-hover:#eef3f5; --faint:#8a96a3;
+    --tip-bg:#1c2430; --tip-ink:#fff; --on-brand:#fff; --header:#1f6f78; --danger-line:#efc9c6;
+    color-scheme:light;
+  }
+  :root[data-theme="dark"]{
+    --bg:#121212; --card:#1c1c1c; --ink:#e8e8e8; --muted:#a3a3a3; --line:#2f2f2f;
+    --brand:#4fb3bd; --brand-ink:#fff; --brand-soft:#1d3b40;
+    --ok:#6fd39a; --ok-soft:#173527; --no:#f08a83; --no-soft:#3d1f1d;
+    --warn:#f2c46b; --warn-soft:#3a2e14;
+    --field:#171717; --hover-line:#474747; --cp-hover:#2a2a2a; --faint:#858585;
+    --tip-bg:#e8e8e8; --tip-ink:#121212; --on-brand:#0d1a1c; --header:#1c1c1c; --danger-line:#5a2e2b;
+    color-scheme:dark;
+  }
+  /* ---- Sage theme ---- */
+  :root[data-palette="sage"]{
+    --bg:#f2f0e8; --card:#fbfaf5; --ink:#2e382b; --muted:#687262; --line:#dcd8ca;
+    --brand:#5b7752; --brand-ink:#fff; --brand-soft:#e5eadb;
+    --ok:#4d7a38; --ok-soft:#e2ebd4; --no:#a4533a; --no-soft:#f4e2d9;
+    --warn:#966914; --warn-soft:#f5ebcf;
+    --field:#fffefa; --hover-line:#c7c2af; --cp-hover:#ebe8dc; --faint:#929888;
+    --tip-bg:#2e382b; --tip-ink:#fff; --header:#55704c; --danger-line:#e6c3b5; --on-brand:#fff; --trim-limited:#b98a2e;
+  }
+  :root[data-palette="sage"][data-theme="dark"]{
+    --bg:#151713; --card:#1e211b; --ink:#e5e8de; --muted:#a3aa99; --line:#323728;
+    --brand:#9ab58b; --brand-ink:#fff; --brand-soft:#28321f;
+    --ok:#9cc488; --ok-soft:#23311b; --no:#df9278; --no-soft:#3a221a;
+    --warn:#dfb766; --warn-soft:#352a13;
+    --field:#191b16; --hover-line:#4a5040; --cp-hover:#292d23; --faint:#868c7d;
+    --tip-bg:#e5e8de; --tip-ink:#151713; --header:#1e211b; --danger-line:#5a3226; --on-brand:#12170e; --trim-limited:#c9a24e;
+  }
+  /* ---- Mocha theme (warm neutral / brown) ---- */
+  :root[data-palette="mocha"]{
+    --bg:#e9e1d4; --card:#fdfbf7; --ink:#3a2f27; --muted:#76675b; --line:#dcd1c1;
+    --brand:#86603f; --brand-ink:#fff; --brand-soft:#f0e5d8;
+    --ok:#5c7838; --ok-soft:#e7ebd5; --no:#a8493a; --no-soft:#f5e0da;
+    --warn:#966714; --warn-soft:#f6eacf;
+    --field:#fffdf9; --hover-line:#cfc2b2; --cp-hover:#f0e9df; --faint:#a19282;
+    --tip-bg:#3a2f27; --tip-ink:#fff; --header:#7a5a40; --danger-line:#ebc5bc; --on-brand:#fff; --trim-limited:#c08f35;
+  }
+  /* softer dark: lifted warm charcoal, off-white text */
+  :root[data-palette="mocha"][data-theme="dark"]{
+    --bg:#2a2420; --card:#332c27; --ink:#e9e0d5; --muted:#b2a494; --line:#473e37;
+    --brand:#cfa57d; --brand-ink:#fff; --brand-soft:#44382e;
+    --ok:#a8c288; --ok-soft:#363b2a; --no:#e09e8d; --no-soft:#4a302a;
+    --warn:#e0bb76; --warn-soft:#473a25;
+    --field:#2e2823; --hover-line:#5b5047; --cp-hover:#3d352f; --faint:#988b7d;
+    --tip-bg:#e9e0d5; --tip-ink:#2a2420; --header:#332c27; --danger-line:#6a3f36; --on-brand:#2a2018; --trim-limited:#cfa75c;
+  }
+  /* ---- Minimal theme (business) ---- */
+  :root[data-palette="minimal"]{
+    --bg:#f6f7f8; --card:#fff; --ink:#111418; --muted:#5d646e; --line:#e3e5e9;
+    --brand:#2b3a4f; --brand-ink:#111418; --brand-soft:#eef0f3;
+    --ok:#2f6b45; --ok-soft:#edf3ef; --no:#9b3a32; --no-soft:#f6ecea;
+    --warn:#87631a; --warn-soft:#f6f0e2;
+    --field:#fff; --hover-line:#c6cad1; --cp-hover:#f0f1f3; --faint:#8a9099;
+    --tip-bg:#111418; --tip-ink:#fff; --header:#fff; --danger-line:#e5cdca; --on-brand:#fff; --trim-limited:#b08a3a;
+  }
+  :root[data-palette="minimal"][data-theme="dark"]{
+    --bg:#141517; --card:#1b1c1f; --ink:#e8e9eb; --muted:#9da1a8; --line:#2c2e33;
+    --brand:#c3cad4; --brand-ink:#e8e9eb; --brand-soft:#25272b;
+    --ok:#7fb592; --ok-soft:#1f2a23; --no:#dc8a82; --no-soft:#2e2120;
+    --warn:#d7b46a; --warn-soft:#2c271b;
+    --field:#17181b; --hover-line:#45484f; --cp-hover:#232528; --faint:#7c8088;
+    --tip-bg:#e8e9eb; --tip-ink:#141517; --header:#1b1c1f; --danger-line:#4a2c29; --on-brand:#141517; --trim-limited:#c9a35a;
+  }
+  body{transition:background-color .2s,color .2s}
+  *{box-sizing:border-box}
+  body{margin:0;font-family:var(--font, Inter, system-ui, sans-serif);font-weight:var(--wbase, 400);background:var(--bg);color:var(--ink);font-size:15px;line-height:1.45}
+  header{background:var(--header);border-bottom:1px solid var(--line);color:var(--brand-ink);padding:11px 24px}
+  header h1{margin:0;font-size:18px;line-height:1.25;font-weight:700;letter-spacing:-.01em}
+  header p{margin:1px 0 0;opacity:.8;font-size:12.5px}
+  header .wrap{display:flex;justify-content:space-between;align-items:center;gap:12px}
+  .theme-btn{background:rgba(255,255,255,.14);border:1px solid rgba(255,255,255,.28);color:#fff;padding:4px 10px;font-size:12.5px;font-weight:500;display:flex;align-items:center;gap:6px;white-space:nowrap}
+  .settings-wrap{position:relative}
+  .theme-btn.gear{padding:4px 7px}
+  .settings{position:absolute;right:0;top:calc(100% + 6px);z-index:40;width:270px;background:var(--card);color:var(--ink);border:1px solid var(--line);border-radius:12px;box-shadow:0 14px 34px rgba(0,0,0,.22);padding:10px;text-align:left}
+  .set-h{font-size:10.5px;font-weight:700;text-transform:uppercase;letter-spacing:.06em;color:var(--muted);margin:2px 4px 6px}
+  .set-h + .font-list{margin-bottom:10px}
+  .pal-list{display:grid;grid-template-columns:1fr 1fr;gap:5px;margin-bottom:10px}
+  .pal-opt{display:flex;align-items:center;gap:8px;padding:6px 8px;font-size:13px;text-align:left}
+  .pal-opt.on{border-color:var(--brand);background:var(--brand-soft);color:var(--brand);font-weight:600}
+  .pal-opt .sw{display:inline-flex;border-radius:5px;overflow:hidden;border:1px solid rgba(0,0,0,.12);flex:0 0 auto}
+  .pal-opt .sw i{width:9px;height:18px;display:block}
+  .font-list{display:flex;flex-direction:column;gap:3px}
+  .font-opt{display:flex;flex-direction:column;align-items:flex-start;gap:0;padding:6px 9px;border-color:transparent;background:transparent;text-align:left;font-size:14px;line-height:1.3}
+  .font-opt .sample{font-size:12px;color:var(--muted)}
+  .font-opt:hover{background:var(--cp-hover);border-color:transparent}
+  .font-opt.on{border-color:var(--brand);background:var(--brand-soft)}
+  .size-seg{display:grid;grid-template-columns:repeat(4,1fr);gap:4px}
+  .size-seg button{padding:5px 2px;font-size:12px}
+  .size-seg.w3{grid-template-columns:repeat(3,1fr);margin-bottom:10px}
+  .size-seg.w3 button.on{font-weight:inherit}
+  .size-seg button.on{border-color:var(--brand);background:var(--brand-soft);color:var(--brand);font-weight:600}
+  .size-seg.w3 button.on{font-weight:revert-layer}
+  .hdr-actions{display:flex;gap:8px;flex-wrap:wrap;justify-content:flex-end}
+  .theme-btn:hover{background:rgba(255,255,255,.24);border-color:rgba(255,255,255,.4)}
+  .theme-btn svg{width:15px;height:15px;fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+  .wrap{max-width:1260px;margin:0 auto}
+  .toolbar{position:sticky;top:0;z-index:5;background:var(--bg);padding:8px 24px;border-bottom:1px solid var(--line)}
+  .toolbar .wrap{display:flex;gap:8px;flex-wrap:wrap;align-items:center}
+  .toolbar input,.toolbar select{padding:5px 10px;font-size:13.5px;border-radius:7px}
+  .toolbar button{padding:5px 12px;font-size:13.5px;border-radius:7px}
+  input,select,textarea{font:inherit;color:inherit;border:1px solid var(--line);border-radius:8px;padding:9px 11px;background:var(--field);width:100%}
+  input:focus,select:focus,textarea:focus{outline:2px solid var(--brand);outline-offset:-1px;border-color:var(--brand)}
+  .toolbar .search{flex:1 1 220px}
+  .toolbar select{flex:0 1 165px;width:auto;min-width:0}
+  button{font:inherit;cursor:pointer;border-radius:8px;border:1px solid var(--line);background:var(--field);padding:9px 14px;color:var(--ink)}
+  button:hover{border-color:var(--hover-line)}
+  button.primary{background:var(--brand);border-color:var(--brand);color:var(--on-brand);font-weight:600}
+  button.primary:hover{filter:brightness(1.07)}
+  button.danger{color:var(--no);border-color:var(--danger-line)}
+  button:disabled{opacity:.5;cursor:not-allowed}
+  .count{color:var(--muted);font-size:13px;padding:10px 0 0}
+  .banner{margin:14px 0 0;padding:10px 14px;border-radius:8px;background:var(--warn-soft);color:var(--warn);font-size:14px;display:none}
+  main{padding:8px 0 40px}
+  .content{max-width:1308px;padding:0 24px}
+  .grid{display:flex;flex-direction:column;gap:8px}
+  .card{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:11px 14px;display:grid;grid-template-columns:210px 235px minmax(0,1fr) auto;gap:6px 18px;align-items:start}
+  .c-id{min-width:0}
+  .c-id .updated{margin-top:5px}
+  .c-ins{display:flex;flex-direction:column;gap:6px;min-width:0}
+  .c-act{justify-self:end}
+  .card .notes{grid-column:1/-1}
+  @media (max-width:820px){
+    .card{grid-template-columns:1fr auto;gap:8px 12px}
+    .c-id{grid-column:1}.c-act{grid-column:2;grid-row:1}
+    .c-contact,.c-ins{grid-column:1/-1}
+  }
+  
+  .card-top{display:flex;justify-content:space-between;gap:10px;align-items:flex-start}
+  .name{font-size:15.5px;font-weight:700;margin:0;line-height:1.25}
+  .spec{display:inline-block;margin-top:3px;background:var(--brand-soft);color:var(--brand);font-weight:600;font-size:11.5px;padding:1px 8px;border-radius:999px}
+  .tags{display:flex;flex-direction:column;gap:4px;margin-top:4px;align-items:flex-start}
+  .tags .spec{margin-top:0}
+  .status{display:inline-flex;align-items:center;gap:5px;font-size:11.5px;font-weight:600;padding:1px 8px;border-radius:999px}
+  .status i{width:7px;height:7px;border-radius:50%;background:currentColor;display:inline-block}
+  .s-open{color:var(--ok)} .status.s-open{background:var(--ok-soft)}
+  .s-limited{color:var(--warn)} .status.s-limited{background:var(--warn-soft)}
+  .s-closed{color:var(--no)} .status.s-closed{background:var(--no-soft)}
+  .sect{font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.06em;color:var(--brand);margin-bottom:-4px}
+  .loc-edit{border:1px solid var(--line);border-radius:10px;padding:10px 12px 12px;margin-bottom:10px;background:var(--bg)}
+  .loc-head{display:flex;justify-content:space-between;align-items:center;margin-bottom:8px}
+  .loc-head .sect{margin:0}
+  .rm-loc{padding:3px 9px;font-size:12px;color:var(--no);border-color:var(--danger-line)}
+  .add-loc{width:100%;border-style:dashed;color:var(--brand);font-weight:600;font-size:13.5px;padding:8px}
+  .more-locs{margin-top:-1px}
+  .loc-toggle{display:inline-flex;align-items:center;gap:5px;padding:3px 10px 3px 7px;font-size:12.5px;font-weight:600;color:var(--brand);background:var(--brand-soft);border-color:transparent;border-radius:999px}
+  .loc-toggle:hover{border-color:var(--brand)}
+  .loc-toggle svg{width:13px;height:13px;fill:none;stroke:currentColor;stroke-width:2.5;stroke-linecap:round;stroke-linejoin:round;transition:transform .15s}
+  .loc-toggle[aria-expanded="true"] svg{transform:rotate(90deg)}
+  .loc-list{display:flex;flex-direction:column;gap:8px;margin-top:8px;padding-left:12px;border-left:2px solid var(--line)}
+  .loc{display:flex;flex-direction:column;gap:3px}
+  .loc-name{font-size:12.5px;font-weight:600}
+  .tagbox{display:flex;flex-wrap:wrap;align-items:center;gap:5px;border:1px solid var(--line);border-radius:8px;padding:5px 6px;background:var(--field);cursor:text}
+  .tagbox:focus-within{outline:2px solid var(--brand);outline-offset:-1px;border-color:var(--brand)}
+  #specTags{display:contents}
+  .tagbox input{border:none;outline:none !important;padding:3px 4px;flex:1 1 140px;width:auto;min-width:120px;background:transparent}
+  .tag{display:inline-flex;align-items:center;gap:3px;background:var(--brand-soft);color:var(--brand);font-weight:600;font-size:13px;padding:2px 4px 2px 9px;border-radius:999px}
+  .tag button{border:none;background:none;color:inherit;padding:0 4px;font-size:15px;line-height:1;border-radius:999px;cursor:pointer}
+  .tag button:hover{background:rgba(0,0,0,.08)}
+  .specs{display:flex;flex-wrap:wrap;gap:4px}
+  .seg{display:flex;flex-wrap:wrap;gap:6px}
+  .seg label{margin:0;font-weight:500;cursor:pointer}
+  .seg input{position:absolute;opacity:0;pointer-events:none}
+  .seg span{display:inline-block;padding:6px 14px;border:1px solid var(--line);border-radius:999px;background:var(--field);color:var(--muted);font-size:13.5px}
+  .seg input:checked + span{border-color:currentColor;font-weight:600;box-shadow:inset 0 0 0 1px currentColor}
+  .seg input:checked + span:not([class]){color:var(--ink)}
+  .seg input:checked + span.s-open{color:var(--ok);background:var(--ok-soft)}
+  .seg input:checked + span.s-limited{color:var(--warn);background:var(--warn-soft)}
+  .seg input:checked + span.s-closed{color:var(--no);background:var(--no-soft)}
+  .seg input:focus-visible + span{outline:2px solid var(--brand);outline-offset:2px}
+  .edit-btn{padding:2px 8px;font-size:12px;color:var(--muted)}
+  .icon-btn,.blurb-btn{display:inline-flex;align-items:center;padding:3px 6px}
+  .blurb-btn{margin-left:-4px}
+  .icon-btn svg,.blurb-btn svg{width:14px;height:14px;fill:none;stroke:var(--brand);stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+  dl{margin:0;display:grid;grid-template-columns:24px 1fr;gap:2px 6px;font-size:13.5px;line-height:1.35}
+  dt{color:var(--muted);font-weight:500;font-size:11px;letter-spacing:.03em;display:flex;align-items:center;height:18px}
+  dt.ic svg{width:15px;height:15px;fill:none;stroke:var(--brand);stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+  .sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+  dd{margin:0;display:flex;align-items:center;gap:4px;flex-wrap:wrap;word-break:break-word}
+  .cp{cursor:pointer;border-radius:3px}
+  .cp:hover{background:var(--cp-hover)}
+  .bubble{position:absolute;z-index:40;background:var(--tip-bg);color:var(--tip-ink);font-size:12px;font-weight:500;padding:3px 8px;border-radius:6px;pointer-events:none;opacity:0;transform:translateY(3px);transition:opacity .15s,transform .15s}
+  .bubble::after{content:"";position:absolute;left:50%;bottom:-4px;margin-left:-4px;border:4px solid transparent;border-bottom:0;border-top-color:var(--tip-bg)}
+  .bubble.show{opacity:1;transform:none}
+  .copy{border:none;background:none;padding:0 5px;font-size:11.5px;color:var(--brand);border-radius:6px}
+  .copy:hover{background:var(--brand-soft)}
+  .ins h4{margin:0 0 3px;font-size:10.5px;text-transform:uppercase;letter-spacing:.05em;color:var(--muted);font-weight:600}
+  .chips{display:flex;flex-wrap:wrap;gap:3px}
+  .chip{font-size:12px;padding:1px 7px;line-height:1.5;border-radius:999px;font-weight:500}
+  .chip.ok{background:var(--ok-soft);color:var(--ok)}
+  .chip.no{background:var(--no-soft);color:var(--no)}
+  .chip.hit{outline:2px solid currentColor}
+  .none{color:var(--muted);font-size:12.5px;font-style:italic}
+  .notes{font-size:12.5px;color:var(--muted);border-top:1px dashed var(--line);padding-top:6px;line-height:1.35;white-space:pre-wrap}
+  .updated{font-size:11px;color:var(--faint)}
+  .empty{text-align:center;padding:60px 20px;color:var(--muted)}
+  .empty h2{color:var(--ink);font-size:18px;margin:0 0 6px}
+  /* modal */
+  .overlay{position:fixed;inset:0;background:rgba(20,28,38,.45);display:none;align-items:flex-start;justify-content:center;padding:40px 16px;overflow:auto;z-index:20}
+  .overlay.open{display:flex}
+  .modal{background:var(--card);border:1px solid var(--line);border-radius:14px;width:100%;max-width:620px;padding:22px 24px;box-shadow:0 20px 50px rgba(0,0,0,.2)}
+  .modal h2{margin:0 0 16px;font-size:19px}
+  .form-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px 14px}
+  .form-grid .full{grid-column:1/-1}
+  label{display:block;font-size:13px;font-weight:600;margin-bottom:4px}
+  .hint{font-weight:400;color:var(--muted)}
+  .field-msg{font-size:12px;margin-top:4px;color:var(--warn)}
+  .modal-actions{display:flex;justify-content:space-between;gap:10px;margin-top:20px}
+  .modal-actions .right{display:flex;gap:10px;margin-left:auto}
+  .confirm{display:none;background:var(--no-soft);color:var(--no);border-radius:8px;padding:10px 12px;margin-top:14px;font-size:14px;align-items:center;justify-content:space-between;gap:10px}
+  .confirm.show{display:flex}
+  .toast{position:fixed;bottom:20px;left:50%;transform:translateX(-50%);background:var(--tip-bg);color:var(--tip-ink);padding:9px 16px;border-radius:8px;font-size:14px;opacity:0;transition:opacity .2s;pointer-events:none;z-index:30}
+  .toast.show{opacity:1}
+  @media (max-width:560px){.form-grid{grid-template-columns:1fr}.toolbar select{flex:1 1 45%}}
+  /* ---- alt card layout ---- */
+  .grid{display:flex;flex-direction:column;gap:8px}
+  .card{display:flex !important;flex-direction:column;align-items:stretch !important;gap:7px;padding:11px 15px !important;border-left:3px solid var(--brand) !important}
+  .r1{display:flex;align-items:flex-start;gap:12px;flex-wrap:nowrap}
+  .r1 .name{flex:1 1 auto;min-width:0;overflow-wrap:anywhere;padding-top:2px}
+  .r1 .name{font-size:15.5px;margin-right:2px}
+  .rtags{display:flex;flex-direction:column;gap:4px;align-items:flex-start;margin-top:-3px}
+  .rtags .spec{margin:0}
+  .contact{display:flex;flex-direction:column;gap:3px}
+  .r1-end{margin-left:auto;flex:0 0 auto;display:flex;align-items:center;gap:10px;white-space:nowrap}
+  .r2{display:flex;flex-wrap:wrap;gap:4px 0;font-size:13.5px;align-items:center}
+  .r2 .it{display:inline-flex;align-items:center;gap:6px;padding-right:14px;margin-right:14px;border-right:1px solid var(--line)}
+  .r2 .it:last-child{border-right:none;margin-right:0;padding-right:0}
+  .ico svg{width:14px;height:14px;fill:none;stroke:var(--brand);stroke-width:2;stroke-linecap:round;stroke-linejoin:round;display:block}
+  .npi-l{width:14px;text-align:center;font-size:9.5px;font-weight:600;color:var(--muted);letter-spacing:.04em}
+  .r3{display:flex;flex-wrap:wrap;gap:6px 8px;padding-top:7px;border-top:1px solid var(--line)}
+  .ins-pop{position:relative}
+  .ins-pill{display:inline-flex;align-items:center;gap:6px;padding:3px 6px 3px 8px;border-radius:999px;font-size:12.5px;font-weight:600;color:var(--ink);background:var(--field)}
+  .ins-pill svg{width:14px;height:14px;fill:none;stroke:var(--brand);stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+  .ins-pill .cnt{font-size:11.5px;padding:0 7px;border-radius:999px;line-height:1.6}
+  .ins-pill .cnt.ok{background:var(--ok-soft);color:var(--ok)}
+  .ins-pill .cnt.no{background:var(--no-soft);color:var(--no)}
+  .ins-pill .cnt.svc{background:var(--brand-soft);color:var(--brand)}
+  .chip.svc{background:var(--brand-soft);color:var(--brand)}
+  .ins-l.svc{color:var(--brand)}
+  .ins-pill:hover,.ins-pop.open .ins-pill{border-color:var(--brand)}
+  .pop{position:absolute;left:0;top:calc(100% + 6px);z-index:15;min-width:260px;max-width:min(460px,80vw);background:var(--card);border:1px solid var(--line);border-radius:10px;padding:10px 12px;box-shadow:0 10px 28px rgba(0,0,0,.18);display:flex;flex-direction:column;gap:8px;
+    opacity:0;visibility:hidden;pointer-events:none;transform:translateY(-3px)}
+  .ins-pop.up .pop{top:auto;bottom:calc(100% + 6px)}
+  .ins-pill:hover + .pop,.ins-pill:focus-visible + .pop,.ins-pop.open .pop{opacity:1;visibility:visible;transform:none;transition:opacity .12s,transform .12s}
+  .pop .insrow{align-items:flex-start;flex-direction:column;gap:4px}
+  .insrow{display:flex;align-items:center;gap:8px;flex-wrap:wrap}
+  .ins-l{font-size:10.5px;font-weight:600;text-transform:uppercase;letter-spacing:.05em;white-space:nowrap}
+  .ins-l.ok{color:var(--ok)} .ins-l.no{color:var(--no)}
+  .card .notes{position:relative;border:none;border-left:3px solid var(--warn);background:var(--warn-soft);color:var(--ink);border-radius:6px;padding:6px 10px 6px 30px;margin-top:1px;font-size:12.5px;line-height:1.4}
+  .card .notes::before{content:"";position:absolute;left:10px;top:7px;width:13px;height:13px;background:var(--warn);
+    -webkit-mask:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='2.2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M14 3H6a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V9z'/%3E%3Cpath d='M14 3v6h6M8 13h8M8 17h5'/%3E%3C/svg%3E") center/contain no-repeat;
+            mask:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='2.2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M14 3H6a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V9z'/%3E%3Cpath d='M14 3v6h6M8 13h8M8 17h5'/%3E%3C/svg%3E") center/contain no-repeat}
+  @media (max-width:700px){.r2 .it{border-right:none;margin-right:0;width:100%}}
+  @media (max-width:520px){.r1-end{flex-direction:column-reverse;align-items:flex-end;gap:3px}}
+  /* card trim follows new-patient status */
+  .card.st-open{border-left-color:var(--ok) !important}
+  .card.st-limited{border-left-color:var(--trim-limited, #d99a1e) !important}
+  .card.st-closed{border-left-color:var(--no) !important}
+  .card.st-none{border-left-color:var(--hover-line) !important}
+  /* ---- side column: meta + pills ---- */
+  .top{display:grid;grid-template-columns:minmax(0,1fr) auto;grid-template-areas:"left meta" "left pills";grid-template-rows:auto 1fr;gap:6px 16px}
+  .top .left{grid-area:left;display:flex;flex-direction:column;gap:7px;min-width:0}
+  .top .left .name{font-size:15.5px;margin:0;overflow-wrap:anywhere;padding-top:2px}
+  .top .left .rtags{margin-top:-3px}
+  .top .r1-end{grid-area:meta;margin:0;justify-self:end;align-self:start}
+  .top .pills{grid-area:pills;display:flex;flex-direction:column;align-items:flex-end;gap:6px;justify-self:end}
+  .pills .pop{left:auto;right:0}
+  @media (max-width:560px){
+    .top{grid-template-areas:"left meta" "pills pills"}
+    .top .pills{flex-direction:row;flex-wrap:wrap;align-items:center;justify-content:flex-start;padding-top:6px;border-top:1px solid var(--line)}
+    .top .pills{width:auto;justify-self:stretch}
+    .pills .ins-pill{width:auto}
+    .pills .ins-pop:first-child .pop{left:0;right:auto}
+  }
+  /* ===== Option E: side-rail card ===== */
+  .card.ecard{display:grid !important;grid-template-columns:64px minmax(0,1fr) 46px;padding:0 !important;gap:0;border-left:1px solid var(--line) !important;overflow:visible}
+  .ecard .rail{display:flex;flex-direction:column;align-items:center;gap:6px;padding:12px 4px;border-right:1px solid var(--line);border-radius:10px 0 0 10px;--c:var(--faint);--s:var(--cp-hover);background:var(--s)}
+  .ecard.st-open .rail{--c:var(--ok);--s:var(--ok-soft)}
+  .ecard.st-limited .rail{--c:var(--trim-limited, #d99a1e);--s:var(--warn-soft)}
+  .ecard.st-closed .rail{--c:var(--no);--s:var(--no-soft)}
+  .ecard .av{width:38px;height:38px;border-radius:50%;background:var(--c);color:var(--card);font-weight:700;font-size:14px;display:flex;align-items:center;justify-content:center;letter-spacing:.02em}
+  .ecard .rail-upd{margin-top:auto;padding-top:6px;font-size:9.5px;line-height:1.25;color:var(--muted);text-align:center;opacity:.85}
+  .ecard .rail small{font-size:10px;font-weight:700;color:var(--c);text-transform:uppercase;letter-spacing:.04em;text-align:center;line-height:1.2}
+  .ecard.st-none .rail small{font-size:9px;font-weight:600}
+  .ecard .mid{padding:11px 14px;display:flex;flex-direction:column;gap:7px;min-width:0}
+  .ecard .etop{display:flex;align-items:center;gap:6px 10px;flex-wrap:wrap}
+  .ecard .etop .name{font-size:15.5px;margin:0;overflow-wrap:anywhere}
+  .ecard .etop .updated{margin-left:auto;white-space:nowrap}
+  .ecard .etop{align-items:baseline;row-gap:3px}
+  .ecard .etop .name{order:1;flex:1 1 auto;min-width:0}
+  .ecard .etop .updated{order:2}
+  .ecard .etop .specs{order:3;flex-basis:100%}
+  .ecard .egrid{display:grid;grid-template-columns:auto max-content auto minmax(0,1fr);gap:3px 8px;font-size:13.5px;align-items:baseline}
+  .ecard .egrid .span3{grid-column:span 3}
+  .ecard .egrid .ki{display:flex;align-items:center;justify-content:center;align-self:center}
+  .ecard .egrid .ki-top{align-self:start;padding-top:3px}
+  .addr2{display:inline-block;line-height:1.35}
+  .it-addr{align-items:flex-start !important}
+  .it-addr .ico{padding-top:3px}
+  .ecard .egrid .ki svg{width:14px;height:14px;fill:none;stroke:var(--brand);stroke-width:2;stroke-linecap:round;stroke-linejoin:round;display:block}
+  .ecard .egrid .k2{margin-left:16px}
+  .ecard .egrid .k{font-size:10.5px;font-weight:700;color:var(--muted);text-transform:uppercase;letter-spacing:.04em}
+  .ecard .notes{margin:0}
+  .ecard .tools{display:flex;flex-direction:column;align-items:center;gap:10px;padding:11px 0;border-left:1px solid var(--line);background:var(--bg);border-radius:0 10px 10px 0}
+  .tbtn{position:relative;width:30px;height:28px;padding:0;display:inline-flex;align-items:center;justify-content:center;border-radius:7px;background:var(--field)}
+  .tbtn svg{width:15px;height:15px;fill:none;stroke:var(--brand);stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+  .tbtn:hover{border-color:var(--brand)}
+  .tbtn .badge{position:absolute;right:-7px;font-size:9.5px;font-weight:700;border-radius:999px;padding:0 4px;line-height:1.5;min-width:15px;text-align:center;border:1.5px solid var(--bg)}
+  .tbtn .badge.ok,.tbtn .badge.svc{top:-7px} .tbtn .badge.no{top:-7px;right:auto;left:-7px}
+  .tbtn .badge.ok{background:var(--ok);color:var(--card)} .tbtn .badge.no{background:var(--no);color:var(--card)} .tbtn .badge.svc{background:var(--brand);color:var(--card)}
+  .ecard .tools .ins-pop{display:flex}
+  .ecard .tools .pop{left:auto;right:calc(100% + 10px);top:-4px}
+  .ecard .tools .ins-pop.up .pop{top:auto;bottom:-4px}
+  .ecard .ins-pill{gap:0}
+  @media (max-width:640px){
+    .card.ecard{grid-template-columns:50px minmax(0,1fr) 42px}
+    .ecard .av{width:32px;height:32px;font-size:12.5px}
+    .ecard .egrid{grid-template-columns:auto minmax(0,1fr)}
+    .ecard .egrid .span3{grid-column:auto}
+    .ecard .egrid .k2{margin-left:0}
+    .ecard .etop .updated{margin-left:0;width:100%}
+  }
+  /* ---- Material Symbols icons ---- */
+  .ms{font-family:"Material Symbols Rounded";font-weight:normal;font-style:normal;font-size:22px;line-height:1;letter-spacing:normal;text-transform:none;white-space:nowrap;word-wrap:normal;direction:ltr;-webkit-font-feature-settings:"liga";font-feature-settings:"liga";-webkit-font-smoothing:antialiased;display:inline-block;overflow:hidden;width:1em;height:1em;text-align:center}
+  .ecard .av .ms{display:none;font-size:22px}
+  html.ms-ok .ecard .av .ms{display:inline-block}
+  html.ms-ok .ecard .av .ini{display:none}
+  .icon-field{display:flex;align-items:center;gap:10px}
+  .icon-prev{width:36px;height:36px;border-radius:50%;background:var(--brand);color:var(--card);display:flex;align-items:center;justify-content:center;flex:0 0 auto;font-weight:700}
+  .icon-prev .ms{font-size:21px}
+  .icon-name{flex:1;font-size:13.5px;color:var(--muted);text-transform:capitalize}
+  .icon-picker{margin-top:8px;border:1px solid var(--line);border-radius:10px;padding:8px;background:var(--bg)}
+  .icon-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(62px,1fr));gap:4px;max-height:260px;overflow:auto;margin-top:8px;padding:2px}
+  .icon-opt{display:flex;flex-direction:column;align-items:center;gap:3px;padding:7px 2px 5px;border-color:transparent;background:transparent;color:var(--ink)}
+  .icon-opt .ms{font-size:24px;color:var(--brand)}
+  .icon-opt small{font-size:10px;color:var(--muted);max-width:100%;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+  .icon-opt:hover{background:var(--cp-hover);border-color:transparent}
+  .icon-opt.on{border-color:var(--brand);background:var(--brand-soft)}
+  .icon-msg{font-size:12.5px;color:var(--muted);padding:4px 2px 0}
+  .icon-msg:empty{display:none}
+  /* ---- side-by-side cards on wide screens ---- */
+  .grid{display:grid !important;grid-template-columns:repeat(auto-fill,minmax(min(100%,max(500px,calc((100% - 10px) / 2))),1fr));gap:10px !important;align-items:stretch}
+  /* keep the toolbar a sensible width on very wide screens */
+  .toolbar .search{max-width:520px}
+  @media (min-width:1100px){ #addBtn{margin-left:auto} }
+  /* ===== Minimal theme: structural tweaks ===== */
+  :root[data-palette="minimal"] header{color:var(--ink)}
+  :root[data-palette="minimal"] header h1{font-size:16.5px;font-weight:600;letter-spacing:-.005em}
+  :root[data-palette="minimal"] header p{color:var(--muted);opacity:1}
+  :root[data-palette="minimal"] .theme-btn{background:transparent;border:1px solid var(--line);color:var(--ink);border-radius:6px}
+  :root[data-palette="minimal"] .theme-btn:hover{background:var(--cp-hover);border-color:var(--hover-line)}
+  :root[data-palette="minimal"] button,:root[data-palette="minimal"] input,:root[data-palette="minimal"] select,:root[data-palette="minimal"] textarea{border-radius:6px}
+  :root[data-palette="minimal"] button.primary{background:var(--ink);border-color:var(--ink);color:var(--card);font-weight:500}
+  :root[data-palette="minimal"] .toolbar{background:var(--card)}
+  :root[data-palette="minimal"] .card{border-radius:6px;box-shadow:none}
+  :root[data-palette="minimal"] .ecard .rail{border-radius:6px 0 0 6px}
+  :root[data-palette="minimal"] .ecard.st-none .rail{--s:transparent}
+  :root[data-palette="minimal"] .ecard .av{background:var(--card);color:var(--ink);border:1px solid var(--line)}
+  :root[data-palette="minimal"] .ecard .rail small{font-weight:600;letter-spacing:.03em}
+  :root[data-palette="minimal"] .ecard.st-none .rail small{color:var(--muted)}
+  :root[data-palette="minimal"] .ecard .tools{background:transparent;border-radius:0 6px 6px 0}
+  :root[data-palette="minimal"] .tbtn{border-radius:5px;background:transparent}
+  :root[data-palette="minimal"] .tbtn svg,:root[data-palette="minimal"] .ecard .egrid .ki svg,:root[data-palette="minimal"] .ico svg{stroke:var(--muted)}
+  :root[data-palette="minimal"] .tbtn:hover svg{stroke:var(--ink)}
+  :root[data-palette="minimal"] .tbtn .badge{font-weight:600;border-color:var(--card)}
+  :root[data-palette="minimal"] .tbtn .badge.ok,:root[data-palette="minimal"] .tbtn .badge.svc{background:var(--ink);color:var(--card)}
+  :root[data-palette="minimal"] .spec{background:transparent;color:var(--muted);border:1px solid var(--line);border-radius:4px;font-weight:500}
+  :root[data-palette="minimal"] .chip{border-radius:4px}
+  :root[data-palette="minimal"] .chip.svc{background:var(--cp-hover);color:var(--ink)}
+  :root[data-palette="minimal"] .ecard .notes{background:var(--cp-hover);border-left-color:var(--hover-line);border-radius:4px}
+  :root[data-palette="minimal"] .ecard .notes::before{background:var(--muted)}
+  :root[data-palette="minimal"] .loc-toggle{background:transparent;border:1px solid var(--line);color:var(--muted);border-radius:4px}
+  :root[data-palette="minimal"] .pop,:root[data-palette="minimal"] .settings,:root[data-palette="minimal"] .modal{border-radius:8px;box-shadow:0 8px 24px rgba(0,0,0,.10)}
+  :root[data-palette="minimal"] .sect{color:var(--muted)}
+  :root[data-palette="minimal"] .icon-prev{background:var(--cp-hover);color:var(--ink);border:1px solid var(--line)}
+  /* ---- layout switch ---- */
+  .layout-seg{display:inline-flex;border:1px solid var(--line);border-radius:7px;overflow:hidden;background:var(--field)}
+  .toolbar .layout-seg button{border:none;border-radius:0;padding:5px 8px;background:transparent;display:inline-flex;align-items:center}
+  .layout-seg button + button{border-left:1px solid var(--line) !important}
+  .layout-seg svg{width:16px;height:16px;fill:none;stroke:var(--muted);stroke-width:2;stroke-linejoin:round}
+  .toolbar .layout-seg button.on{background:var(--brand-soft)}
+  .layout-seg button.on svg{stroke:var(--brand)}
+  .layout-seg button:hover svg{stroke:var(--ink)}
+  @media (min-width:1100px){ .layout-seg{margin-left:auto} #addBtn{margin-left:0} }
+  /* single column: same card width as one grid column */
+  html[data-layout="list"] .grid{grid-template-columns:min(100%, max(500px, calc((100% - 10px) / 2))) !important;justify-content:center}
+  html[data-layout="list"] .count{max-width:min(100%, max(500px, calc((100% - 10px) / 2)));margin:0 auto}
+  @media (max-width:1060px){ .layout-seg{display:none} }
+  /* ---- publishing ---- */
+  .publish-bar{display:flex;align-items:center;gap:12px;flex-wrap:wrap;margin:12px 0 0;padding:9px 12px;border-radius:8px;background:var(--warn-soft);color:var(--ink);border:1px solid var(--line);font-size:13.5px}
+  .publish-bar[hidden]{display:none}
+  .publish-bar #pubText{flex:1 1 320px}
+  .pub-actions{display:flex;gap:8px}
+  .pub-actions button{padding:5px 12px;font-size:13px}
+  #editRow{margin:0 0 10px;padding-bottom:10px;border-bottom:1px solid var(--line)}
+  .edit-switch{display:flex;align-items:flex-start;gap:10px;cursor:pointer;margin:0;font-weight:400;font-size:13.5px}
+  .edit-switch small{display:block;color:var(--muted);font-size:11.5px;margin-top:1px}
+  .edit-switch input{position:absolute;opacity:0;pointer-events:none}
+  .sw-track{flex:0 0 auto;width:34px;height:20px;border-radius:999px;background:var(--hover-line);position:relative;transition:background .15s;margin-top:1px}
+  .sw-knob{position:absolute;top:2px;left:2px;width:16px;height:16px;border-radius:50%;background:#fff;transition:transform .15s;box-shadow:0 1px 2px rgba(0,0,0,.2)}
+  .edit-switch input:checked + .sw-track{background:var(--brand)}
+  .edit-switch input:checked + .sw-track .sw-knob{transform:translateX(14px)}
+  .edit-switch input:focus-visible + .sw-track{outline:2px solid var(--brand);outline-offset:2px}
+</style>
+<script>
+  var FONTS = {
+    inter: { label: "Inter (default)", css: "Inter, system-ui, sans-serif" },
+    atkinson: { label: "Atkinson Hyperlegible", css: "'Atkinson Hyperlegible', Verdana, sans-serif" },
+    nunito: { label: "Nunito", css: "Nunito, system-ui, sans-serif" },
+    lato: { label: "Lato", css: "Lato, 'Segoe UI', sans-serif" },
+    source: { label: "Source Sans", css: "'Source Sans 3', 'Segoe UI', sans-serif" },
+    robotoflex: { label: "Roboto Flex", css: "'Roboto Flex', Roboto, 'Segoe UI', sans-serif" },
+    serif: { label: "Source Serif (serif)", css: "'Source Serif 4', Georgia, 'Times New Roman', serif" },
+    system: { label: "System (Segoe UI)", css: "'Segoe UI', system-ui, -apple-system, Roboto, Arial, sans-serif" }
+  };
+  var WEIGHTS = { light: { label: "Light", w: 300 }, regular: { label: "Regular", w: 400 }, medium: { label: "Medium", w: 500 } };
+  var SIZES = { small: { label: "Small", z: 0.92 }, normal: { label: "Normal", z: 1 }, large: { label: "Large", z: 1.1 }, xl: { label: "Larger", z: 1.22 } };
+  function applyText(font, size, weight){
+    var f = FONTS[font] || FONTS.inter, z = (SIZES[size] || SIZES.normal).z;
+    document.documentElement.style.setProperty("--wbase", String((WEIGHTS[weight] || WEIGHTS.regular).w));
+    document.documentElement.style.setProperty("--font", f.css);
+    document.documentElement.style.zoom = z === 1 ? "" : String(z);
+  }
+  (function(){
+    var font = null, size = null, weight = null;
+    try { font = localStorage.getItem("providerDirectory.font"); size = localStorage.getItem("providerDirectory.size"); weight = localStorage.getItem("providerDirectory.weight"); } catch(e){}
+    applyText(font, size, weight);
+    var lay = null;
+    try { lay = localStorage.getItem("providerDirectory.layout"); } catch(e){}
+    document.documentElement.setAttribute("data-layout", lay === "list" ? "list" : "grid");
+    var pal = null;
+    try { pal = localStorage.getItem("providerDirectory.palette"); } catch(e){}
+    if (pal && pal !== "default") document.documentElement.setAttribute("data-palette", pal);
+  })();
+  var PALETTES = {
+    default: { label: "Default", sw: ["#1f6f78", "#e3f1f2", "#f4f6f8"] },
+    sage: { label: "Sage", sw: ["#55704c", "#e5eadb", "#f2f0e8"] },
+    mocha: { label: "Mocha", sw: ["#7a5a40", "#f0e5d8", "#e9e1d4"] },
+    minimal: { label: "Minimal", sw: ["#111418", "#ffffff", "#e3e5e9"] }
+  };
+  (function(){
+    var t = null;
+    try { t = localStorage.getItem("providerDirectory.theme"); } catch(e){}
+    if (!t) t = (window.matchMedia && matchMedia("(prefers-color-scheme: dark)").matches) ? "dark" : "light";
+    document.documentElement.setAttribute("data-theme", t);
+  })();
+</script>
+</head>
+<body>
+<header><div class="wrap">
+  <div>
+    <h1>Specialty Provider Directory</h1>
+    <p>Outside specialty providers for referrals</p>
+  </div>
+  <div class="hdr-actions">
+    <button class="theme-btn" id="exportBtn" type="button" title="Download a backup file of all providers"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3v12M7 10l5 5 5-5M5 21h14"/></svg>Export</button>
+    <button class="theme-btn" id="importBtn" type="button" title="Load providers from a backup file"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 15V3M7 8l5-5 5 5M5 21h14"/></svg>Import</button>
+    <input type="file" id="importFile" accept=".json,application/json" hidden>
+    <button class="theme-btn" id="themeBtn" type="button" aria-label="Toggle dark mode"></button>
+    <div class="settings-wrap">
+      <button class="theme-btn gear" id="settingsBtn" type="button" title="Text settings" aria-label="Text settings" aria-expanded="false"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.7 1.7 0 0 0 .3 1.8l.1.1a2 2 0 1 1-2.8 2.8l-.1-.1a1.7 1.7 0 0 0-1.8-.3 1.7 1.7 0 0 0-1 1.5V21a2 2 0 1 1-4 0v-.1a1.7 1.7 0 0 0-1.1-1.5 1.7 1.7 0 0 0-1.8.3l-.1.1a2 2 0 1 1-2.8-2.8l.1-.1a1.7 1.7 0 0 0 .3-1.8 1.7 1.7 0 0 0-1.5-1H3a2 2 0 1 1 0-4h.1a1.7 1.7 0 0 0 1.5-1.1 1.7 1.7 0 0 0-.3-1.8l-.1-.1a2 2 0 1 1 2.8-2.8l.1.1a1.7 1.7 0 0 0 1.8.3H9a1.7 1.7 0 0 0 1-1.5V3a2 2 0 1 1 4 0v.1a1.7 1.7 0 0 0 1 1.5 1.7 1.7 0 0 0 1.8-.3l.1-.1a2 2 0 1 1 2.8 2.8l-.1.1a1.7 1.7 0 0 0-.3 1.8V9a1.7 1.7 0 0 0 1.5 1H21a2 2 0 1 1 0 4h-.1a1.7 1.7 0 0 0-1.5 1z"/></svg></button>
+      <div class="settings" id="settingsPanel" hidden>
+        <div id="editRow" hidden>
+          <label class="edit-switch"><input type="checkbox" id="editToggle"><span class="sw-track"><span class="sw-knob"></span></span><span><b>Editing mode</b><small>On this computer only. Lets you add and edit providers, then publish them.</small></span></label>
+        </div>
+        <div class="set-h">Theme</div>
+        <div class="pal-list" id="palList"></div>
+        <div class="set-h">Font</div>
+        <div class="font-list" id="fontList"></div>
+        <div class="set-h">Text weight</div>
+        <div class="size-seg w3" id="weightSeg"></div>
+        <div class="set-h">Text size</div>
+        <div class="size-seg" id="sizeSeg"></div>
+      </div>
+    </div>
+  </div>
+</div></header>
+
+<div class="toolbar"><div class="wrap">
+  <input class="search" id="q" type="search" placeholder="Search name, specialty, NPI, city, phone…" aria-label="Search">
+  <select id="fSpec" aria-label="Filter by specialty"><option value="">All specialties</option></select>
+  <select id="fIns" aria-label="Filter by insurance accepted"><option value="">Any insurance</option></select>
+  <select id="fStatus" aria-label="Filter by new patient status"><option value="">Any status</option><option value="open">Open to new patients</option><option value="limited">Limited</option><option value="closed">Closed to new patients</option></select>
+  <div class="layout-seg" role="group" aria-label="Layout">
+    <button type="button" data-layout="list" title="Single column" aria-label="Single column"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="4" y="4" width="16" height="6" rx="1.5"/><rect x="4" y="14" width="16" height="6" rx="1.5"/></svg></button>
+    <button type="button" data-layout="grid" title="Two-column grid" aria-label="Two-column grid"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3.5" y="4" width="7.5" height="7" rx="1.5"/><rect x="13" y="4" width="7.5" height="7" rx="1.5"/><rect x="3.5" y="13" width="7.5" height="7" rx="1.5"/><rect x="13" y="13" width="7.5" height="7" rx="1.5"/></svg></button>
+  </div>
+  <button class="primary" id="addBtn">+ Add provider</button>
+</div></div>
+
+<div class="wrap content">
+  <div class="banner" id="banner"></div>
+  <div class="publish-bar" id="publishBar" hidden>
+    <span id="pubText"></span>
+    <span class="pub-actions"><button type="button" class="primary" id="pubDownload">Download providers.json</button><button type="button" id="pubDiscard">Discard changes</button></span>
+  </div>
+  <div class="count" id="count"></div>
+  <main><div class="grid" id="grid"></div><div class="empty" id="empty" hidden></div></main>
+</div>
+
+<div class="overlay" id="overlay" role="dialog" aria-modal="true" aria-labelledby="mTitle">
+  <form class="modal" id="form" novalidate>
+    <h2 id="mTitle">Add provider</h2>
+    <div class="form-grid">
+      <div class="full"><label for="name">Provider name *</label><input id="name" required placeholder="e.g. Jane Smith, MD or Valley Cardiology Group"></div>
+      <div class="full"><label for="specialty">Specialties * <span class="hint">(press Enter or comma after each)</span></label>
+        <div class="tagbox" id="specBox"><span id="specTags"></span><input id="specialty" list="specList" placeholder="e.g. Cardiology" autocomplete="off"></div>
+        <datalist id="specList"></datalist></div>
+      <div class="full"><label>Icon</label>
+        <div class="icon-field">
+          <span class="icon-prev" id="iconPrev"></span>
+          <span class="icon-name" id="iconName"></span>
+          <button type="button" id="iconPickBtn">Choose icon</button>
+        </div>
+        <div class="icon-picker" id="iconPicker" hidden>
+          <input id="iconSearch" type="search" placeholder="Search icons (e.g. heart, bone, eye, pill)">
+          <div class="icon-grid" id="iconGrid"></div>
+          <div class="icon-msg" id="iconMsg"></div>
+        </div>
+      </div>
+      <div class="full"><label>New patients</label>
+        <div class="seg" id="statusSeg" role="radiogroup" aria-label="New patients">
+          <label><input type="radio" name="status" value="open"><span class="s-open">Open</span></label>
+          <label><input type="radio" name="status" value="limited"><span class="s-limited">Limited</span></label>
+          <label><input type="radio" name="status" value="closed"><span class="s-closed">Closed</span></label>
+          <label><input type="radio" name="status" value=""><span>Not sure</span></label>
+        </div>
+      </div>
+      <div class="full sect">Main location</div>
+      <div class="full"><label for="address">Address</label><textarea id="address" rows="2" placeholder="Street, Suite&#10;City, State ZIP"></textarea></div>
+      <div><label for="phone">Phone</label><input id="phone" inputmode="tel" placeholder="555-555-1234"></div>
+      <div><label for="fax">Fax</label><input id="fax" inputmode="tel" placeholder="555-555-5678"></div>
+      <div class="full">
+        <div id="locList"></div>
+        <button type="button" class="add-loc" id="addLocBtn">+ Add another location</button>
+      </div>
+      <div class="full"><label for="npi">NPI <span class="hint">(10 digits)</span></label><input id="npi" inputmode="numeric" maxlength="10" placeholder="1234567890"><div class="field-msg" id="npiMsg"></div></div>
+      <div class="full"><label for="services">Services offered <span class="hint">(separate with commas)</span></label><input id="services" placeholder="e.g. Sleeve gastrectomy, Gastric bypass, Nutrition counseling"></div>
+      <div class="full"><label for="accepted">Insurances accepted <span class="hint">(separate with commas)</span></label><input id="accepted" placeholder="e.g. Medicaid, Medicare, IHS/PRC, Blue Cross"></div>
+      <div class="full"><label for="notAccepted">Insurances NOT accepted <span class="hint">(separate with commas)</span></label><input id="notAccepted" placeholder="e.g. Tricare, Kaiser"></div>
+      <div class="full"><label for="notes">Notes <span class="hint">(optional)</span></label><textarea id="notes" rows="2" placeholder="Referral requirements, contact person, etc."></textarea></div>
+    </div>
+    <div class="confirm" id="confirm"><span>Delete this provider permanently?</span><span><button type="button" id="confirmNo">Cancel</button> <button type="button" class="danger" id="confirmYes">Delete</button></span></div>
+    <div class="modal-actions">
+      <button type="button" class="danger" id="delBtn" hidden>Delete</button>
+      <div class="right"><button type="button" id="cancelBtn">Cancel</button><button type="submit" class="primary" id="saveBtn">Save</button></div>
+    </div>
+  </form>
+</div>
+<div class="toast" id="toast"></div>
+
+<script>
+(() => {
+  const $ = id => document.getElementById(id);
+  let providers = [];           // [{id, ...data}]
+  let col = null;               // db collection
+  let canWrite = true;
+  let editingId = null;
+  let loaded = false;
+
+  const esc = s => String(s ?? "").replace(/[&<>"']/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
+  const splitList = s => String(s || "").split(/[,;\n]/).map(x => x.trim()).filter(Boolean);
+  const norm = s => String(s || "").toLowerCase();
+  const digits = s => String(s || "").replace(/\D/g, "");
+
+  function fmtPhone(p){
+    const d = digits(p);
+    if (d.length === 10) return `${d.slice(0,3)}-${d.slice(3,6)}-${d.slice(6)}`;
+    if (d.length === 11 && d[0] === "1") return `${d.slice(1,4)}-${d.slice(4,7)}-${d.slice(7)}`;
+    return String(p || "").trim();
+  }
+  // NPI check digit: Luhn with 80840 prefix
+  function npiValid(n){
+    if (!/^\d{10}$/.test(n)) return false;
+    const s = "80840" + n.slice(0,9);
+    let sum = 0;
+    for (let i = 0; i < s.length; i++){
+      let d = +s[s.length - 1 - i];
+      if (i % 2 === 0){ d *= 2; if (d > 9) d -= 9; }
+      sum += d;
+    }
+    return (10 - (sum % 10)) % 10 === +n[9];
+  }
+
+  function toast(msg){
+    const t = $("toast"); t.textContent = msg; t.classList.add("show");
+    clearTimeout(t._h); t._h = setTimeout(() => t.classList.remove("show"), 1800);
+  }
+  async function copyText(t){
+    try { await navigator.clipboard.writeText(t); return true; } catch {}
+    try {
+      const ta = document.createElement("textarea"); ta.value = t; ta.setAttribute("readonly", "");
+      ta.style.cssText = "position:fixed;top:-1000px;opacity:0"; document.body.appendChild(ta);
+      ta.select(); const ok = document.execCommand("copy"); ta.remove(); return ok;
+    } catch { return false; }
+  }
+  function copiedBubble(el, msg){
+    document.querySelectorAll(".bubble").forEach(b => b.remove());
+    const r = el.getBoundingClientRect();
+    const b = document.createElement("div");
+    b.className = "bubble"; b.textContent = msg;
+    document.body.appendChild(b);
+    const z = parseFloat(document.documentElement.style.zoom) || 1;
+    // with page zoom, rects come back in zoomed pixels while left/top are unzoomed
+    const bw = b.getBoundingClientRect().width / z, bh = b.getBoundingClientRect().height / z;
+    b.style.left = ((r.left + Math.min(r.width, 120 * z) / 2) / z + window.scrollX / z - bw / 2) + "px";
+    b.style.top = (r.top / z + window.scrollY / z - bh - 6) + "px";
+    requestAnimationFrame(() => b.classList.add("show"));
+    setTimeout(() => { b.classList.remove("show"); setTimeout(() => b.remove(), 200); }, 1100);
+  }
+  function banner(msg){ const b = $("banner"); b.textContent = msg || ""; b.style.display = msg ? "block" : "none"; }
+
+  function uniqSorted(arr){
+    const m = new Map();
+    arr.forEach(v => { const k = norm(v); if (k && !m.has(k)) m.set(k, v.trim()); });
+    return [...m.values()].sort((a,b) => a.localeCompare(b));
+  }
+
+  function refreshFilters(){
+    const specs = uniqSorted(providers.flatMap(specsOf));
+    const ins = uniqSorted(providers.flatMap(p => p.accepted || []));
+    const fill = (sel, items, label) => {
+      const cur = sel.value;
+      sel.innerHTML = `<option value="">${label}</option>` + items.map(v => `<option>${esc(v)}</option>`).join("");
+      if (items.some(v => v === cur)) sel.value = cur;
+    };
+    fill($("fSpec"), specs, "All specialties");
+    fill($("fIns"), ins, "Any insurance");
+    $("specList").innerHTML = specs.map(v => `<option value="${esc(v)}">`).join("");
+  }
+
+  function render(){
+    const q = norm($("q").value).trim();
+    const qd = digits(q);
+    const fs = norm($("fSpec").value);
+    const fi = norm($("fIns").value);
+    const fst = $("fStatus").value;
+    const list = providers.filter(p => {
+      if (fs && !specsOf(p).some(x => norm(x) === fs)) return false;
+      if (fi && !(p.accepted || []).some(i => norm(i) === fi)) return false;
+      if (fst && (p.status || "") !== fst) return false;
+      if (!q) return true;
+      const locs = p.locations || [];
+      const hay = norm([p.name, ...specsOf(p), p.address, p.npi, p.notes, ...(p.accepted||[]), ...(p.notAccepted||[]), ...locs.flatMap(l => [l.name, l.address]), ...(p.services||[])].join(" "));
+      if (hay.includes(q)) return true;
+      return qd.length >= 3 && [p.phone, p.fax, p.npi, ...locs.flatMap(l => [l.phone, l.fax])].some(x => digits(x).includes(qd));
+    }).sort((a,b) => (specsOf(a)[0]||"").localeCompare(specsOf(b)[0]||"") || (a.name||"").localeCompare(b.name||""));
+
+    const grid = $("grid"), empty = $("empty");
+    if (!loaded){ grid.innerHTML = ""; empty.hidden = false; empty.innerHTML = "<p>Loading providers…</p>"; $("count").textContent = ""; return; }
+    $("count").textContent = providers.length ? `${list.length} of ${providers.length} provider${providers.length===1?"":"s"}` : "";
+    if (!providers.length){
+      grid.innerHTML = ""; empty.hidden = false;
+      empty.innerHTML = `<h2>No providers yet</h2><p>${canWrite ? "Click <b>+ Add provider</b> to create the first card." : "Providers will appear here once they’re added."}</p>`;
+      return;
+    }
+    if (!list.length){ grid.innerHTML = ""; empty.hidden = false; empty.innerHTML = "<h2>No matches</h2><p>Try a different search or clear the filters.</p>"; return; }
+    empty.hidden = true;
+
+    grid.innerHTML = list.map(p => {
+      const chip = (arr, cls) => arr && arr.length
+        ? `<div class="chips">${arr.map(i => `<span class="chip ${cls}${cls==="ok" && fi && norm(i)===fi ? " hit":""}">${esc(i)}</span>`).join("")}</div>`
+        : `<span class="none">Not listed</span>`;
+      const ICON = {
+        Phone: '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2z"/></svg>',
+        Fax: '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 9V2h12v7"/><path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"/><rect x="6" y="14" width="12" height="8" rx="1"/></svg>',
+        Address: '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 10c0 6-8 12-8 12S4 16 4 10a8 8 0 0 1 16 0z"/><circle cx="12" cy="10" r="3"/></svg>'
+      };
+      const lbl = label => ICON[label] ? `<dt class="ic" title="${label}"><span class="sr">${label}</span>${ICON[label]}</dt>` : `<dt>${label}</dt>`;
+      const val2 = (label, val) => val ? `<span class="cp" data-copy="${esc(val)}" title="Click to copy ${label.toLowerCase()}">${esc(val)}</span>` : '<span class="none">—</span>';
+      const row = (label, val) => `${lbl(label)}<dd>${val2(label, val)}</dd>`;
+      const updated = p.updatedAt ? new Date(p.updatedAt).toLocaleDateString(undefined,{month:"short",day:"numeric",year:"numeric"}) : "";
+      const addr1 = (p.address || "").split(/\n+/).map(x => x.trim()).filter(Boolean).join(", ");
+      const item = (label, val, icon) => val
+        ? `<span class="it">${icon}<span class="cp" data-copy="${esc(val)}" title="Click to copy ${label.toLowerCase()}">${esc(val)}</span></span>`
+        : `<span class="it">${icon}<span class="none">—</span></span>`;
+      const ICO = l => `<span class="ico" title="${l}">${ICON[l]}</span>`;
+      const extraLocs = p => {
+        const locs = (p.locations || []).filter(l => l.address || l.phone || l.fax || l.name);
+        if (!locs.length) return "";
+        const open = expanded.has(p.id);
+        const n = locs.length;
+        return `<div class="more-locs">
+          <button type="button" class="loc-toggle" data-locs="${esc(p.id)}" aria-expanded="${open}">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 6l6 6-6 6"/></svg>${open ? "Hide" : "+" + n} additional location${n === 1 ? "" : "s"}
+          </button>
+          ${open ? `<div class="loc-list">${locs.map(l => {
+            const a = (l.address || "").split(/\n+/).map(x => x.trim()).filter(Boolean).join(", ");
+            return `<div class="loc">
+              ${l.name ? `<div class="loc-name">${esc(l.name)}</div>` : ""}
+              <div class="r2"><span class="it it-addr">${ICO("Address")}${addrHTML(l.address)}</span></div>
+              <div class="r2">${item("Phone", fmtPhone(l.phone), ICO("Phone"))}${item("Fax", fmtPhone(l.fax), ICO("Fax"))}</div>
+            </div>`;}).join("")}</div>` : ""}
+        </div>`;
+      };
+      const ini = initials(p.name);
+      const stLbl = { open: "Open", limited: "Limited", closed: "Closed" }[p.status] || "Status not set";
+      const nAcc = (p.accepted || []).length, nNo = (p.notAccepted || []).length, nSvc = (p.services || []).length;
+      const val = (label, v) => v ? `<span class="cp" data-copy="${esc(v)}" title="Click to copy ${label.toLowerCase()}">${esc(v)}</span>` : '<span class="none">—</span>';
+      return `<article class="card ecard st-${p.status || "none"}">
+        <div class="rail" title="${esc(STATUS[p.status] || "New-patient status not set")}">
+          <div class="av"><span class="ms">${esc(iconFor(p))}</span><span class="ini">${esc(ini)}</span></div>
+          <small>${stLbl}</small>
+          ${p.updatedAt ? `<span class="rail-upd" title="Last updated ${esc(updated)}">Updated<br>${esc(new Date(p.updatedAt).toLocaleDateString("en-US",{month:"numeric",day:"numeric",year:"2-digit"}))}</span>` : ""}
+        </div>
+        <div class="mid">
+          <div class="etop">
+            <h3 class="name"><span class="cp" data-copy="${esc(p.name)}" title="Click to copy provider name">${esc(p.name)}</span></h3>
+            <div class="specs">${specsOf(p).map(x => `<span class="spec">${esc(x)}</span>`).join("")}</div>
+          </div>
+          <div class="egrid">
+            <span class="k ki ki-top" title="Address">${ICON.Address}</span><span class="span3">${addrHTML(p.address)}</span>
+            <span class="k ki" title="Phone">${ICON.Phone}</span><span>${val("Phone", fmtPhone(p.phone))}</span>
+            <span class="k ki k2" title="Fax">${ICON.Fax}</span><span>${val("Fax", fmtPhone(p.fax))}</span>
+            <span class="k">NPI</span><span class="span3">${val("NPI", p.npi)}</span>
+          </div>
+          ${extraLocs(p)}
+          ${p.notes ? `<div class="notes">${esc(p.notes)}</div>` : ""}
+        </div>
+        <div class="tools">
+          <div class="ins-pop">
+            <button type="button" class="ins-pill tbtn" aria-haspopup="true" aria-label="Insurance: ${nAcc} accepted, ${nNo} not accepted"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg><span class="badge ok">${nAcc}</span>${nNo ? `<span class="badge no">${nNo}</span>` : ""}</button>
+            <div class="pop" role="tooltip">
+              <div class="insrow"><span class="ins-l ok">Accepts</span>${chip(p.accepted, "ok")}</div>
+              <div class="insrow"><span class="ins-l no">Doesn’t accept</span>${chip(p.notAccepted, "no")}</div>
+            </div>
+          </div>
+          ${nSvc ? `<div class="ins-pop">
+            <button type="button" class="ins-pill tbtn" aria-haspopup="true" aria-label="Services: ${nSvc}"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 3h6v6h6v6h-6v6H9v-6H3V9h6z"/></svg><span class="badge svc">${nSvc}</span></button>
+            <div class="pop" role="tooltip"><div class="insrow"><span class="ins-l svc">Services offered</span>${chip(p.services, "svc")}</div></div>
+          </div>` : ""}
+          ${canWrite ? `<button class="tbtn" data-edit="${esc(p.id)}" title="Edit provider" aria-label="Edit provider"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 20h9"/><path d="M16.5 3.5a2.1 2.1 0 0 1 3 3L7 19l-4 1 1-4z"/></svg></button>` : ""}
+          <button class="tbtn" data-blurb="${esc(p.id)}" title="Copy referral note" aria-label="Copy referral note"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="8" y="2" width="8" height="4" rx="1"/><path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"/></svg></button>
+        </div>
+      </article>`;
+    }).join("");
+  }
+
+  const expanded = new Set();   // providers whose extra locations are shown
+  const STATUS = { open: "Open to new patients", limited: "Limited new patients", closed: "Closed to new patients" };
+
+  // ----- theme -----
+  const SUN = '<svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg>';
+  const MOON = '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg>';
+  function paintThemeBtn(){
+    const dark = document.documentElement.getAttribute("data-theme") === "dark";
+    $("themeBtn").innerHTML = dark ? SUN + "Light mode" : MOON + "Dark mode";
+  }
+  $("themeBtn").addEventListener("click", () => {
+    const next = document.documentElement.getAttribute("data-theme") === "dark" ? "light" : "dark";
+    document.documentElement.setAttribute("data-theme", next);
+    try { localStorage.setItem("providerDirectory.theme", next); } catch {}
+    paintThemeBtn();
+  });
+  paintThemeBtn();
+
+  // ----- insurance popover -----
+  function placePop(w){
+    const r = w.getBoundingClientRect();
+    w.classList.toggle("up", window.innerHeight - r.bottom < 200 && r.top > 220);
+  }
+  $("grid").addEventListener("mouseover", e => { const w = e.target.closest(".ins-pop"); if (w && !w.contains(e.relatedTarget)) placePop(w); });
+  document.addEventListener("click", e => { if (!e.target.closest(".ins-pop")) document.querySelectorAll(".ins-pop.open").forEach(x => x.classList.remove("open")); });
+
+  function initials(name){
+    const stop = new Set(["of","and","the","&","at","for","in","md","do","dds","inc","llc","pc"]);
+    const w = String(name || "").replace(/[^\p{L}\p{N}\s&]/gu, " ").split(/\s+/).filter(x => x && !stop.has(x.toLowerCase()));
+    return ((w[0] || "?")[0] + (w[1] ? w[1][0] : (w[0] || "").slice(1, 2))).toUpperCase();
+  }
+
+  // ----- provider icons (Google Material Symbols) -----
+  const ICONS = [
+    ["cardiology","Cardiology heart"],["ecg_heart","Heart ECG"],["monitor_heart","Heart monitor"],["favorite","Heart"],["ecg","ECG"],["blood_pressure","Blood pressure"],
+    ["neurology","Neurology brain"],["psychology","Psychology mind head"],["psychiatry","Psychiatry mental health"],["cognition","Cognition brain"],["self_improvement","Behavioral health wellness"],
+    ["pulmonology","Pulmonology lungs"],["respiratory_rate","Respiratory breathing"],["oxygen_saturation","Oxygen saturation"],["airwave","Airway breath"],
+    ["gastroenterology","Gastroenterology stomach GI"],["nephrology","Nephrology kidney"],["urology","Urology bladder"],["endocrinology","Endocrinology thyroid gland"],["glucose","Glucose diabetes"],
+    ["hematology","Hematology blood"],["bloodtype","Blood type"],["water_drop","Drop fluid"],["oncology","Oncology cancer"],["immunology","Immunology immune"],["allergy","Allergy"],["allergies","Allergies"],
+    ["rheumatology","Rheumatology joints"],["orthopedics","Orthopedics bone"],["skeleton","Skeleton bones"],["foot_bones","Foot podiatry"],["hand_bones","Hand"],["femur","Femur leg bone"],["tibia","Tibia shin bone"],["humerus","Humerus arm bone"],["ulna_radius","Forearm wrist"],
+    ["physical_therapy","Physical therapy rehab"],["accessible","Wheelchair accessible"],["assist_walker","Walker mobility"],["falling","Fall risk"],["personal_injury","Injury trauma"],
+    ["dermatology","Dermatology skin"],["ophthalmology","Ophthalmology eye"],["visibility","Eye vision"],["eyeglasses","Optometry glasses"],["ent","ENT ear nose throat"],["hearing","Hearing audiology"],["ear_sound","Ear audiology"],["sign_language","Sign language"],
+    ["dentistry","Dentistry tooth dental"],["gynecology","Gynecology women OB"],["pregnant_woman","Pregnancy obstetrics"],["breastfeeding","Lactation breastfeeding"],["pediatrics","Pediatrics child"],["child_care","Child care"],["elderly","Geriatrics elderly"],["elderly_woman","Geriatrics elderly woman"],
+    ["radiology","Radiology imaging x-ray"],["labs","Lab test tubes"],["lab_profile","Lab results"],["lab_panel","Lab panel"],["biotech","Pathology microscope"],["science","Science lab"],["genetics","Genetics DNA"],["coronavirus","Infectious disease virus"],
+    ["medication","Medication pharmacy"],["medication_liquid","Liquid medication"],["pill","Pill"],["prescriptions","Prescriptions"],["vaccines","Vaccines syringe injection"],["syringe","Syringe injection"],["mixture_med","Compounding"],
+    ["stethoscope","Stethoscope primary care"],["medical_services","Medical bag"],["local_hospital","Hospital"],["emergency","Emergency"],["health_and_safety","Health safety"],["healing","Wound care bandage"],["medical_mask","Mask"],["masks","Masks"],["sick","Sick illness"],
+    ["inpatient","Inpatient"],["outpatient","Outpatient clinic"],["ward","Ward bed"],["home_health","Home health"],["hotel","Sleep medicine bed"],["bedtime","Sleep"],
+    ["diagnosis","Diagnosis"],["clinical_notes","Clinical notes"],["medical_information","Medical information"],["procedure","Procedure surgery"],["vital_signs","Vital signs"],["health_metrics","Health metrics"],
+    ["nutrition","Nutrition dietitian"],["weight","Weight bariatric"],["body_fat","Body composition"],["fitness_center","Fitness"],["spa","Spa wellness"],["body_system","Body system"],["conditions","Conditions"]
+  ];
+  // specialty keyword -> default icon
+  const AUTO_ICON = [
+    [/cardio|heart|vascular/i,"cardiology"],[/neuro|brain|spine|stroke/i,"neurology"],[/psychiat|behavior|mental|counsel/i,"psychiatry"],[/psycholog/i,"psychology"],
+    [/pulmon|lung|respir|sleep/i,"pulmonology"],[/gastro|gi\b|hepat|liver|colon/i,"gastroenterology"],[/nephro|kidney|dialysis/i,"nephrology"],[/urolog/i,"urology"],
+    [/endocrin|thyroid/i,"endocrinology"],[/diabet/i,"glucose"],[/hemat/i,"hematology"],[/onco|cancer/i,"oncology"],[/immun|allerg/i,"immunology"],[/rheumat/i,"rheumatology"],
+    [/ortho|bone|sport/i,"orthopedics"],[/podiat|foot/i,"foot_bones"],[/physical therapy|rehab|\bpt\b/i,"physical_therapy"],[/derma|skin/i,"dermatology"],
+    [/ophthal|retina|eye/i,"ophthalmology"],[/optom/i,"eyeglasses"],[/\bent\b|otolaryn|ear|nose|throat/i,"ent"],[/audiol|hearing/i,"hearing"],[/dent|oral/i,"dentistry"],
+    [/gyn|\bob\b|obstet|women/i,"gynecology"],[/pediat|child/i,"pediatrics"],[/geriat/i,"elderly"],[/radiol|imaging|x-ray|mri|ct\b/i,"radiology"],[/lab|patholog/i,"labs"],
+    [/infect/i,"coronavirus"],[/pharm/i,"medication"],[/bariat|weight/i,"weight"],[/nutrition|diet/i,"nutrition"],[/wound/i,"healing"],[/surg/i,"procedure"],[/emerg|urgent/i,"emergency"],
+    [/home health|hospice/i,"home_health"],[/genetic/i,"genetics"]
+  ];
+  const DEFAULT_ICON = "medical_services";
+  function autoIcon(p){
+    const sp = specsOf(p).join(" ");
+    for (const [re, ic] of AUTO_ICON) if (re.test(sp)) return ic;
+    return DEFAULT_ICON;
+  }
+  function iconFor(p){ return (p.icon && !badIcons.has(p.icon)) ? p.icon : autoIcon(p); }
+  let formIcon = "";
+  const badIcons = new Set();
+  let msReady = false;
+
+  // check which icons the font actually draws (a working icon renders about 1em wide)
+  function probeIcons(){
+    const box = document.createElement("div");
+    box.style.cssText = "position:absolute;left:-9999px;top:0;visibility:hidden";
+    box.innerHTML = ICONS.map(([n]) => `<span class="ms" style="font-size:24px;display:inline-block;width:auto">${n}</span>`).join("");
+    document.body.appendChild(box);
+    [...box.children].forEach((el, i) => { if (el.getBoundingClientRect().width > 34) badIcons.add(ICONS[i][0]); });
+    box.remove();
+  }
+  async function initIconFont(){
+    try {
+      if (!document.fonts) return;
+      await Promise.race([document.fonts.load('24px "Material Symbols Rounded"', "cardiology"), new Promise(r => setTimeout(r, 4000))]);
+      msReady = document.fonts.check('24px "Material Symbols Rounded"', "cardiology");
+    } catch { msReady = false; }
+    if (msReady){ probeIcons(); if (badIcons.size < ICONS.length - 5) document.documentElement.classList.add("ms-ok"); else msReady = false; }
+    render(); paintIconField();
+  }
+  function paintIconField(){
+    const cur = formIcon && !badIcons.has(formIcon) ? formIcon : "";
+    const auto = autoIcon({ specialties: formSpecs });
+    const show = cur || auto;
+    $("iconPrev").innerHTML = msReady ? `<span class="ms">${show}</span>` : `<span class="ini">?</span>`;
+    const label = (ICONS.find(x => x[0] === show) || [show, show.replace(/_/g, " ")])[1].split(" ").slice(0, 2).join(" ");
+    $("iconName").textContent = cur ? label : `Automatic — based on specialty (${label.split(" ")[0].toLowerCase()})`;
+    if (!$("iconPicker").hidden) paintIconGrid();
+  }
+  function paintIconGrid(){
+    if (!msReady){
+      $("iconGrid").innerHTML = "";
+      $("iconMsg").textContent = "Icons couldn’t load — your network may be blocking Google Fonts. Cards will show initials instead.";
+      return;
+    }
+    const q = norm($("iconSearch").value).trim();
+    const list = ICONS.filter(([n, l]) => !badIcons.has(n) && (!q || norm(n + " " + l).includes(q)));
+    $("iconGrid").innerHTML = `<button type="button" class="icon-opt auto${!formIcon ? " on" : ""}" data-icon="" title="Automatic — matches the specialty"><span class="ms">auto_awesome</span><small>Auto</small></button>` +
+      list.map(([n, l]) => `<button type="button" class="icon-opt${n === formIcon ? " on" : ""}" data-icon="${n}" title="${esc(l)}"><span class="ms">${n}</span><small>${esc(l.split(" ")[0])}</small></button>`).join("");
+    $("iconMsg").textContent = list.length ? "" : "No icons match that search.";
+  }
+  $("iconPickBtn").addEventListener("click", () => {
+    const pk = $("iconPicker"); pk.hidden = !pk.hidden;
+    $("iconPickBtn").textContent = pk.hidden ? "Choose icon" : "Close";
+    if (!pk.hidden){ paintIconGrid(); $("iconSearch").focus(); }
+  });
+  $("iconSearch").addEventListener("input", paintIconGrid);
+  $("iconSearch").addEventListener("keydown", e => { if (e.key === "Enter") e.preventDefault(); });
+  $("iconGrid").addEventListener("click", e => {
+    const b = e.target.closest("[data-icon]"); if (!b) return;
+    formIcon = b.dataset.icon; paintIconField();
+  });
+
+  // ----- addresses: street on line 1, city/state/ZIP on line 2 -----
+  function addrLines(raw){
+    const lines = String(raw || "").split(/\n+/).map(x => x.trim()).filter(Boolean);
+    if (!lines.length) return [];
+    if (lines.length > 1) return [lines.slice(0, -1).join(", "), lines[lines.length - 1]];
+    // one line: split before "City, ST 12345" at the end
+    const m = lines[0].match(/^(.*?),\s*([^,]+,\s*[A-Za-z]{2}\.?(?:\s+\d{5}(?:-\d{4})?)?)\s*$/);
+    return m && m[1] ? [m[1].trim(), m[2].trim()] : [lines[0]];
+  }
+  function addrHTML(raw){
+    const L = addrLines(raw);
+    if (!L.length) return '<span class="none">—</span>';
+    const one = L.join(", ");
+    return `<span class="cp addr2" data-copy="${esc(one)}" title="Click to copy address">${L.map(esc).join("<br>")}</span>`;
+  }
+
+  // ----- specialties -----
+  function specsOf(p){
+    if (Array.isArray(p.specialties) && p.specialties.length) return p.specialties;
+    return p.specialty ? [p.specialty] : [];
+  }
+  function dedupeKeepOrder(arr){ const seen = new Set(); return arr.map(x => x.trim()).filter(x => x && !seen.has(norm(x)) && seen.add(norm(x))); }
+  let formSpecs = [];
+  function paintSpecTags(){
+    if (typeof paintIconField === "function" && $("iconPrev")) setTimeout(paintIconField);
+    $("specTags").innerHTML = formSpecs.map((x, i) => `<span class="tag">${esc(x)}<button type="button" data-rm-spec="${i}" aria-label="Remove ${esc(x)}">×</button></span>`).join("");
+  }
+  function addSpecFromInput(){
+    const parts = splitList($("specialty").value);
+    if (!parts.length) return;
+    // match casing of an existing specialty if one exists
+    const known = new Map([...$("specList").options].map(o => [norm(o.value), o.value]));
+    formSpecs = dedupeKeepOrder([...formSpecs, ...parts.map(x => known.get(norm(x)) || x)]);
+    $("specialty").value = "";
+    paintSpecTags();
+  }
+  $("specialty").addEventListener("keydown", e => {
+    if (e.key === "Enter" || e.key === ","){ e.preventDefault(); addSpecFromInput(); }
+    else if (e.key === "Backspace" && !$("specialty").value && formSpecs.length){ formSpecs.pop(); paintSpecTags(); }
+  });
+  $("specialty").addEventListener("input", e => {
+    // picking a suggestion from the list adds it straight away
+    if (e.inputType === "insertReplacementText" || e.inputType === undefined){
+      const v = norm($("specialty").value);
+      if ([...$("specList").options].some(o => norm(o.value) === v)) addSpecFromInput();
+    }
+  });
+  $("specialty").addEventListener("blur", addSpecFromInput);
+  $("specBox").addEventListener("click", e => {
+    const rm = e.target.closest("[data-rm-spec]");
+    if (rm){ formSpecs.splice(+rm.dataset.rmSpec, 1); paintSpecTags(); }
+    $("specialty").focus();
+  });
+
+  // ----- extra locations in the form -----
+  function addLocRow(l){
+    const n = $("locList").children.length + 1;
+    const d = document.createElement("div");
+    d.className = "loc-edit";
+    d.innerHTML = `<div class="loc-head"><span class="sect">Location ${n + 1}</span><button type="button" class="rm-loc">Remove</button></div>
+      <div class="form-grid">
+        <div class="full"><label>Location name <span class="hint">(optional)</span></label><input class="l-name" placeholder="e.g. Redding office"></div>
+        <div class="full"><label>Address</label><textarea class="l-address" rows="2" placeholder="Street, Suite&#10;City, State ZIP"></textarea></div>
+        <div><label>Phone</label><input class="l-phone" inputmode="tel" placeholder="555-555-1234"></div>
+        <div><label>Fax</label><input class="l-fax" inputmode="tel" placeholder="555-555-5678"></div>
+      </div>`;
+    d.querySelector(".l-name").value = l?.name || "";
+    d.querySelector(".l-address").value = l?.address || "";
+    d.querySelector(".l-phone").value = l?.phone || "";
+    d.querySelector(".l-fax").value = l?.fax || "";
+    d.querySelector(".rm-loc").addEventListener("click", () => { d.remove(); renumberLocs(); });
+    $("locList").appendChild(d);
+    return d;
+  }
+  function renumberLocs(){ [...$("locList").children].forEach((d, i) => d.querySelector(".sect").textContent = "Location " + (i + 2)); }
+  function readLocs(){
+    return [...$("locList").children].map(d => ({
+      name: d.querySelector(".l-name").value.trim(),
+      address: d.querySelector(".l-address").value.trim(),
+      phone: fmtPhone(d.querySelector(".l-phone").value),
+      fax: fmtPhone(d.querySelector(".l-fax").value)
+    })).filter(l => l.name || l.address || l.phone || l.fax);
+  }
+  $("addLocBtn").addEventListener("click", () => { const d = addLocRow(); d.querySelector(".l-address").focus(); });
+
+  // ----- text settings -----
+  let curFont = "inter", curSize = "normal", curWeight = "regular";
+  try { curFont = localStorage.getItem("providerDirectory.font") || "inter"; curSize = localStorage.getItem("providerDirectory.size") || "normal"; curWeight = localStorage.getItem("providerDirectory.weight") || "regular"; } catch {}
+  let curPal = "default";
+  try { curPal = localStorage.getItem("providerDirectory.palette") || "default"; } catch {}
+  function paintSettings(){
+    $("palList").innerHTML = Object.entries(PALETTES).map(([k, v]) =>
+      `<button type="button" class="pal-opt${k === curPal ? " on" : ""}" data-pal="${k}"><span class="sw">${v.sw.map(c => `<i style="background:${c}"></i>`).join("")}</span>${v.label}</button>`).join("");
+    $("fontList").innerHTML = Object.entries(FONTS).map(([k, v]) =>
+      `<button type="button" class="font-opt${k === curFont ? " on" : ""}" data-font="${k}" style="font-family:${v.css.replace(/"/g, "&quot;")}"><span>${v.label}</span><span class="sample">Referral sent · 0123</span></button>`).join("");
+    $("weightSeg").innerHTML = Object.entries(WEIGHTS).map(([k, v]) =>
+      `<button type="button" class="${k === curWeight ? "on" : ""}" data-weight="${k}" style="font-weight:${v.w}">${v.label}</button>`).join("");
+    $("sizeSeg").innerHTML = Object.entries(SIZES).map(([k, v]) =>
+      `<button type="button" class="${k === curSize ? "on" : ""}" data-size="${k}">${v.label}</button>`).join("");
+  }
+  function saveText(){
+    applyText(curFont, curSize, curWeight);
+    try { localStorage.setItem("providerDirectory.font", curFont); localStorage.setItem("providerDirectory.size", curSize); localStorage.setItem("providerDirectory.weight", curWeight); } catch {}
+    paintSettings();
+  }
+  function toggleSettings(open){
+    const p = $("settingsPanel");
+    open = open ?? p.hidden;
+    p.hidden = !open; $("settingsBtn").setAttribute("aria-expanded", open);
+  }
+  $("settingsBtn").addEventListener("click", e => { e.stopPropagation(); toggleSettings(); });
+  $("settingsPanel").addEventListener("click", e => {
+    e.stopPropagation();
+    const f = e.target.closest("[data-font]"); if (f){ curFont = f.dataset.font; saveText(); }
+    const z = e.target.closest("[data-size]"); if (z){ curSize = z.dataset.size; saveText(); }
+    const w = e.target.closest("[data-weight]"); if (w){ curWeight = w.dataset.weight; saveText(); }
+    const pl = e.target.closest("[data-pal]");
+    if (pl){
+      curPal = pl.dataset.pal;
+      if (curPal === "default") document.documentElement.removeAttribute("data-palette");
+      else document.documentElement.setAttribute("data-palette", curPal);
+      try { localStorage.setItem("providerDirectory.palette", curPal); } catch {}
+      paintSettings();
+    }
+  });
+  document.addEventListener("click", () => toggleSettings(false));
+  document.addEventListener("keydown", e => { if (e.key === "Escape") toggleSettings(false); });
+  paintSettings();
+
+  // ----- layout switch -----
+  function paintLayout(){
+    const cur = document.documentElement.getAttribute("data-layout");
+    document.querySelectorAll(".layout-seg [data-layout]").forEach(b => { const on = b.dataset.layout === cur; b.classList.toggle("on", on); b.setAttribute("aria-pressed", on); });
+  }
+  document.querySelector(".layout-seg").addEventListener("click", e => {
+    const b = e.target.closest("[data-layout]"); if (!b) return;
+    document.documentElement.setAttribute("data-layout", b.dataset.layout);
+    try { localStorage.setItem("providerDirectory.layout", b.dataset.layout); } catch {}
+    paintLayout();
+  });
+  paintLayout();
+
+  // ----- modal -----
+  function openForm(p){
+    editingId = p ? p.id : null;
+    $("mTitle").textContent = p ? "Edit provider" : "Add provider";
+    $("name").value = p?.name || "";
+    $("specialty").value = "";
+    formSpecs = p ? [...specsOf(p)] : [];
+    paintSpecTags();
+    formIcon = p?.icon || "";
+    $("iconPicker").hidden = true; $("iconSearch").value = "";
+    paintIconField();
+    $("phone").value = p?.phone || "";
+    $("fax").value = p?.fax || "";
+    $("npi").value = p?.npi || "";
+    $("address").value = p?.address || "";
+    $("locList").innerHTML = "";
+    (p?.locations || []).forEach(addLocRow);
+    $("accepted").value = (p?.accepted || []).join(", ");
+    $("notAccepted").value = (p?.notAccepted || []).join(", ");
+    $("notes").value = p?.notes || "";
+    $("services").value = (p?.services || []).join(", ");
+    const st = p?.status || "";
+    document.querySelectorAll('input[name="status"]').forEach(r => r.checked = r.value === st);
+    $("npiMsg").textContent = "";
+    $("delBtn").hidden = !p;
+    $("confirm").classList.remove("show");
+    $("overlay").classList.add("open");
+    setTimeout(() => $("name").focus(), 30);
+  }
+  function closeForm(){ $("overlay").classList.remove("open"); editingId = null; }
+
+  function checkNpi(){
+    const n = digits($("npi").value);
+    $("npi").value = n;
+    $("npiMsg").textContent = !n ? "" : n.length !== 10 ? "NPI should be 10 digits." : npiValid(n) ? "" : "This NPI’s check digit doesn’t validate — double-check it.";
+  }
+  $("npi").addEventListener("input", checkNpi);
+
+  $("form").addEventListener("submit", async e => {
+    e.preventDefault();
+    addSpecFromInput();
+    const name = $("name").value.trim(), specialties = uniqSorted(formSpecs).length ? dedupeKeepOrder(formSpecs) : [], specialty = specialties[0] || "";
+    if (!name){ $("name").focus(); toast("Provider name is required"); return; }
+    if (!specialty){ $("specialty").focus(); toast("Add at least one specialty"); return; }
+    const data = {
+      name, specialty, specialties, icon: formIcon,
+      phone: fmtPhone($("phone").value), fax: fmtPhone($("fax").value),
+      npi: digits($("npi").value),
+      address: $("address").value.trim(),
+      locations: readLocs(),
+      accepted: uniqSorted(splitList($("accepted").value)),
+      notAccepted: uniqSorted(splitList($("notAccepted").value)),
+      services: uniqSorted(splitList($("services").value)),
+      notes: $("notes").value.trim(),
+      status: (document.querySelector('input[name="status"]:checked') || {}).value || "",
+      updatedAt: new Date().toISOString()
+    };
+    
+    $("saveBtn").disabled = true;
+    try {
+      if (editingId){
+        const existing = providers.find(p => p.id === editingId) || {};
+        await col.doc(editingId).set({ ...data, createdAt: existing.createdAt || data.updatedAt });
+      } else {
+        await col.add({ ...data, createdAt: data.updatedAt });
+      }
+      closeForm(); toast("Saved");
+    } catch (err) { handleWriteError(err); }
+    finally { $("saveBtn").disabled = false; }
+  });
+
+  function handleWriteError(err){
+    const code = err && err.code;
+    if (code === "invalid_argument"){ canWrite = false; applyWriteState(); closeForm(); banner("You have view-only access to this directory, so changes can’t be saved."); }
+    else if (code === "quota_exceeded") toast("The directory is full — remove some providers first.");
+    else toast("Couldn’t save — please try again.");
+  }
+
+  $("delBtn").addEventListener("click", () => $("confirm").classList.add("show"));
+  $("confirmNo").addEventListener("click", () => $("confirm").classList.remove("show"));
+  $("confirmYes").addEventListener("click", async () => {
+    if (!col || !editingId) return;
+    try { await col.doc(editingId).delete(); closeForm(); toast("Provider deleted"); }
+    catch (err) { handleWriteError(err); }
+  });
+  $("cancelBtn").addEventListener("click", closeForm);
+  $("overlay").addEventListener("click", e => { if (e.target === $("overlay")) closeForm(); });
+  document.addEventListener("keydown", e => { if (e.key === "Escape" && $("overlay").classList.contains("open")) closeForm(); });
+
+  $("addBtn").addEventListener("click", () => openForm(null));
+  $("grid").addEventListener("click", async e => {
+    const ip = e.target.closest(".ins-pill");
+    if (ip){ if (!matchMedia("(hover: none)").matches) return; const w = ip.parentElement; const was = w.classList.contains("open"); document.querySelectorAll(".ins-pop.open").forEach(x => x.classList.remove("open")); if (!was){ placePop(w); w.classList.add("open"); } return; }
+    const bl = e.target.closest("[data-blurb]");
+    if (bl){
+      const p = providers.find(x => x.id === bl.dataset.blurb); if (!p) return;
+      const parts = [];
+      if (p.phone) parts.push("P: " + fmtPhone(p.phone));
+      if (p.fax) parts.push("F: " + fmtPhone(p.fax));
+      const text = `Referral sent to ${p.name}.` + (parts.length ? " " + parts.join(" | ") : "");
+      const ok = await copyText(text);
+      copiedBubble(bl, ok ? "Referral note copied" : "Couldn’t copy");
+      return;
+    }
+    const tg = e.target.closest("[data-locs]");
+    if (tg){ const id = tg.dataset.locs; expanded.has(id) ? expanded.delete(id) : expanded.add(id); render(); return; }
+    const ed = e.target.closest("[data-edit]");
+    if (ed){ openForm(providers.find(p => p.id === ed.dataset.edit)); return; }
+    const cp = e.target.closest("[data-copy]");
+    if (cp){
+      if (String(window.getSelection() || "").length) return; // let people select text normally
+      const ok = await copyText(cp.dataset.copy);
+      copiedBubble(cp, ok ? "Copied" : "Couldn’t copy");
+    }
+  });
+  ["q","fSpec","fIns","fStatus"].forEach(id => $(id).addEventListener("input", render));
+
+  function applyWriteState(){ $("addBtn").hidden = !canWrite; render(); }
+
+  // ----- data -----
+  // On the website: everyone sees providers.json (the published list).
+  // In Editing mode, your changes are kept on this computer as a draft until you publish them.
+  // Opened as a local file (no providers.json available): works like before, saved in this browser.
+  const KEY = "specialtyProviderDirectory.v1";
+  const EDIT_KEY = "providerDirectory.editMode";
+  let storageOk = true;
+  let published = null;          // list from providers.json, or null if it couldn't be loaded
+  let editMode = false;
+  try { editMode = localStorage.getItem(EDIT_KEY) === "1"; } catch {}
+  function sanitizeList(list){
+    return (Array.isArray(list) ? list : []).filter(p => p && p.name).map(p => ({
+        id: String(p.id || newId()), name: String(p.name), specialty: String((Array.isArray(p.specialties) && p.specialties[0]) || p.specialty || ""),
+        icon: typeof p.icon === "string" ? p.icon.replace(/[^a-z0-9_]/g, "") : "",
+        specialties: Array.isArray(p.specialties) ? p.specialties.map(String).filter(Boolean) : splitList(p.specialty),
+        phone: String(p.phone || ""), fax: String(p.fax || ""), npi: digits(p.npi), address: String(p.address || ""),
+        accepted: Array.isArray(p.accepted) ? p.accepted.map(String) : splitList(p.accepted),
+        notAccepted: Array.isArray(p.notAccepted) ? p.notAccepted.map(String) : splitList(p.notAccepted),
+        services: Array.isArray(p.services) ? p.services.map(String) : splitList(p.services),
+        locations: Array.isArray(p.locations) ? p.locations.filter(l => l && typeof l === "object").map(l => ({ name: String(l.name || ""), address: String(l.address || ""), phone: String(l.phone || ""), fax: String(l.fax || "") })) : [],
+        notes: String(p.notes || ""), status: ["open","limited","closed"].includes(p.status) ? p.status : "", createdAt: p.createdAt || "", updatedAt: p.updatedAt || ""
+    }));
+  }
+
+  const sortKeys = o => Array.isArray(o) ? o.map(sortKeys) : (o && typeof o === "object") ? Object.keys(o).sort().reduce((r, k) => (r[k] = sortKeys(o[k]), r), {}) : o;
+  const canonOne = p => JSON.stringify(sortKeys(sanitizeList([p])[0] || {}));
+  const canonical = list => JSON.stringify(sanitizeList(list).map(sortKeys).sort((x, y) => String(x.id).localeCompare(String(y.id))));
+  function hasUnpublished(){ return published !== null && canonical(providers) !== canonical(published); }
+  function countChanges(){
+    if (published === null) return 0;
+    const a = new Map(published.map(p => [p.id, canonOne(p)])), b = new Map(providers.map(p => [p.id, canonOne(p)]));
+    let n = 0;
+    b.forEach((v, k) => { if (a.get(k) !== v) n++; });
+    a.forEach((v, k) => { if (!b.has(k)) n++; });
+    return n;
+  }
+  function paintPublishBar(){
+    const bar = $("publishBar");
+    const show = editMode && hasUnpublished();
+    bar.hidden = !show;
+    if (show){
+      const n = countChanges();
+      $("pubText").innerHTML = `<b>${n} unpublished change${n === 1 ? "" : "s"}</b> — only you can see ${n === 1 ? "it" : "them"}. To publish, download <b>providers.json</b> and upload it to your GitHub project.`;
+      $("pubDiscard").textContent = "Discard changes"; delete $("pubDiscard").dataset.armed;
+    }
+  }
+  function applyMode(){
+    // published site + editing off = read-only view
+    canWrite = published === null ? true : editMode;
+    const ro = !canWrite;
+    $("addBtn").hidden = ro;
+    $("exportBtn").hidden = ro; $("importBtn").hidden = ro;
+    if ($("editToggle")) $("editToggle").checked = editMode;
+    if ($("editRow")) $("editRow").hidden = published === null;
+    paintPublishBar();
+    render();
+  }
+  function persist(){
+    if (published !== null && !editMode) return true; // read-only view never saves
+    paintPublishBar();
+    try { localStorage.setItem(KEY, JSON.stringify(providers)); return true; }
+    catch { storageOk = false; banner("This browser isn’t letting the page save. Use Export to keep a backup of your changes."); return false; }
+  }
+  function load(){
+    try { const raw = localStorage.getItem(KEY); providers = raw ? JSON.parse(raw) : []; if (!Array.isArray(providers)) providers = []; }
+    catch { providers = []; storageOk = false; banner("This browser isn’t letting the page save. Use Export to keep a backup of your changes."); }
+  }
+  const newId = () => Date.now().toString(36) + Math.random().toString(36).slice(2, 7);
+  col = {
+    add: async d => { providers.push({ id: newId(), ...d }); persist(); refreshFilters(); render(); },
+    doc: id => ({
+      set: async d => { const i = providers.findIndex(p => p.id === id); if (i > -1) providers[i] = { id, ...d }; persist(); refreshFilters(); render(); },
+      delete: async () => { providers = providers.filter(p => p.id !== id); persist(); refreshFilters(); render(); }
+    })
+  };
+
+  // Export / import
+  $("exportBtn").addEventListener("click", () => {
+    const blob = new Blob([JSON.stringify({ app: "specialty-provider-directory", exportedAt: new Date().toISOString(), providers }, null, 2)], { type: "application/json" });
+    const a = document.createElement("a");
+    a.href = URL.createObjectURL(blob);
+    a.download = "providers.json";
+    document.body.appendChild(a); a.click(); a.remove();
+    setTimeout(() => URL.revokeObjectURL(a.href), 1000);
+    toast("providers.json downloaded");
+  });
+  $("pubDownload").addEventListener("click", () => $("exportBtn").click());
+  $("pubDiscard").addEventListener("click", e => {
+    const b = e.currentTarget;
+    if (!b.dataset.armed){ b.dataset.armed = "1"; b.textContent = "Click again to discard"; setTimeout(() => { if (b.dataset.armed){ delete b.dataset.armed; b.textContent = "Discard changes"; } }, 4000); return; }
+    providers = published.map(p => ({ ...p }));
+    try { localStorage.removeItem(KEY); } catch {}
+    refreshFilters(); applyMode(); toast("Changes discarded");
+  });
+  $("editToggle").addEventListener("change", e => {
+    editMode = e.target.checked;
+    try { localStorage.setItem(EDIT_KEY, editMode ? "1" : "0"); } catch {}
+    if (!editMode && published !== null) providers = published.map(p => ({ ...p })); // view mode shows the published list
+    else if (editMode) loadDraftOrPublished();
+    refreshFilters(); applyMode();
+  });
+  $("importBtn").addEventListener("click", () => $("importFile").click());
+  $("importFile").addEventListener("change", async e => {
+    const f = e.target.files[0]; e.target.value = "";
+    if (!f) return;
+    try {
+      const parsed = JSON.parse(await f.text());
+      const list = Array.isArray(parsed) ? parsed : parsed.providers;
+      if (!Array.isArray(list)) throw 0;
+      const clean = sanitizeList(list);
+      // merge: imported entries replace ones with the same id, others are added
+      const byId = new Map(providers.map(p => [p.id, p]));
+      clean.forEach(p => byId.set(p.id, p));
+      providers = [...byId.values()];
+      persist(); refreshFilters(); render();
+      toast(`Imported ${clean.length} provider${clean.length===1?"":"s"}`);
+    } catch { toast("That file isn’t a provider directory backup"); }
+  });
+
+  function loadDraftOrPublished(){
+    let draft = null;
+    try { const raw = localStorage.getItem(KEY); draft = raw ? JSON.parse(raw) : null; } catch {}
+    if (Array.isArray(draft) && draft.length && canonical(draft) !== canonical(published)) providers = draft;
+    else { providers = published.map(p => ({ ...p })); try { localStorage.removeItem(KEY); } catch {} }
+  }
+  async function start(){
+    try {
+      if (location.protocol === "file:") throw 0;  // opened from a folder: no website to load from
+      const res = await fetch("providers.json", { cache: "no-store" });
+      if (!res.ok) throw 0;
+      const parsed = await res.json();
+      published = sanitizeList(Array.isArray(parsed) ? parsed : parsed.providers);
+    } catch { published = null; }
+    if (published === null) load();              // local file: same as before
+    else if (editMode) loadDraftOrPublished();
+    else providers = published.map(p => ({ ...p }));
+    loaded = true; refreshFilters(); applyMode();
+  }
+  render();
+  start();
+  initIconFont();
+})();
+</script>
+</body>
+</html>
