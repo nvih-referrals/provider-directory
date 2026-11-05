@@ -495,7 +495,7 @@
 <div class="toolbar"><div class="wrap">
   <input class="search" id="q" type="search" placeholder="Search name, specialty, NPI, city, phone…" aria-label="Search">
   <select id="fSpec" aria-label="Filter by specialty"><option value="">All specialties</option></select>
-  <select id="fIns" aria-label="Filter by insurance accepted"><option value="">Any insurance</option></select>
+  <select id="fCity" aria-label="Filter by city"><option value="">All cities</option></select>
   <select id="fStatus" aria-label="Filter by new patient status"><option value="">Any status</option><option value="open">Open to new patients</option><option value="limited">Limited</option><option value="closed">Closed to new patients</option></select>
   <div class="layout-seg" role="group" aria-label="Layout">
     <button type="button" data-layout="list" title="Single column" aria-label="Single column"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="4" y="4" width="16" height="6" rx="1.5"/><rect x="4" y="14" width="16" height="6" rx="1.5"/></svg></button>
@@ -634,14 +634,14 @@
 
   function refreshFilters(){
     const specs = uniqSorted(providers.flatMap(specsOf));
-    const ins = uniqSorted(providers.flatMap(p => p.accepted || []));
+    const cities = uniqSorted(providers.flatMap(citiesOf));
     const fill = (sel, items, label) => {
       const cur = sel.value;
       sel.innerHTML = `<option value="">${label}</option>` + items.map(v => `<option>${esc(v)}</option>`).join("");
       if (items.some(v => v === cur)) sel.value = cur;
     };
     fill($("fSpec"), specs, "All specialties");
-    fill($("fIns"), ins, "Any insurance");
+    fill($("fCity"), cities, "All cities");
     $("specList").innerHTML = specs.map(v => `<option value="${esc(v)}">`).join("");
   }
 
@@ -649,11 +649,12 @@
     const q = norm($("q").value).trim();
     const qd = digits(q);
     const fs = norm($("fSpec").value);
-    const fi = norm($("fIns").value);
+    const fi = "";
+    const fc = norm($("fCity").value);
     const fst = $("fStatus").value;
     const list = providers.filter(p => {
       if (fs && !specsOf(p).some(x => norm(x) === fs)) return false;
-      if (fi && !(p.accepted || []).some(i => norm(i) === fi)) return false;
+      if (fc && !citiesOf(p).some(c => norm(c) === fc)) return false;
       if (fst && (p.status || "") !== fst) return false;
       if (!q) return true;
       const locs = p.locations || [];
@@ -879,10 +880,22 @@
   function addrLines(raw){
     const lines = String(raw || "").split(/\n+/).map(x => x.trim()).filter(Boolean);
     if (!lines.length) return [];
+    // only break where a line break was typed (Enter); commas never move text down
     if (lines.length > 1) return [lines.slice(0, -1).join(", "), lines[lines.length - 1]];
-    // one line: split before "City, ST 12345" at the end
-    const m = lines[0].match(/^(.*?),\s*([^,]+,\s*[A-Za-z]{2}\.?(?:\s+\d{5}(?:-\d{4})?)?)\s*$/);
-    return m && m[1] ? [m[1].trim(), m[2].trim()] : [lines[0]];
+    return [lines[0]];
+  }
+  function cityFromAddr(raw){
+    const L = addrLines(raw);
+    const last = L.length > 1 ? L[L.length - 1] : (L[0] || "");
+    // city = the part just before ", ST" (and optional ZIP) at the end of the address
+    const m = last.match(/([^,\n]+),\s*[A-Za-z]{2}\.?(?:\s+\d{5}(?:-\d{4})?)?\s*$/);
+    if (!m) return "";
+    // tidy capitalization: "CHICO" / "chico" -> "Chico"
+    return m[1].trim().replace(/\s+/g, " ").toLowerCase().replace(/\b\w/g, c => c.toUpperCase());
+  }
+  // main address plus any additional locations
+  function citiesOf(p){
+    return [p.address, ...(p.locations || []).map(l => l.address)].map(cityFromAddr).filter(Boolean);
   }
   function addrHTML(raw){
     const L = addrLines(raw);
@@ -1132,7 +1145,7 @@
       copiedBubble(cp, ok ? "Copied" : "Couldn’t copy");
     }
   });
-  ["q","fSpec","fIns","fStatus"].forEach(id => $(id).addEventListener("input", render));
+  ["q","fSpec","fCity","fStatus"].forEach(id => $(id).addEventListener("input", render));
 
   function applyWriteState(){ $("addBtn").hidden = !canWrite; render(); }
 
