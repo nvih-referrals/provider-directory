@@ -496,6 +496,7 @@
   .cf-seg input:checked + .cf-unknown{background:var(--hover-line);color:var(--ink)}
   .cf-seg input:focus-visible + span{outline:2px solid var(--brand);outline-offset:-2px}
   @media (max-width:560px){ .core-form{grid-template-columns:1fr} }
+  a.tbtn{border:1px solid var(--line);text-decoration:none}
 </style>
 <script>
   var FONTS = {
@@ -673,6 +674,7 @@
         <button type="button" class="add-loc" id="addLocBtn">+ Add another location</button>
       </div>
       <div class="full"><label for="npi">NPI <span class="hint">(10 digits)</span></label><input id="npi" inputmode="numeric" maxlength="10" placeholder="1234567890"><div class="field-msg" id="npiMsg"></div></div>
+      <div class="full"><label for="website">Website <span class="hint">(optional)</span></label><input id="website" type="url" inputmode="url" placeholder="e.g. enloe.org/bariatric" autocomplete="off"></div>
       <div class="full"><label for="services">Services offered <span class="hint">(separate with commas)</span></label><input id="services" placeholder="e.g. Sleeve gastrectomy, Gastric bypass, Nutrition counseling"></div>
       <div class="full"><label>Insurance</label><div class="core-form" id="coreForm"></div></div>
       <div class="full"><label for="accepted">Other plans accepted <span class="hint">(separate with commas)</span></label><input id="accepted" placeholder="e.g. Blue Shield PPO, Aetna, Tricare"></div>
@@ -893,6 +895,7 @@
             <div class="pop" role="tooltip"><div class="insrow"><span class="ins-l svc">Services offered</span>${chip(p.services, "svc")}</div></div>
           </div>` : ""}
           ${canWrite ? `<button class="tbtn" data-edit="${esc(p.id)}" title="Edit provider" aria-label="Edit provider"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 20h9"/><path d="M16.5 3.5a2.1 2.1 0 0 1 3 3L7 19l-4 1 1-4z"/></svg></button>` : ""}
+          ${p.website ? `<a class="tbtn" href="${esc(p.website)}" target="_blank" rel="noopener noreferrer" title="Open website: ${esc(p.website.replace(/^https?:\/\//, ""))}" aria-label="Open provider website"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M10 13a5 5 0 0 0 7.5.5l3-3a5 5 0 0 0-7-7l-1.7 1.7"/><path d="M14 11a5 5 0 0 0-7.5-.5l-3 3a5 5 0 0 0 7 7l1.7-1.7"/></svg></a>` : ""}
           <button class="tbtn" data-blurb="${esc(p.id)}" title="Copy referral note" aria-label="Copy referral note"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="8" y="2" width="8" height="4" rx="1"/><path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"/></svg></button>
         </div>
       </article>`;
@@ -1053,10 +1056,10 @@
   // ----- common insurances (always shown on the card as ✓ / ✕ / ?) -----
   // To add another, add a line here: key, label shown on the card, and names that count as a match.
   const CORE_INS = [
-    { key: "medical", label: "Medi-Cal", names: ["medical", "medi cal"] },
-    { key: "medicare", label: "Medicare", names: ["medicare"] },
     { key: "partnership", label: "Partnership", names: ["partnership", "partnership healthplan", "partnership health plan", "partnership healthplan of california", "partnership health plan of california", "phc"] },
-    { key: "private", label: "Private", names: ["private", "private insurance", "commercial"] }
+    { key: "private", label: "Private", names: ["private", "private insurance", "commercial"] },
+    { key: "medicare", label: "Medicare", names: ["medicare"] },
+    { key: "medical", label: "Medi-Cal", names: ["medical", "medi cal"] }
   ];
   const insKey = x => String(x || "").toLowerCase().replace(/[^a-z ]/g, " ").replace(/\s+/g, " ").trim();
   const insKey2 = x => insKey(x).replace(/ /g, "");
@@ -1080,6 +1083,15 @@
     });
     return { accepted: uniqSorted([...acc, ...splitList($("accepted").value).filter(x => !coreOf(x))]),
              notAccepted: uniqSorted([...no, ...splitList($("notAccepted").value).filter(x => !coreOf(x))]) };
+  }
+
+  // ----- websites -----
+  // accepts "enloe.org", "www.enloe.org/x" or a full link; only http(s) links are kept
+  function cleanUrl(v){
+    let u = String(v || "").trim();
+    if (!u) return "";
+    if (!/^[a-z][a-z0-9+.-]*:/i.test(u)) u = "https://" + u.replace(/^\/+/, "");
+    try { const x = new URL(u); return /^https?:$/.test(x.protocol) && x.hostname.includes(".") ? x.href : ""; } catch { return ""; }
   }
 
   // ----- specialties -----
@@ -1256,6 +1268,7 @@
     $("phone").value = p?.phone || "";
     $("fax").value = p?.fax || "";
     $("npi").value = p?.npi || "";
+    $("website").value = p?.website || "";
     $("address").value = p?.address || "";
     $("locList").innerHTML = "";
     (p?.locations || []).forEach(addLocRow);
@@ -1294,6 +1307,7 @@
       name, specialty, specialties, icon: formIcon,
       phone: fmtPhone($("phone").value), fax: fmtPhone($("fax").value),
       npi: digits($("npi").value),
+      website: cleanUrl($("website").value),
       address: $("address").value.trim(),
       locations: readLocs(),
       ...mergeIns(),
@@ -1386,7 +1400,7 @@
         id: String(p.id || newId()), name: String(p.name), specialty: String((Array.isArray(p.specialties) && p.specialties[0]) || p.specialty || ""),
         icon: typeof p.icon === "string" ? p.icon.replace(/[^a-z0-9_]/g, "") : "",
         specialties: Array.isArray(p.specialties) ? p.specialties.map(String).filter(Boolean) : splitList(p.specialty),
-        phone: String(p.phone || ""), fax: String(p.fax || ""), npi: digits(p.npi), address: String(p.address || ""),
+        phone: String(p.phone || ""), fax: String(p.fax || ""), npi: digits(p.npi), address: String(p.address || ""), website: cleanUrl(p.website),
         accepted: Array.isArray(p.accepted) ? p.accepted.map(String) : splitList(p.accepted),
         notAccepted: Array.isArray(p.notAccepted) ? p.notAccepted.map(String) : splitList(p.notAccepted),
         services: Array.isArray(p.services) ? p.services.map(String) : splitList(p.services),
