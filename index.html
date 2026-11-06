@@ -450,6 +450,19 @@
   .settings{max-height:calc(100vh - 80px);overflow:auto}
   /* anything marked hidden stays hidden, whatever its button styling */
   [hidden]{display:none !important}
+  /* ===== Favorites ===== */
+  .fav-btn{margin-top:auto;border:none;background:none;padding:4px;border-radius:7px;display:flex;align-items:center;justify-content:center;cursor:pointer}
+  .fav-btn svg{width:18px;height:18px;fill:none;stroke:var(--c);stroke-width:1.8;stroke-linejoin:round;opacity:.7;transition:transform .12s, opacity .12s}
+  .fav-btn:hover svg{opacity:1;transform:scale(1.12)}
+  .fav-btn.on svg{fill:#e8a317;stroke:#c98a0c;opacity:1}
+  :root[data-theme="dark"] .fav-btn.on svg{fill:#f2bc3d;stroke:#f2bc3d}
+  .fav-btn:focus-visible{outline:2px solid var(--brand);outline-offset:1px}
+  .fav-filter{display:inline-flex;align-items:center;gap:5px;padding:5px 10px !important;font-size:13px !important;color:var(--muted);white-space:nowrap}
+  .fav-filter svg{width:15px;height:15px;fill:none;stroke:currentColor;stroke-width:1.9;stroke-linejoin:round}
+  .fav-filter.on{border-color:#e8a317;background:#fff5dc;color:#8a5a00}
+  .fav-filter.on svg{fill:#e8a317;stroke:#c98a0c}
+  :root[data-theme="dark"] .fav-filter.on{background:#3a2e14;color:#f2c46b;border-color:#8a6a1e}
+  @media (min-width:1100px){ .fav-filter{margin-left:auto} .layout-seg{margin-left:0 !important} }
 </style>
 <script>
   var FONTS = {
@@ -572,6 +585,7 @@
   <select id="fSpec" aria-label="Filter by specialty"><option value="">All specialties</option></select>
   <select id="fCity" aria-label="Filter by city"><option value="">All cities</option></select>
   <select id="fStatus" aria-label="Filter by new patient status"><option value="">Any status</option><option value="open">Open to new patients</option><option value="limited">Limited</option><option value="closed">Closed to new patients</option></select>
+  <button type="button" class="fav-filter" id="favFilter" aria-pressed="false" title="Show only my favorites"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.8l2.8 5.8 6.3.9-4.6 4.4 1.1 6.3L12 17.2 6.4 20.2l1.1-6.3L2.9 9.5l6.3-.9z"/></svg><span>Favorites</span></button>
   <div class="layout-seg" role="group" aria-label="Layout">
     <button type="button" data-layout="list" title="Single column" aria-label="Single column"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="4" y="4" width="16" height="6" rx="1.5"/><rect x="4" y="14" width="16" height="6" rx="1.5"/></svg></button>
     <button type="button" data-layout="grid" title="Two-column grid" aria-label="Two-column grid"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3.5" y="4" width="7.5" height="7" rx="1.5"/><rect x="13" y="4" width="7.5" height="7" rx="1.5"/><rect x="3.5" y="13" width="7.5" height="7" rx="1.5"/><rect x="13" y="13" width="7.5" height="7" rx="1.5"/></svg></button>
@@ -731,6 +745,7 @@
       if (fs && !specsOf(p).some(x => norm(x) === fs)) return false;
       if (fc && !citiesOf(p).some(c => norm(c) === fc)) return false;
       if (fst && (p.status || "") !== fst) return false;
+      if (favOnly && !favs.has(p.id)) return false;
       if (!q) return true;
       const locs = p.locations || [];
       const hay = norm([p.name, ...specsOf(p), p.address, p.npi, p.notes, ...(p.accepted||[]), ...(p.notAccepted||[]), ...locs.flatMap(l => [l.name, l.address]), ...(p.services||[])].join(" "));
@@ -746,7 +761,7 @@
       empty.innerHTML = `<h2>No providers yet</h2><p>${canWrite ? "Click <b>+ Add provider</b> to create the first card." : "Providers will appear here once they’re added."}</p>`;
       return;
     }
-    if (!list.length){ grid.innerHTML = ""; empty.hidden = false; empty.innerHTML = "<h2>No matches</h2><p>Try a different search or clear the filters.</p>"; return; }
+    if (!list.length){ grid.innerHTML = ""; empty.hidden = false; empty.innerHTML = favOnly && !favs.size ? "<h2>No favorites yet</h2><p>Click the star at the bottom of a card’s left panel to add it to your favorites.</p>" : "<h2>No matches</h2><p>Try a different search or clear the filters.</p>"; return; }
     empty.hidden = true;
 
     grid.innerHTML = list.map(p => {
@@ -793,6 +808,7 @@
         <div class="rail" title="${esc(STATUS[p.status] || "New-patient status not set")}">
           <div class="av"><span class="ms">${esc(iconFor(p))}</span><span class="ini">${esc(ini)}</span></div>
           <small>${stLbl}</small>
+          <button type="button" class="fav-btn${favs.has(p.id) ? " on" : ""}" data-fav="${esc(p.id)}" aria-pressed="${favs.has(p.id)}" title="${favs.has(p.id) ? "Remove from favorites" : "Add to favorites"}" aria-label="${favs.has(p.id) ? "Remove from favorites" : "Add to favorites"}"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.8l2.8 5.8 6.3.9-4.6 4.4 1.1 6.3L12 17.2 6.4 20.2l1.1-6.3L2.9 9.5l6.3-.9z"/></svg></button>
         </div>
         <div class="mid">
           <div class="etop">
@@ -1102,6 +1118,25 @@
   });
   paintDecor();
 
+  // ----- favorites (saved in each person's own browser) -----
+  const FAV_KEY = "providerDirectory.favorites";
+  const favs = new Set();
+  let favOnly = false;
+  try { (JSON.parse(localStorage.getItem(FAV_KEY) || "[]") || []).forEach(id => favs.add(String(id))); } catch {}
+  try { favOnly = localStorage.getItem("providerDirectory.favOnly") === "1"; } catch {}
+  function saveFavs(){ try { localStorage.setItem(FAV_KEY, JSON.stringify([...favs])); } catch {} paintFavFilter(); }
+  function paintFavFilter(){
+    const b = $("favFilter");
+    b.classList.toggle("on", favOnly); b.setAttribute("aria-pressed", favOnly);
+    b.querySelector("span").textContent = favs.size ? `Favorites (${favs.size})` : "Favorites";
+  }
+  $("favFilter").addEventListener("click", () => {
+    favOnly = !favOnly;
+    try { localStorage.setItem("providerDirectory.favOnly", favOnly ? "1" : "0"); } catch {}
+    paintFavFilter(); render();
+  });
+  paintFavFilter();
+
   // ----- layout switch -----
   function paintLayout(){
     const cur = document.documentElement.getAttribute("data-layout");
@@ -1208,6 +1243,13 @@
   $("grid").addEventListener("click", async e => {
     const ip = e.target.closest(".ins-pill");
     if (ip){ if (!matchMedia("(hover: none)").matches) return; const w = ip.parentElement; const was = w.classList.contains("open"); document.querySelectorAll(".ins-pop.open").forEach(x => x.classList.remove("open")); if (!was){ placePop(w); w.classList.add("open"); } return; }
+    const fv = e.target.closest("[data-fav]");
+    if (fv){
+      const id = fv.dataset.fav;
+      favs.has(id) ? favs.delete(id) : favs.add(id);
+      saveFavs(); render();
+      return;
+    }
     const bl = e.target.closest("[data-blurb]");
     if (bl){
       const p = providers.find(x => x.id === bl.dataset.blurb); if (!p) return;
