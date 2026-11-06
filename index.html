@@ -476,6 +476,26 @@
   .start-btn.fav:not(:disabled) svg{fill:#e8a317;stroke:#c98a0c}
   :root[data-theme="dark"] .start-btn.fav:not(:disabled){background:#3a2e14;color:#f2c46b;border-color:#8a6a1e}
   .start-btn:hover:not(:disabled){border-color:var(--brand)}
+  /* ===== Common insurances ===== */
+  .core-ins{display:flex;flex-wrap:wrap;gap:4px 6px;padding-top:7px;border-top:1px solid var(--line)}
+  .ci{display:inline-flex;align-items:center;gap:5px;font-size:12.5px;font-weight:500;padding:2px 9px 2px 3px;border-radius:999px;border:1px solid var(--line);background:var(--field);color:var(--ink);white-space:nowrap}
+  .ci b{width:17px;height:17px;border-radius:50%;display:inline-flex;align-items:center;justify-content:center;font-size:11px;font-weight:800;line-height:1}
+  .ci-yes b{background:var(--ok);color:var(--card)}
+  .ci-no b{background:var(--no);color:var(--card)}
+  .ci-unknown{color:var(--muted)}
+  .ci-unknown b{background:var(--cp-hover);color:var(--muted);border:1px solid var(--line)}
+  .core-form{display:grid;grid-template-columns:1fr 1fr;gap:6px 18px}
+  .cf-row{display:flex;align-items:center;justify-content:space-between;gap:8px;font-size:13.5px}
+  .cf-seg{display:inline-flex;border:1px solid var(--line);border-radius:7px;overflow:hidden}
+  .cf-seg label{margin:0;cursor:pointer}
+  .cf-seg input{position:absolute;opacity:0;pointer-events:none}
+  .cf-seg span{display:inline-flex;width:32px;height:26px;align-items:center;justify-content:center;font-weight:800;font-size:13px;color:var(--muted);background:var(--field)}
+  .cf-seg label + label span{border-left:1px solid var(--line)}
+  .cf-seg input:checked + .cf-yes{background:var(--ok);color:#fff}
+  .cf-seg input:checked + .cf-no{background:var(--no);color:#fff}
+  .cf-seg input:checked + .cf-unknown{background:var(--hover-line);color:var(--ink)}
+  .cf-seg input:focus-visible + span{outline:2px solid var(--brand);outline-offset:-2px}
+  @media (max-width:560px){ .core-form{grid-template-columns:1fr} }
 </style>
 <script>
   var FONTS = {
@@ -654,8 +674,9 @@
       </div>
       <div class="full"><label for="npi">NPI <span class="hint">(10 digits)</span></label><input id="npi" inputmode="numeric" maxlength="10" placeholder="1234567890"><div class="field-msg" id="npiMsg"></div></div>
       <div class="full"><label for="services">Services offered <span class="hint">(separate with commas)</span></label><input id="services" placeholder="e.g. Sleeve gastrectomy, Gastric bypass, Nutrition counseling"></div>
-      <div class="full"><label for="accepted">Insurances accepted <span class="hint">(separate with commas)</span></label><input id="accepted" placeholder="e.g. Medicaid, Medicare, IHS/PRC, Blue Cross"></div>
-      <div class="full"><label for="notAccepted">Insurances NOT accepted <span class="hint">(separate with commas)</span></label><input id="notAccepted" placeholder="e.g. Tricare, Kaiser"></div>
+      <div class="full"><label>Insurance</label><div class="core-form" id="coreForm"></div></div>
+      <div class="full"><label for="accepted">Other plans accepted <span class="hint">(separate with commas)</span></label><input id="accepted" placeholder="e.g. Blue Shield PPO, Aetna, Tricare"></div>
+      <div class="full"><label for="notAccepted">Other plans NOT accepted <span class="hint">(separate with commas)</span></label><input id="notAccepted" placeholder="e.g. Kaiser, Anthem HMO"></div>
       <div class="full"><label for="notes">Notes <span class="hint">(optional)</span></label><textarea id="notes" rows="2" placeholder="Referral requirements, contact person, etc."></textarea></div>
     </div>
     <div class="confirm" id="confirm"><span>Delete this provider permanently?</span><span><button type="button" id="confirmNo">Cancel</button> <button type="button" class="danger" id="confirmYes">Delete</button></span></div>
@@ -829,7 +850,8 @@
       };
       const ini = initials(p.name);
       const stLbl = { open: "Open", limited: "Limited", closed: "Closed" }[p.status] || "Status not set";
-      const nAcc = (p.accepted || []).length, nNo = (p.notAccepted || []).length, nSvc = (p.services || []).length;
+      const ins = splitIns(p);
+      const nAcc = ins.otherAcc.length, nNo = ins.otherNo.length, nSvc = (p.services || []).length;
       const val = (label, v) => v ? `<span class="cp" data-copy="${esc(v)}" title="Click to copy ${label.toLowerCase()}">${esc(v)}</span>` : '<span class="none">—</span>';
       return `<article class="card ecard st-${p.status || "none"}">
         <div class="rail" title="${esc(STATUS[p.status] || "New-patient status not set")}">
@@ -849,15 +871,21 @@
             <span class="k ki k2" title="Fax">${ICON.Fax}</span><span>${val("Fax", fmtPhone(p.fax))}</span>
             <span class="k">NPI</span><span class="span3">${val("NPI", p.npi)}</span>
           </div>
+          <div class="core-ins">${CORE_INS.map(c => {
+            const st = ins.core[c.key];
+            const mark = st === "yes" ? "✓" : st === "no" ? "✕" : "?";
+            const tip = st === "yes" ? "Accepts" : st === "no" ? "Doesn’t accept" : "Not sure if they accept";
+            return `<span class="ci ci-${st}" title="${tip} ${c.label}"><b>${mark}</b>${c.label}</span>`;
+          }).join("")}</div>
           ${extraLocs(p)}
           ${p.notes ? `<div class="notes">${esc(p.notes)}</div>` : ""}
         </div>
         <div class="tools">
           <div class="ins-pop">
-            <button type="button" class="ins-pill tbtn" aria-haspopup="true" aria-label="Insurance: ${nAcc} accepted, ${nNo} not accepted"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg><span class="badge ok">${nAcc}</span>${nNo ? `<span class="badge no">${nNo}</span>` : ""}</button>
+            <button type="button" class="ins-pill tbtn" aria-haspopup="true" aria-label="Other insurance plans: ${nAcc} accepted, ${nNo} not accepted"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>${nAcc ? `<span class="badge ok">${nAcc}</span>` : ""}${nNo ? `<span class="badge no">${nNo}</span>` : ""}</button>
             <div class="pop" role="tooltip">
-              <div class="insrow"><span class="ins-l ok">Accepts</span>${chip(p.accepted, "ok")}</div>
-              <div class="insrow"><span class="ins-l no">Doesn’t accept</span>${chip(p.notAccepted, "no")}</div>
+              ${nAcc || nNo ? `<div class="insrow"><span class="ins-l ok">Other plans accepted</span>${chip(ins.otherAcc, "ok")}</div>
+              <div class="insrow"><span class="ins-l no">Other plans not accepted</span>${chip(ins.otherNo, "no")}</div>` : `<div class="insrow"><span class="ins-l">Other insurance plans</span><span class="none">None listed</span></div>`}
             </div>
           </div>
           ${nSvc ? `<div class="ins-pop">
@@ -1020,6 +1048,38 @@
     if (!L.length) return '<span class="none">—</span>';
     const one = L.join(", ");
     return `<span class="cp addr2" data-copy="${esc(one)}" title="Click to copy address">${L.map(esc).join("<br>")}</span>`;
+  }
+
+  // ----- common insurances (always shown on the card as ✓ / ✕ / ?) -----
+  // To add another, add a line here: key, label shown on the card, and names that count as a match.
+  const CORE_INS = [
+    { key: "medical", label: "Medi-Cal", names: ["medical", "medi cal"] },
+    { key: "medicare", label: "Medicare", names: ["medicare"] },
+    { key: "partnership", label: "Partnership", names: ["partnership", "partnership healthplan", "partnership health plan", "partnership healthplan of california", "partnership health plan of california", "phc"] },
+    { key: "private", label: "Private", names: ["private", "private insurance", "commercial"] }
+  ];
+  const insKey = x => String(x || "").toLowerCase().replace(/[^a-z ]/g, " ").replace(/\s+/g, " ").trim();
+  const insKey2 = x => insKey(x).replace(/ /g, "");
+  function coreOf(name){
+    const k = insKey(name), k2 = insKey2(name);
+    return CORE_INS.find(c => c.names.some(n => n === k || n.replace(/ /g, "") === k2)) || null;
+  }
+  // split a provider's lists into the common four and "other plans"
+  function splitIns(p){
+    const core = {}; CORE_INS.forEach(c => core[c.key] = "unknown");
+    const otherAcc = [], otherNo = [];
+    (p.notAccepted || []).forEach(x => { const c = coreOf(x); c ? core[c.key] = "no" : otherNo.push(x); });
+    (p.accepted || []).forEach(x => { const c = coreOf(x); c ? core[c.key] = "yes" : otherAcc.push(x); });
+    return { core, otherAcc, otherNo };
+  }
+  function mergeIns(){
+    const acc = [], no = [];
+    CORE_INS.forEach(c => {
+      const v = (document.querySelector(`input[name="core-${c.key}"]:checked`) || {}).value;
+      if (v === "yes") acc.push(c.label); else if (v === "no") no.push(c.label);
+    });
+    return { accepted: uniqSorted([...acc, ...splitList($("accepted").value).filter(x => !coreOf(x))]),
+             notAccepted: uniqSorted([...no, ...splitList($("notAccepted").value).filter(x => !coreOf(x))]) };
   }
 
   // ----- specialties -----
@@ -1199,8 +1259,12 @@
     $("address").value = p?.address || "";
     $("locList").innerHTML = "";
     (p?.locations || []).forEach(addLocRow);
-    $("accepted").value = (p?.accepted || []).join(", ");
-    $("notAccepted").value = (p?.notAccepted || []).join(", ");
+    const sp = splitIns(p || {});
+    $("accepted").value = sp.otherAcc.join(", ");
+    $("notAccepted").value = sp.otherNo.join(", ");
+    $("coreForm").innerHTML = CORE_INS.map(c => `<div class="cf-row"><span class="cf-name">${c.label}</span><div class="cf-seg" role="radiogroup" aria-label="${c.label}">
+      ${[["yes","✓","Accepts"],["no","✕","Doesn’t accept"],["unknown","?","Not sure"]].map(([v,m,t]) => `<label title="${t}"><input type="radio" name="core-${c.key}" value="${v}"${sp.core[c.key] === v ? " checked" : ""}><span class="cf-${v}">${m}</span></label>`).join("")}
+    </div></div>`).join("");
     $("notes").value = p?.notes || "";
     $("services").value = (p?.services || []).join(", ");
     const st = p?.status || "";
@@ -1232,8 +1296,7 @@
       npi: digits($("npi").value),
       address: $("address").value.trim(),
       locations: readLocs(),
-      accepted: uniqSorted(splitList($("accepted").value)),
-      notAccepted: uniqSorted(splitList($("notAccepted").value)),
+      ...mergeIns(),
       services: uniqSorted(splitList($("services").value)),
       notes: $("notes").value.trim(),
       status: (document.querySelector('input[name="status"]:checked') || {}).value || "",
