@@ -299,12 +299,12 @@
   .ecard .rail small{font-size:10px;font-weight:700;color:var(--c);text-transform:uppercase;letter-spacing:.04em;text-align:center;line-height:1.2}
   .ecard.st-none .rail small{font-size:9px;font-weight:600}
   .ecard .mid{padding:11px 14px;display:flex;flex-direction:column;gap:7px;min-width:0}
-  .ecard .etop{display:flex;align-items:center;gap:6px 10px;flex-wrap:wrap}
+  .ecard .etop{display:flex;align-items:center;gap:6px 10px;flex-wrap:wrap;position:relative}
   .ecard .etop .name{font-size:15.5px;margin:0;overflow-wrap:anywhere}
   .ecard .etop .updated{margin-left:auto;white-space:nowrap}
   .ecard .etop{align-items:baseline;row-gap:3px}
   .ecard .etop .name{order:1;flex:1 1 auto;min-width:0}
-  .ecard .etop .updated{order:2}
+  .ecard .etop .updated{order:2;flex:0 0 auto;align-self:flex-start;padding-top:3px;font-size:11px}
   .ecard .etop .specs{order:3;flex-basis:100%}
   .ecard .egrid{display:grid;grid-template-columns:auto max-content auto minmax(0,1fr);gap:3px 8px;font-size:13.5px;align-items:baseline}
   .ecard .egrid .span3{grid-column:span 3}
@@ -334,7 +334,6 @@
     .ecard .egrid{grid-template-columns:auto minmax(0,1fr)}
     .ecard .egrid .span3{grid-column:auto}
     .ecard .egrid .k2{margin-left:0}
-    .ecard .etop .updated{margin-left:0;width:100%}
   }
   /* ---- Material Symbols icons ---- */
   .ms{font-family:"Material Symbols Rounded";font-weight:normal;font-style:normal;font-size:22px;line-height:1;letter-spacing:normal;text-transform:none;white-space:nowrap;word-wrap:normal;direction:ltr;-webkit-font-feature-settings:"liga";font-feature-settings:"liga";-webkit-font-smoothing:antialiased;display:inline-block;overflow:hidden;width:1em;height:1em;text-align:center}
@@ -417,6 +416,11 @@
   .edit-switch input:checked + .sw-track{background:var(--brand)}
   .edit-switch input:checked + .sw-track .sw-knob{transform:translateX(14px)}
   .edit-switch input:focus-visible + .sw-track{outline:2px solid var(--brand);outline-offset:2px}
+  /* pin "Updated" to the top-right corner; long names wrap beside it */
+  .ecard .etop{display:grid !important;grid-template-columns:minmax(0,1fr) auto;grid-template-areas:"name upd" "specs specs";column-gap:12px}
+  .ecard .etop .name{grid-area:name}
+  .ecard .etop .updated{grid-area:upd;margin:0 !important;width:auto !important}
+  .ecard .etop .specs{grid-area:specs}
 </style>
 <script>
   var FONTS = {
@@ -718,11 +722,11 @@
         <div class="rail" title="${esc(STATUS[p.status] || "New-patient status not set")}">
           <div class="av"><span class="ms">${esc(iconFor(p))}</span><span class="ini">${esc(ini)}</span></div>
           <small>${stLbl}</small>
-          ${p.updatedAt ? `<span class="rail-upd" title="Last updated ${esc(updated)}">Updated<br>${esc(new Date(p.updatedAt).toLocaleDateString("en-US",{month:"numeric",day:"numeric",year:"2-digit"}))}</span>` : ""}
         </div>
         <div class="mid">
           <div class="etop">
             <h3 class="name"><span class="cp" data-copy="${esc(p.name)}" title="Click to copy provider name">${esc(p.name)}</span></h3>
+            ${p.updatedAt ? `<span class="updated" title="Last updated ${esc(updated)}">Updated ${esc(new Date(p.updatedAt).toLocaleDateString("en-US",{month:"numeric",day:"numeric",year:"2-digit"}))}</span>` : ""}
             <div class="specs">${specsOf(p).map(x => `<span class="spec">${esc(x)}</span>`).join("")}</div>
           </div>
           <div class="egrid">
