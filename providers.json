@@ -1,19 +1,21 @@
 {
   "app": "specialty-provider-directory",
-  "exportedAt": "2026-11-05T23:40:59.503Z",
+  "exportedAt": "2026-11-06T20:30:09.507Z",
   "providers": [
     {
       "id": "mw17vvayh700d",
       "name": "Enloe Ear, Nose & Throat",
       "specialty": "ENT",
-      "icon": "",
       "specialties": [
         "ENT"
       ],
+      "icon": "",
       "phone": "530-332-5160",
       "fax": "530-893-6005",
       "npi": "1265863179",
+      "website": "https://www.enloe.org/care-treatment/ent/",
       "address": "135 Mission Ranch Blvd., Chico, CA 95926",
+      "locations": [],
       "accepted": [
         "Medi-Cal",
         "Medicare",
@@ -24,25 +26,31 @@
         "Imperial Health",
         "Kaiser"
       ],
-      "services": [],
-      "locations": [],
+      "services": [
+        "Chronic sinusitis",
+        "Head & neck surgery",
+        "Otology",
+        "Reconstructive surgery"
+      ],
       "notes": "Chart notes need to be from in-person visits.",
       "status": "open",
-      "createdAt": "2026-11-03T21:45:55.257Z",
-      "updatedAt": "2026-11-05T22:41:47.671Z"
+      "updatedAt": "2026-11-06T19:01:24.282Z",
+      "createdAt": "2026-11-03T21:45:55.257Z"
     },
     {
       "id": "mw18ebgrbd2fd",
       "name": "Enloe Bariatric and Metabolic Services",
       "specialty": "Bariatric Surgery",
-      "icon": "",
       "specialties": [
         "Bariatric Surgery"
       ],
+      "icon": "",
       "phone": "530-332-5350",
       "fax": "530-893-6032",
       "npi": "",
+      "website": "https://www.enloe.org/care-treatment/bariatric-surgery/",
       "address": "251 Cohasset Road, Ste. 240, Chico, CA 95926",
+      "locations": [],
       "accepted": [
         "Medi-Cal",
         "Medicare",
@@ -54,24 +62,32 @@
         "Kaiser"
       ],
       "services": [],
-      "locations": [],
       "notes": "",
       "status": "open",
-      "createdAt": "2026-11-03T22:00:16.011Z",
-      "updatedAt": "2026-11-05T22:32:51.057Z"
+      "updatedAt": "2026-11-06T18:13:11.371Z",
+      "createdAt": "2026-11-03T22:00:16.011Z"
     },
     {
       "id": "mw18x5w8u22dw",
       "name": "Enloe Cardiology Services",
       "specialty": "Cardiology",
-      "icon": "",
       "specialties": [
         "Cardiology"
       ],
-      "phone": "(530) 332-4400",
-      "fax": "(530) 893-6993",
+      "icon": "",
+      "phone": "530-332-4400",
+      "fax": "530-893-6993",
       "npi": "1720099328",
+      "website": "https://www.enloe.org/care-treatment/heart-vascular-care/",
       "address": "185 E. Seventh Ave., Chico, CA",
+      "locations": [
+        {
+          "name": "Esplanade Location",
+          "address": "1430 Esplanade, Ste. 6, Chico, CA",
+          "phone": "530-332-4600",
+          "fax": "530-893-6957"
+        }
+      ],
       "accepted": [
         "Medi-Cal",
         "Medicare",
@@ -83,18 +99,10 @@
         "Kaiser"
       ],
       "services": [],
-      "locations": [
-        {
-          "name": "Esplanade Location",
-          "address": "1430 Esplanade, Ste. 6, Chico, CA",
-          "phone": "(530) 332-4600",
-          "fax": "(530) 893-6957"
-        }
-      ],
       "notes": "",
       "status": "open",
-      "createdAt": "2026-11-03T22:14:55.256Z",
-      "updatedAt": "2026-11-04T17:53:14.716Z"
+      "updatedAt": "2026-11-06T18:31:27.955Z",
+      "createdAt": "2026-11-03T22:14:55.256Z"
     },
     {
       "id": "mw191cp6bocyp",
@@ -108,6 +116,7 @@
       "fax": "530-893-6042",
       "npi": "1790562551",
       "address": "198 Cohasset Rd., Chico, CA 95926",
+      "website": "",
       "accepted": [
         "Medi-Cal",
         "Medicare",
@@ -136,14 +145,16 @@
       "id": "mw193meb1yzln",
       "name": "Enloe Colorectal Surgery",
       "specialty": "Colorectal Surgery",
-      "icon": "",
       "specialties": [
         "Colorectal Surgery"
       ],
+      "icon": "",
       "phone": "530-332-4650",
       "fax": "530-893-6921",
       "npi": "1992117592",
+      "website": "https://www.enloe.org/care-treatment/colorectal-surgery/",
       "address": "2 Governors Ln., Ste. A, Chico, CA 95926",
+      "locations": [],
       "accepted": [
         "Medi-Cal",
         "Medicare",
@@ -155,24 +166,25 @@
         "Kaiser"
       ],
       "services": [],
-      "locations": [],
       "notes": "",
       "status": "open",
-      "createdAt": "2026-11-03T22:19:56.579Z",
-      "updatedAt": "2026-11-05T22:38:03.731Z"
+      "updatedAt": "2026-11-06T18:39:29.156Z",
+      "createdAt": "2026-11-03T22:19:56.579Z"
     },
     {
       "id": "mw1961f3etngw",
       "name": "Enloe Home Medical Equipment",
       "specialty": "Durable Medical Equipment",
-      "icon": "oxygen_saturation",
       "specialties": [
         "Durable Medical Equipment"
       ],
+      "icon": "oxygen_saturation",
       "phone": "530-332-6086",
       "fax": "530-302-9015",
       "npi": "",
+      "website": "https://www.enloe.org/care-treatment/medical-equipment/",
       "address": "1390 E Lassen Ave Ste. 6, Chico, CA 95973",
+      "locations": [],
       "accepted": [
         "Medi-Cal",
         "Medicare",
@@ -183,25 +195,33 @@
         "Imperial Health",
         "Kaiser"
       ],
-      "services": [],
-      "locations": [],
+      "services": [
+        "CPAP/BiPAP units & supplies",
+        "Hospital beds",
+        "Oxygen equipment",
+        "Ventilators/home respiratory support systems",
+        "Wheelchairs",
+        "Wound vacs"
+      ],
       "notes": "",
       "status": "open",
-      "createdAt": "2026-11-03T22:21:49.359Z",
-      "updatedAt": "2026-11-05T22:40:18.161Z"
+      "updatedAt": "2026-11-06T18:56:40.512Z",
+      "createdAt": "2026-11-03T22:21:49.359Z"
     },
     {
       "id": "mw198ng9vd4lw",
       "name": "Enloe Digestive Health",
       "specialty": "Gastroenterology",
-      "icon": "",
       "specialties": [
         "Gastroenterology"
       ],
+      "icon": "",
       "phone": "530-332-3986",
       "fax": "530-893-6975",
       "npi": "1801226162",
+      "website": "https://www.enloe.org/care-treatment/digestive-health/",
       "address": "111 Raley Blvd., Ste. 100, Chico, CA 95928",
+      "locations": [],
       "accepted": [
         "Medi-Cal",
         "Medicare",
@@ -212,25 +232,38 @@
         "Imperial Health",
         "Kaiser"
       ],
-      "services": [],
-      "locations": [],
+      "services": [
+        "24-hour pH monitoring",
+        "Barrx",
+        "Cholangloscopy",
+        "EGD",
+        "Endoscopic submucosal dissection",
+        "Esophageal motility studies",
+        "Fecal microbiota transplantation",
+        "Hemorrhoidal banding",
+        "Screenings & surveillance colonoscopy",
+        "Small bowel enteroscopy",
+        "Video capsule endoscopy"
+      ],
       "notes": "",
       "status": "open",
-      "createdAt": "2026-11-03T22:23:51.225Z",
-      "updatedAt": "2026-11-05T22:42:36.247Z"
+      "updatedAt": "2026-11-06T19:15:41.020Z",
+      "createdAt": "2026-11-03T22:23:51.225Z"
     },
     {
       "id": "mw199krbwd309",
       "name": "Enloe General Surgery",
       "specialty": "General Surgery",
-      "icon": "health_metrics",
       "specialties": [
         "General Surgery"
       ],
+      "icon": "health_metrics",
       "phone": "530-332-3550",
       "fax": "530-893-6046",
       "npi": "1255812780",
+      "website": "https://www.enloe.org/care-treatment/surgery/general-surgery/",
       "address": "251 Cohasset Road, Ste. 300, Chico, CA 95926",
+      "locations": [],
       "accepted": [
         "Medi-Cal",
         "Medicare",
@@ -241,25 +274,33 @@
         "Imperial Health",
         "Kaiser"
       ],
-      "services": [],
-      "locations": [],
+      "services": [
+        "Appendicitis",
+        "Cholecystitis with gallstones",
+        "Gallstones",
+        "Hernias",
+        "Lipomas cysts or skin tags",
+        "Thyroid issues"
+      ],
       "notes": "",
       "status": "open",
-      "createdAt": "2026-11-03T22:24:34.390Z",
-      "updatedAt": "2026-11-05T22:43:32.284Z"
+      "updatedAt": "2026-11-06T19:21:06.983Z",
+      "createdAt": "2026-11-03T22:24:34.390Z"
     },
     {
       "id": "mw19c7f1bara0",
       "name": "Enloe Genetics",
       "specialty": "Genetic Testing",
-      "icon": "",
       "specialties": [
         "Genetic Testing"
       ],
+      "icon": "",
       "phone": "530-332-3840",
       "fax": "530-893-6025",
       "npi": "1255812780",
+      "website": "https://www.enloe.org/care-treatment/cancer-care/risk-assessment/",
       "address": "251 Cohasset Rd. Ste 320, Chico, CA 95926",
+      "locations": [],
       "accepted": [
         "Medi-Cal",
         "Medicare",
@@ -271,24 +312,25 @@
         "Kaiser"
       ],
       "services": [],
-      "locations": [],
       "notes": "",
       "status": "open",
-      "createdAt": "2026-11-03T22:26:37.069Z",
-      "updatedAt": "2026-11-05T22:43:41.290Z"
+      "updatedAt": "2026-11-06T19:24:31.013Z",
+      "createdAt": "2026-11-03T22:26:37.069Z"
     },
     {
       "id": "mw19e2gyt4r1d",
       "name": "Enloe Lymphedema Therapy Clinic",
       "specialty": "Lymphedema Therapy",
-      "icon": "physical_therapy",
       "specialties": [
         "Lymphedema Therapy"
       ],
+      "icon": "physical_therapy",
       "phone": "530-332-3800",
       "fax": "530-893-6905",
       "npi": "1588385454",
+      "website": "https://www.enloe.org/care-treatment/cancer-care/clinical-supportive-care/lymphedema-therapy/",
       "address": "251 Cohasset Rd., #330, Chico, CA 95926",
+      "locations": [],
       "accepted": [
         "Medi-Cal",
         "Medicare",
@@ -300,24 +342,25 @@
         "Kaiser"
       ],
       "services": [],
-      "locations": [],
       "notes": "Only ICD-10 codes accepted are: I89.0, I97.2, I97.89 and Q82.0. Must include supporting documentation.",
       "status": "open",
-      "createdAt": "2026-11-03T22:28:03.970Z",
-      "updatedAt": "2026-11-05T22:45:08.191Z"
+      "updatedAt": "2026-11-06T19:29:02.940Z",
+      "createdAt": "2026-11-03T22:28:03.970Z"
     },
     {
       "id": "mw19tq689goiy",
       "name": "Enloe Nephrology",
       "specialty": "Nephrology",
-      "icon": "",
       "specialties": [
         "Nephrology"
       ],
-      "phone": "(530) 332-3815",
-      "fax": "(530) 893-6051",
+      "icon": "",
+      "phone": "530-332-3815",
+      "fax": "530-893-6051",
       "npi": "1932099702",
+      "website": "https://www.enloe.org/care-treatment/nephrology/",
       "address": "3011 Ceres Ave, Ste. 100, Chico, CA 95973",
+      "locations": [],
       "accepted": [
         "Medi-Cal",
         "Medicare",
@@ -328,25 +371,44 @@
         "Imperial Health",
         "Kaiser"
       ],
-      "services": [],
-      "locations": [],
+      "services": [
+        "Acute nontraumatic kidney injury",
+        "Adult polystic kidney",
+        "Ascites",
+        "Attorphy of the kidney",
+        "Benign prostatic hyperplasia",
+        "Hematuria",
+        "Hyperkalemia",
+        "Hypertension",
+        "Hypoosmolality or hyponatremia",
+        "Kidney cysts",
+        "Kidney disease",
+        "Kidney failure",
+        "Kidney stones",
+        "Proeinuria",
+        "Renal impairment",
+        "Renal insufficiency",
+        "Urine retention"
+      ],
       "notes": "",
       "status": "open",
-      "createdAt": "2026-11-03T22:40:14.528Z",
-      "updatedAt": "2026-11-03T22:40:14.528Z"
+      "updatedAt": "2026-11-06T19:35:03.042Z",
+      "createdAt": "2026-11-03T22:40:14.528Z"
     },
     {
       "id": "mw19yrt7r118e",
       "name": "Enloe Neurosurgical & Spine Clinic",
       "specialty": "Neurosurgery",
-      "icon": "",
       "specialties": [
         "Neurosurgery"
       ],
+      "icon": "",
       "phone": "530-332-4800",
       "fax": "530-893-6917",
       "npi": "1336580422",
+      "website": "https://www.enloe.org/care-treatment/neurosurgery/spine-back/",
       "address": "251 Cohasset Rd., Ste. 370, Chico, CA 95926",
+      "locations": [],
       "accepted": [
         "Medi-Cal",
         "Medicare",
@@ -357,36 +419,36 @@
         "Imperial Health",
         "Kaiser"
       ],
-      "services": [],
-      "locations": [],
+      "services": [
+        "Anterior cervical discectomy & fusion",
+        "Carpal tunnel decompression",
+        "Cervical laminectomy for spinal stenosis",
+        "Decompressive lumbar laminectomy",
+        "Dorsal column stimulator",
+        "Microscopic/minimally invasive lumbar discectomy",
+        "Removal of spinal cord tumors",
+        "Spinal fusion",
+        "Treatment of traumatic spinal injury",
+        "Ulnar nerve decompression"
+      ],
       "notes": "Do not send referrals for general Neurology.",
       "status": "open",
-      "createdAt": "2026-11-03T22:44:09.930Z",
-      "updatedAt": "2026-11-05T22:47:12.684Z"
+      "updatedAt": "2026-11-06T19:46:18.625Z",
+      "createdAt": "2026-11-03T22:44:09.930Z"
     },
     {
       "id": "mw1a08xr79j2i",
       "name": "Enloe Obstetrics & Gynecology",
       "specialty": "Obstetrics & Gynecology",
-      "icon": "",
       "specialties": [
         "Obstetrics & Gynecology"
       ],
+      "icon": "",
       "phone": "530-332-5175",
       "fax": "530-893-6925",
       "npi": "1023420726",
+      "website": "https://www.enloe.org/care-treatment/gynecology/",
       "address": "Chico, CA",
-      "accepted": [
-        "Medi-Cal",
-        "Medicare",
-        "Partnership",
-        "Private"
-      ],
-      "notAccepted": [
-        "Imperial Health",
-        "Kaiser"
-      ],
-      "services": [],
       "locations": [
         {
           "name": "Esplanade Location",
@@ -413,10 +475,40 @@
           "fax": "530-893-6024"
         }
       ],
+      "accepted": [
+        "Medi-Cal",
+        "Medicare",
+        "Partnership",
+        "Private"
+      ],
+      "notAccepted": [
+        "Imperial Health",
+        "Kaiser"
+      ],
+      "services": [
+        "Antepartum testing",
+        "Bladder control problems",
+        "Care for early adolescence",
+        "Cervical cancer screenings",
+        "Endometriosis",
+        "Family planning",
+        "Fertility problems",
+        "Hormone imbalance",
+        "IUD placement",
+        "Menopause treatment",
+        "Menstrual disorders",
+        "Midwifery services",
+        "Ovarian cysts",
+        "Painful bladder syndrome",
+        "Pap smears",
+        "Premenstrual syndrome",
+        "Prenatal care",
+        "Vaginal bleeding problems"
+      ],
       "notes": "Main contact info is for centralized referrals. Referral will be directed to 1 of 4 locations. Check acceptance letter/fax for specific clinic info.",
-      "status": "",
-      "createdAt": "2026-11-03T22:45:18.783Z",
-      "updatedAt": "2026-11-05T22:48:53.992Z"
+      "status": "open",
+      "updatedAt": "2026-11-06T19:53:51.627Z",
+      "createdAt": "2026-11-03T22:45:18.783Z"
     },
     {
       "id": "mw1ahxexyidod",
@@ -430,6 +522,7 @@
       "fax": "530-893-6991",
       "npi": "",
       "address": "251 Cohasset Rd., Ste. 310, Chico, CA 95926",
+      "website": "",
       "accepted": [
         "Medi-Cal",
         "Medicare",
@@ -451,14 +544,16 @@
       "id": "mw1ajzsqfru4e",
       "name": "Enloe Orthopedic & Trauma Clinic",
       "specialty": "Orthopedics",
-      "icon": "personal_injury",
       "specialties": [
         "Orthopedics"
       ],
-      "phone": "(530) 332-4470",
-      "fax": "(530) 893-6885",
+      "icon": "personal_injury",
+      "phone": "530-332-4470",
+      "fax": "530-893-6885",
       "npi": "1770905994",
+      "website": "https://www.enloe.org/care-treatment/emergency-trauma-care/orthopedic-trauma-clinic/",
       "address": "1600 Esplanade, Ste C, Chico, CA 95926",
+      "locations": [],
       "accepted": [
         "Medi-Cal",
         "Medicare",
@@ -470,24 +565,25 @@
         "Kaiser"
       ],
       "services": [],
-      "locations": [],
       "notes": "Imaging required.",
       "status": "open",
-      "createdAt": "2026-11-03T23:00:40.057Z",
-      "updatedAt": "2026-11-04T19:29:46.880Z"
+      "updatedAt": "2026-11-06T20:26:46.519Z",
+      "createdAt": "2026-11-03T23:00:40.057Z"
     },
     {
       "id": "mw1aldw09awty",
       "name": "Enloe Total Joint Replacement",
       "specialty": "Orthopedics",
-      "icon": "personal_injury",
       "specialties": [
         "Orthopedics"
       ],
-      "phone": "(530) 332-6045",
-      "fax": "(530) 893-6980",
+      "icon": "personal_injury",
+      "phone": "530-332-6045",
+      "fax": "530-893-6980",
       "npi": "1770905994",
+      "website": "https://www.enloe.org/care-treatment/joint-care/total-joint-replacement/",
       "address": "251 Cohasset Rd., Ste 130, Chico, CA 95926",
+      "locations": [],
       "accepted": [
         "Medi-Cal",
         "Medicare",
@@ -498,12 +594,17 @@
         "Imperial Health Plan",
         "Kaiser"
       ],
-      "services": [],
-      "locations": [],
+      "services": [
+        "Partial knee replacement surgery",
+        "Reverse total shoulder replacement surgery",
+        "Total hip replacement surgery",
+        "Total knee replacement surgery",
+        "Total shoulder joint replacement surgery"
+      ],
       "notes": "Hips and knees only. Send A1C results with referral.",
       "status": "open",
-      "createdAt": "2026-11-03T23:01:44.976Z",
-      "updatedAt": "2026-11-04T19:29:59.649Z"
+      "updatedAt": "2026-11-06T20:28:16.192Z",
+      "createdAt": "2026-11-03T23:01:44.976Z"
     },
     {
       "id": "mw1an024up85c",
@@ -517,6 +618,7 @@
       "fax": "(530) 893-6978",
       "npi": "1972905503",
       "address": "340 East Ave, Chico, CA 95926",
+      "website": "",
       "accepted": [
         "Medi-Cal",
         "Medicare",
@@ -546,6 +648,7 @@
       "fax": "(530) 893-6877",
       "npi": "1972905503",
       "address": "340 W East Ave, Chico, CA 95926",
+      "website": "",
       "accepted": [
         "Medi-Cal",
         "Medicare",
@@ -588,6 +691,7 @@
       "fax": "(530) 893-6973",
       "npi": "1720099328",
       "address": "888 Lakeside Village Cmns., Bldg. C, Chico, CA 95928",
+      "website": "",
       "accepted": [
         "Medi-Cal",
         "Medicare",
@@ -617,6 +721,7 @@
       "fax": "(530) 893-6019",
       "npi": "1417901091",
       "address": "1638 Esplanade, Chico, CA 95926",
+      "website": "",
       "accepted": [
         "Medi-Cal",
         "Medicare",
@@ -653,6 +758,7 @@
       "fax": "(530) 893-6023",
       "npi": "",
       "address": "277 Cohasset Rd., Chico, CA 95926",
+      "website": "",
       "accepted": [
         "Medi-Cal",
         "Medicare",
@@ -682,6 +788,7 @@
       "fax": "(530) 893-6986",
       "npi": "1770905994",
       "address": "1600 Esplanade, Ste C, Chico, CA 95926",
+      "website": "",
       "accepted": [
         "Medi-Cal",
         "Medicare",
@@ -711,6 +818,7 @@
       "fax": "(530) 893-6950",
       "npi": "1164885604",
       "address": "1026 Mangrove Ave, Ste 10, Chico, CA 95926",
+      "website": "",
       "accepted": [
         "Medi-Cal",
         "Medicare",
@@ -732,14 +840,16 @@
       "id": "mw1avyi9e1lpw",
       "name": "Enloe Comprehensive Breast Care",
       "specialty": "Oncology",
-      "icon": "",
       "specialties": [
         "Oncology"
       ],
-      "phone": "(530) 332-4530",
-      "fax": "(530) 893-6984",
+      "icon": "",
+      "phone": "530-332-4530",
+      "fax": "530-893-6984",
       "npi": "1588385454",
+      "website": "https://www.enloe.org/care-treatment/cancer-care/treatment/breast/",
       "address": "251 Cohasset Rd., # 220, Chico, CA 95926",
+      "locations": [],
       "accepted": [
         "Medi-Cal",
         "Medicare",
@@ -751,11 +861,10 @@
         "Kaiser"
       ],
       "services": [],
-      "locations": [],
       "notes": "",
       "status": "open",
-      "createdAt": "2026-11-03T23:09:58.257Z",
-      "updatedAt": "2026-11-04T17:29:34.268Z"
+      "updatedAt": "2026-11-06T19:56:25.279Z",
+      "createdAt": "2026-11-03T23:09:58.257Z"
     },
     {
       "id": "mw1axfpaqphns",
@@ -769,6 +878,7 @@
       "fax": "(530) 893-6986",
       "npi": "1417901091",
       "address": "1531 Esplanade, Chico, CA 95926",
+      "website": "",
       "accepted": [
         "Medi-Cal",
         "Medicare",
@@ -790,14 +900,16 @@
       "id": "mw1azd01kd0k8",
       "name": "Enloe Diabetes Services",
       "specialty": "Nutrition/Diabetes Education",
-      "icon": "",
       "specialties": [
         "Nutrition/Diabetes Education"
       ],
-      "phone": "(530) 332-6840",
-      "fax": "(530) 893-6858",
+      "icon": "",
+      "phone": "530-332-6840",
+      "fax": "530-893-6858",
       "npi": "1164885604",
+      "website": "https://www.enloe.org/care-treatment/diabetes-services/",
       "address": "1026 Mangrove Ave Ste. 10, Chico, CA 95926",
+      "locations": [],
       "accepted": [
         "Medi-Cal",
         "Medicare",
@@ -809,24 +921,25 @@
         "Kaiser"
       ],
       "services": [],
-      "locations": [],
       "notes": "No pre-diabetes diagnosis. Free zoom classes offered.",
       "status": "limited",
-      "createdAt": "2026-11-03T23:12:37.009Z",
-      "updatedAt": "2026-11-03T23:12:37.009Z"
+      "updatedAt": "2026-11-06T19:49:03.384Z",
+      "createdAt": "2026-11-03T23:12:37.009Z"
     },
     {
       "id": "mw1b2xlnruiwh",
       "name": "Enloe Acupuncture Clinic",
       "specialty": "Acupuncture",
-      "icon": "spa",
       "specialties": [
         "Acupuncture"
       ],
-      "phone": "(530) 332-3857",
-      "fax": "(530) 893-6905",
+      "icon": "spa",
+      "phone": "530-332-3857",
+      "fax": "530-893-6905",
       "npi": "1588385454",
+      "website": "https://www.enloe.org/care-treatment/cancer-care/clinical-supportive-care/acupuncture/",
       "address": "265 Cohasset Rd., Ste 160, Chico, CA 95926",
+      "locations": [],
       "accepted": [
         "Medi-Cal",
         "Medicare",
@@ -838,45 +951,47 @@
         "Kaiser"
       ],
       "services": [],
-      "locations": [],
       "notes": "Only accepting internal referrals from the Cancer Center.",
       "status": "closed",
-      "createdAt": "2026-11-03T23:15:23.675Z",
-      "updatedAt": "2026-11-04T19:36:27.320Z"
+      "updatedAt": "2026-11-06T17:58:54.258Z",
+      "createdAt": "2026-11-03T23:15:23.675Z"
     },
     {
       "id": "mw1b3mmrbud1g",
-      "name": "Acupuncture Center of Chico",
+      "name": "Chico Community Acupuncture",
       "specialty": "Acupuncture",
-      "icon": "spa",
       "specialties": [
         "Acupuncture"
       ],
-      "phone": "530-345-7735",
+      "icon": "spa",
+      "phone": "530-345-5300",
       "fax": "",
       "npi": "",
-      "address": "1550 Humboldt Rd. #7, Chico, CA",
+      "website": "https://www.chicocommunityacupuncture.com/",
+      "address": "1815 Mangrove Ave., Chico, CA 95926",
+      "locations": [],
       "accepted": [],
       "notAccepted": [],
       "services": [],
-      "locations": [],
       "notes": "No referral required. Does not bill insurance.",
       "status": "open",
-      "createdAt": "2026-11-03T23:15:56.115Z",
-      "updatedAt": "2026-11-05T22:27:21.645Z"
+      "updatedAt": "2026-11-06T17:58:25.151Z",
+      "createdAt": "2026-11-03T23:15:56.115Z"
     },
     {
       "id": "mw1b4h3dw7i32",
       "name": "The Healing Center (Janette Y. Votaw)",
       "specialty": "Acupuncture",
-      "icon": "spa",
       "specialties": [
         "Acupuncture"
       ],
+      "icon": "spa",
       "phone": "530-892-1196",
       "fax": "530-487-0042",
       "npi": "",
+      "website": "https://www.healingcenter530.com/",
       "address": "574 Manzanita Ave Ste. 4, Chico, CA 95926",
+      "locations": [],
       "accepted": [
         "Medi/Medi",
         "Medicare",
@@ -884,27 +999,28 @@
       ],
       "notAccepted": [],
       "services": [],
-      "locations": [],
       "notes": "",
       "status": "open",
-      "createdAt": "2026-11-03T23:16:35.593Z",
-      "updatedAt": "2026-11-05T22:30:29.337Z"
+      "updatedAt": "2026-11-06T17:59:28.587Z",
+      "createdAt": "2026-11-03T23:16:35.593Z"
     },
     {
       "id": "mw1b6vz76xhor",
       "name": "Allergy Associates",
       "specialty": "Allergy & Immunology",
-      "icon": "",
       "specialties": [
         "Allergy & Immunology"
       ],
+      "icon": "",
       "phone": "530-896-2200",
       "fax": "530-896-2209",
       "npi": "",
+      "website": "https://www.norcalallergy.com/",
       "address": "145 Mission Ranch Blvd., Ste. 110, Chico, CA 95926",
+      "locations": [],
       "accepted": [
-        "Medicare*",
-        "Private*"
+        "Medicare",
+        "Private"
       ],
       "notAccepted": [
         "Blue Cross",
@@ -912,24 +1028,25 @@
         "Partnership (Primary or Secondary)"
       ],
       "services": [],
-      "locations": [],
       "notes": "Insurance acceptance depends on specific plan.",
       "status": "open",
-      "createdAt": "2026-11-03T23:18:28.195Z",
-      "updatedAt": "2026-11-05T22:30:42.745Z"
+      "updatedAt": "2026-11-06T18:03:39.333Z",
+      "createdAt": "2026-11-03T23:18:28.195Z"
     },
     {
       "id": "mw1b9lk7a2880",
-      "name": "Dove's Landing Allergy/Immunology",
+      "name": "Dove's Landing Allergy & Immunology",
       "specialty": "Allergy & Immunology",
-      "icon": "",
       "specialties": [
         "Allergy & Immunology"
       ],
-      "phone": "(530) 712-2171",
-      "fax": "(530) 712-2155",
-      "npi": "1679581557",
+      "icon": "",
+      "phone": "530-712-2171",
+      "fax": "530-712-2155",
+      "npi": "",
+      "website": "https://www.orovillehospital.com/health-services/allergy-and-immunology",
       "address": "2450 Oro Dam Blvd. E, Oroville, CA",
+      "locations": [],
       "accepted": [
         "Covered CA",
         "Medicare",
@@ -940,32 +1057,24 @@
         "Partnership"
       ],
       "services": [],
-      "locations": [],
       "notes": "Alt fax: 530-712-2149",
       "status": "open",
-      "createdAt": "2026-11-03T23:20:34.663Z",
-      "updatedAt": "2026-11-03T23:20:34.663Z"
+      "updatedAt": "2026-11-06T18:07:16.997Z",
+      "createdAt": "2026-11-03T23:20:34.663Z"
     },
     {
       "id": "mw1bbgi4jvrff",
       "name": "Allergy Medical Group",
       "specialty": "Allergy & Immunology",
-      "icon": "",
       "specialties": [
         "Allergy & Immunology"
       ],
+      "icon": "",
       "phone": "916-782-7758",
       "fax": "916-782-7770",
       "npi": "1417039371",
+      "website": "https://www.allergymedgroup.com/",
       "address": "935 Reserve Dr., Roseville, CA 95678",
-      "accepted": [
-        "Private"
-      ],
-      "notAccepted": [
-        "Medi-Cal",
-        "Partnership"
-      ],
-      "services": [],
       "locations": [
         {
           "name": "Yuba City Location",
@@ -974,29 +1083,32 @@
           "fax": "530-870-8087"
         }
       ],
+      "accepted": [
+        "Private"
+      ],
+      "notAccepted": [
+        "Medi-Cal",
+        "Partnership"
+      ],
+      "services": [],
       "notes": "",
       "status": "open",
-      "createdAt": "2026-11-03T23:22:01.420Z",
-      "updatedAt": "2026-11-05T23:10:25.691Z"
+      "updatedAt": "2026-11-06T18:04:09.381Z",
+      "createdAt": "2026-11-03T23:22:01.420Z"
     },
     {
       "id": "mw1bdo33lptt9",
       "name": "Capital Allergy & Respiratory Disease",
       "specialty": "Allergy & Immunology",
-      "icon": "",
       "specialties": [
         "Allergy & Immunology"
       ],
+      "icon": "",
       "phone": "916-453-8696",
       "fax": "916-453-8715",
       "npi": "1629191267",
+      "website": "https://capitalallergy.com/",
       "address": "5609 J St., Ste. C, Sacramento, CA 95819",
-      "accepted": [
-        "Partnership",
-        "Private"
-      ],
-      "notAccepted": [],
-      "services": [],
       "locations": [
         {
           "name": "Roseville Location",
@@ -1011,32 +1123,30 @@
           "fax": "916-453-8715"
         }
       ],
+      "accepted": [
+        "Partnership",
+        "Private"
+      ],
+      "notAccepted": [],
+      "services": [],
       "notes": "",
       "status": "open",
-      "createdAt": "2026-11-03T23:23:44.559Z",
-      "updatedAt": "2026-11-05T23:09:04.281Z"
+      "updatedAt": "2026-11-06T18:04:27.257Z",
+      "createdAt": "2026-11-03T23:23:44.559Z"
     },
     {
       "id": "mw1bf30nz5m9b",
       "name": "Sutter Allergy",
       "specialty": "Allergy & Immunology",
-      "icon": "",
       "specialties": [
         "Allergy & Immunology"
       ],
+      "icon": "",
       "phone": "916-925-1056",
       "fax": "916-503-7632",
       "npi": "",
+      "website": "https://www.sutterhealth.org/services/allergy",
       "address": "1 Scripps Dr., Ste. 101, Sacramento, CA 95825",
-      "accepted": [
-        "Medicare",
-        "Private"
-      ],
-      "notAccepted": [
-        "Medi-Cal",
-        "Partnership"
-      ],
-      "services": [],
       "locations": [
         {
           "name": "Elk Grove Location",
@@ -1051,23 +1161,34 @@
           "fax": "916-503-7632"
         }
       ],
+      "accepted": [
+        "Medicare",
+        "Private"
+      ],
+      "notAccepted": [
+        "Medi-Cal",
+        "Partnership"
+      ],
+      "services": [],
       "notes": "",
       "status": "open",
-      "createdAt": "2026-11-03T23:24:50.567Z",
-      "updatedAt": "2026-11-05T23:09:29.341Z"
+      "updatedAt": "2026-11-06T18:07:37.180Z",
+      "createdAt": "2026-11-03T23:24:50.567Z"
     },
     {
       "id": "mw1bfu2z4ow3e",
       "name": "The Allergy Center",
       "specialty": "Allergy & Immunology",
-      "icon": "",
       "specialties": [
         "Allergy & Immunology"
       ],
+      "icon": "",
       "phone": "916-736-6644",
       "fax": "916-774-0143",
       "npi": "",
+      "website": "https://sacent.com/allergist/",
       "address": "1528 Eureka Rd. Ste. 102, Roseville, CA",
+      "locations": [],
       "accepted": [
         "Medi-Cal",
         "Medicare",
@@ -1076,11 +1197,10 @@
       ],
       "notAccepted": [],
       "services": [],
-      "locations": [],
       "notes": "Part of Sacramento ENT.",
       "status": "open",
-      "createdAt": "2026-11-03T23:25:25.643Z",
-      "updatedAt": "2026-11-05T22:32:02.262Z"
+      "updatedAt": "2026-11-06T18:07:53.798Z",
+      "createdAt": "2026-11-03T23:25:25.643Z"
     },
     {
       "id": "mw1bgur98fez4",
@@ -1094,6 +1214,7 @@
       "fax": "(916) 734-6474",
       "npi": "1063401826",
       "address": "4860 Y St, Sacramento, CA 95817",
+      "website": "",
       "accepted": [
         "Medi-Cal",
         "Medicare",
@@ -1112,14 +1233,16 @@
       "id": "mw1bhwv9zdp3x",
       "name": "Arrhythmia Center of Northern California",
       "specialty": "Cardiology",
-      "icon": "",
       "specialties": [
         "Cardiology"
       ],
+      "icon": "",
       "phone": "530-893-8806",
       "fax": "530-893-8846",
       "npi": "1952754673",
+      "website": "https://arrhythmiacenternc.com/",
       "address": "1645 Esplanade Ste. 3, Chico, CA  95926",
+      "locations": [],
       "accepted": [
         "Medi-Cal",
         "Medicare",
@@ -1128,24 +1251,25 @@
       ],
       "notAccepted": [],
       "services": [],
-      "locations": [],
       "notes": "",
       "status": "open",
-      "createdAt": "2026-11-03T23:27:02.565Z",
-      "updatedAt": "2026-11-05T22:35:54.122Z"
+      "updatedAt": "2026-11-06T18:29:59.499Z",
+      "createdAt": "2026-11-03T23:27:02.565Z"
     },
     {
       "id": "mw1birjylg3lq",
       "name": "Heart & Vascular Centers of America",
       "specialty": "Cardiology",
-      "icon": "",
       "specialties": [
         "Cardiology"
       ],
+      "icon": "",
       "phone": "530-715-2900",
       "fax": "530-513-5490",
       "npi": "1003547340",
+      "website": "https://heartandvascularcentersofamerica.com/",
       "address": "3247 Esplanade Ste. 165, Chico, CA 95973",
+      "locations": [],
       "accepted": [
         "Medi-Cal",
         "Medicare",
@@ -1153,25 +1277,36 @@
         "Private"
       ],
       "notAccepted": [],
-      "services": [],
-      "locations": [],
+      "services": [
+        "Atrial fibrillation & stroke prevention",
+        "Coronary & vascular procedures",
+        "Diagnostic testing",
+        "Heart failure treatment",
+        "Hypertension & lipid management",
+        "Loop recorder procedure",
+        "Prevention of heart & vascular disease",
+        "The Watchman",
+        "Varicose & spider veins"
+      ],
       "notes": "",
       "status": "open",
-      "createdAt": "2026-11-03T23:27:42.333Z",
-      "updatedAt": "2026-11-05T22:36:32.251Z"
+      "updatedAt": "2026-11-06T18:33:43.778Z",
+      "createdAt": "2026-11-03T23:27:42.333Z"
     },
     {
       "id": "mw1bjd40qqdwz",
       "name": "Sutter Health Cardiology",
       "specialty": "Cardiology",
-      "icon": "",
       "specialties": [
         "Cardiology"
       ],
+      "icon": "",
       "phone": "530-749-3346",
       "fax": "916-503-7632",
       "npi": "",
+      "website": "https://www.sutterhealth.org/services/heart-and-vascular",
       "address": "440 Plumas Blvd. 2nd Fl., Yuba City, CA 95991",
+      "locations": [],
       "accepted": [
         "Medi-Cal",
         "Medicare",
@@ -1180,24 +1315,25 @@
       ],
       "notAccepted": [],
       "services": [],
-      "locations": [],
       "notes": "",
       "status": "open",
-      "createdAt": "2026-11-03T23:28:10.272Z",
-      "updatedAt": "2026-11-05T22:36:43.049Z"
+      "updatedAt": "2026-11-06T18:34:06.024Z",
+      "createdAt": "2026-11-03T23:28:10.272Z"
     },
     {
       "id": "mw1bkaguy404u",
       "name": "UC Davis Cardiology",
       "specialty": "Cardiology",
-      "icon": "",
       "specialties": [
         "Cardiology"
       ],
+      "icon": "",
       "phone": "916-734-3761",
       "fax": "",
       "npi": "1710918545",
+      "website": "https://health.ucdavis.edu/internal-medicine/cardiology/",
       "address": "4860 Y St. #200, Sacramento, CA 95817",
+      "locations": [],
       "accepted": [
         "Medi-Cal",
         "Medicare",
@@ -1206,34 +1342,34 @@
       ],
       "notAccepted": [],
       "services": [],
-      "locations": [],
       "notes": "Referrals must be submitted electronically or via portal.",
       "status": "open",
-      "createdAt": "2026-11-03T23:28:53.502Z",
-      "updatedAt": "2026-11-05T22:36:49.467Z"
+      "updatedAt": "2026-11-06T18:34:21.430Z",
+      "createdAt": "2026-11-03T23:28:53.502Z"
     },
     {
       "id": "mw1bl5zrvsc25",
       "name": "Ampla Health Chiropractic",
       "specialty": "Chiropractic",
-      "icon": "physical_therapy",
       "specialties": [
         "Chiropractic"
       ],
+      "icon": "physical_therapy",
       "phone": "530-342-4395",
       "fax": "530-342-6150",
       "npi": "1316963606",
+      "website": "https://www.amplahealth.org/chiropractic-services/",
       "address": "680 Cohasset Rd., Chico, CA 95926",
+      "locations": [],
       "accepted": [
         "Partnership"
       ],
       "notAccepted": [],
       "services": [],
-      "locations": [],
       "notes": "Possibly accepts Medicare and Private insurance as well.",
       "status": "open",
-      "createdAt": "2026-11-03T23:29:34.359Z",
-      "updatedAt": "2026-11-05T22:37:01.848Z"
+      "updatedAt": "2026-11-06T18:37:07.998Z",
+      "createdAt": "2026-11-03T23:29:34.359Z"
     },
     {
       "id": "mw1bmgyartl0w",
@@ -1247,6 +1383,7 @@
       "fax": "530-712-2386",
       "npi": "1316991508",
       "address": "1611 Feather River Blvd. Ste. 6, Oroville, CA 95965",
+      "website": "",
       "accepted": [
         "Medi-Cal",
         "Medicare",
@@ -1265,43 +1402,55 @@
       "id": "mw1bnczq27lgw",
       "name": "Joyce Family Chiropractic",
       "specialty": "Chiropractic",
-      "icon": "physical_therapy",
       "specialties": [
         "Chiropractic"
       ],
+      "icon": "physical_therapy",
       "phone": "530-899-8500",
       "fax": "530-899-0400",
       "npi": "",
+      "website": "https://www.joycefamilychiropractic.com/",
       "address": "9 Frontier Cir., Chico, CA 95928",
-      "accepted": [],
-      "notAccepted": [],
-      "services": [],
       "locations": [],
+      "accepted": [],
+      "notAccepted": [
+        "Medi-Cal",
+        "Medicare",
+        "Partnership",
+        "Private"
+      ],
+      "services": [],
       "notes": "Does not bill insurance.",
       "status": "open",
-      "createdAt": "2026-11-03T23:31:16.742Z",
-      "updatedAt": "2026-11-05T22:37:24.637Z"
+      "updatedAt": "2026-11-06T18:38:32.207Z",
+      "createdAt": "2026-11-03T23:31:16.742Z"
     },
     {
       "id": "mw1bnwgd1s38t",
       "name": "North Valley Chiropractic",
       "specialty": "Chiropractic",
-      "icon": "physical_therapy",
       "specialties": [
         "Chiropractic"
       ],
+      "icon": "physical_therapy",
       "phone": "530-809-1077",
       "fax": "530-636-4471",
       "npi": "",
+      "website": "https://www.northvalleychiro.com/",
       "address": "2056 Talbert Dr. Ste. 100, Chico, CA 95928",
-      "accepted": [],
-      "notAccepted": [],
-      "services": [],
       "locations": [],
+      "accepted": [],
+      "notAccepted": [
+        "Medi-Cal",
+        "Medicare",
+        "Partnership",
+        "Private"
+      ],
+      "services": [],
       "notes": "Cash pay only. Does not accept referrals.",
       "status": "open",
-      "createdAt": "2026-11-03T23:31:41.965Z",
-      "updatedAt": "2026-11-05T22:37:34.728Z"
+      "updatedAt": "2026-11-06T18:38:42.551Z",
+      "createdAt": "2026-11-03T23:31:41.965Z"
     },
     {
       "id": "mw1boky88c3xb",
@@ -1315,6 +1464,7 @@
       "fax": "530-894-6750",
       "npi": "",
       "address": "1635 Magnolia Ave, Chico, CA",
+      "website": "",
       "accepted": [
         "Blue Shield"
       ],
@@ -1343,6 +1493,7 @@
       "fax": "530-343-9827",
       "npi": "",
       "address": "2954 CA-32 Ste. 600, Chico, CA",
+      "website": "",
       "accepted": [],
       "notAccepted": [],
       "services": [],
@@ -1356,14 +1507,16 @@
       "id": "mw1bpra9ic2h1",
       "name": "Adventist Health - Feather River Dermatology",
       "specialty": "Dermatology",
-      "icon": "",
       "specialties": [
         "Dermatology"
       ],
-      "phone": "(530) 872-2000",
-      "fax": "(530) 332-1049",
+      "icon": "",
+      "phone": "530-872-2000",
+      "fax": "530-332-1049",
       "npi": "1912092792",
+      "website": "https://www.adventisthealth.org/feather-river/services/dermatology/",
       "address": "5125 Skyway, Paradise, CA 95969",
+      "locations": [],
       "accepted": [
         "Medi-Cal",
         "Medicare",
@@ -1371,25 +1524,35 @@
         "Private"
       ],
       "notAccepted": [],
-      "services": [],
-      "locations": [],
+      "services": [
+        "Acne treatment",
+        "Cosmetic treatments",
+        "Detection and treatment of skin cancer",
+        "Eczema treatment",
+        "Minor skin surgery",
+        "Prescriptions",
+        "Psoriasis or rosacea treatment",
+        "Skin exams"
+      ],
       "notes": "",
       "status": "open",
-      "createdAt": "2026-11-03T23:33:08.577Z",
-      "updatedAt": "2026-11-03T23:33:08.577Z"
+      "updatedAt": "2026-11-06T18:41:02.361Z",
+      "createdAt": "2026-11-03T23:33:08.577Z"
     },
     {
       "id": "mw1bqfzfv1hz6",
       "name": "Berman Skin Institute",
       "specialty": "Dermatology",
-      "icon": "",
       "specialties": [
         "Dermatology"
       ],
+      "icon": "",
       "phone": "916-678-7270",
       "fax": "408-919-1790",
       "npi": "1528175528",
+      "website": "https://www.skinmds.com/",
       "address": "1792 Tribute Rd., Ste. 200, Sacramento, CA 95815",
+      "locations": [],
       "accepted": [
         "Medi-Cal",
         "Medicare",
@@ -1397,25 +1560,33 @@
         "Private"
       ],
       "notAccepted": [],
-      "services": [],
-      "locations": [],
-      "notes": "",
+      "services": [
+        "Cosmetic Dermatology",
+        "Hair loss",
+        "Medical Dermatology",
+        "Skin cancer",
+        "Suspicious moles",
+        "Weight loss program"
+      ],
+      "notes": "Multiple locations, including Los Altos / Palo Alto, Walnut Creek, Pleasanton, Placerville, Cameron Park, Roseville, Fremont, San Francisco, Berkeley.",
       "status": "open",
-      "createdAt": "2026-11-03T23:33:40.587Z",
-      "updatedAt": "2026-11-05T22:38:13.768Z"
+      "updatedAt": "2026-11-06T18:42:46.828Z",
+      "createdAt": "2026-11-03T23:33:40.587Z"
     },
     {
       "id": "mw1br9qoahwlz",
       "name": "Chico Dermatology",
       "specialty": "Dermatology",
-      "icon": "",
       "specialties": [
         "Dermatology"
       ],
+      "icon": "",
       "phone": "530-774-2650",
       "fax": "530-774-2644",
       "npi": "",
+      "website": "https://p.rejuvene.com/dermatology-promo/?utm_source=googleads&utm_medium=cpc&utm_campaign=Hodari_Chico_GenDerm_Search&utm_term=dermatologist%20chico&gad_source=1&gad_campaignid=23178495739&gbraid=0AAAAACSe0nVy3AjsM9zPn-4_n6qtAGtIV&gclid=CjwKCAiAkrbXBhB2EiwA2y1E3hhveRofct5Y3uia4GC6MU78ULDKTv6vshTeGNhlqne_S96AtZOtxBoCsecQAvD_BwE",
       "address": "774 East Ave, Chico, CA  95926",
+      "locations": [],
       "accepted": [
         "Covered CA BC/BS",
         "Medicare",
@@ -1425,25 +1596,40 @@
         "Medi-Cal",
         "Partnership"
       ],
-      "services": [],
-      "locations": [],
+      "services": [
+        "Acne",
+        "Eczema",
+        "Moles",
+        "Psoriasis",
+        "Rashes",
+        "Rosacea"
+      ],
       "notes": "Booking out a few months.",
       "status": "limited",
-      "createdAt": "2026-11-03T23:34:19.152Z",
-      "updatedAt": "2026-11-05T22:38:20.394Z"
+      "updatedAt": "2026-11-06T18:43:43.281Z",
+      "createdAt": "2026-11-03T23:34:19.152Z"
     },
     {
       "id": "mw1bt7d217a39",
       "name": "CK Derm",
       "specialty": "Dermatology",
-      "icon": "",
       "specialties": [
         "Dermatology"
       ],
+      "icon": "",
       "phone": "530-767-3376",
       "fax": "530-767-3373",
       "npi": "1053300632",
+      "website": "https://www.ckderm.com/location/chico",
       "address": "1817 Concord Ave Ste. 100, Chico, CA 95928",
+      "locations": [
+        {
+          "name": "Redding location",
+          "address": "2107 Airpark Drive, Redding, CA 96001",
+          "phone": "530-241-1111",
+          "fax": "530-241-4870"
+        }
+      ],
       "accepted": [
         "Anthem BC",
         "Covered CA BC",
@@ -1454,42 +1640,34 @@
         "Covered CA BS",
         "Medi-Cal"
       ],
-      "services": [],
-      "locations": [
-        {
-          "name": "Redding location",
-          "address": "2107 Airpark Drive, Redding, CA 96001",
-          "phone": "530-241-1111",
-          "fax": "530-241-4870"
-        }
+      "services": [
+        "Biologics",
+        "Cosmetic Dermatology",
+        "Medical Dermatology",
+        "Mohs surgery",
+        "Pediatric Dermatology",
+        "Phototherapy",
+        "Skin radiation",
+        "Surgical Dermatology"
       ],
       "notes": "",
       "status": "open",
-      "createdAt": "2026-11-03T23:35:49.382Z",
-      "updatedAt": "2026-11-05T22:38:32.005Z"
+      "updatedAt": "2026-11-06T18:44:55.767Z",
+      "createdAt": "2026-11-03T23:35:49.382Z"
     },
     {
       "id": "mw1bujq3wn7lf",
-      "name": "Hodari MD Dermatology",
+      "name": "Hodari MD Dermatology & Rejuvene",
       "specialty": "Dermatology",
-      "icon": "",
       "specialties": [
         "Dermatology"
       ],
+      "icon": "",
       "phone": "530-894-6832",
       "fax": "530-342-4199",
       "npi": "",
+      "website": "https://www.rejuvene.com/",
       "address": "80 Declaration Dr., Chico, CA",
-      "accepted": [
-        "Med/Medi",
-        "Medicare",
-        "Private"
-      ],
-      "notAccepted": [
-        "Medi-Cal",
-        "Partnership"
-      ],
-      "services": [],
       "locations": [
         {
           "name": "Oroville Location",
@@ -1504,67 +1682,103 @@
           "fax": "530-329-8598"
         }
       ],
+      "accepted": [
+        "Med/Medi",
+        "Medicare",
+        "Private"
+      ],
+      "notAccepted": [
+        "Medi-Cal",
+        "Partnership"
+      ],
+      "services": [
+        "Acne",
+        "Biopsy",
+        "DermaTherapy",
+        "Eczema",
+        "Facials & peels",
+        "Injectables",
+        "Lasers & light",
+        "Med Spa",
+        "Medical Dermatology",
+        "Moles",
+        "Psoriasis",
+        "Rashes",
+        "Rosacea",
+        "Skin checks & cancer screenings",
+        "Skin tightening"
+      ],
       "notes": "",
       "status": "open",
-      "createdAt": "2026-11-03T23:36:52.059Z",
-      "updatedAt": "2026-11-05T23:08:40.184Z"
+      "updatedAt": "2026-11-06T18:47:12.347Z",
+      "createdAt": "2026-11-03T23:36:52.059Z"
     },
     {
       "id": "mw1bv1at64ira",
       "name": "Lassen Medical Group",
       "specialty": "Dermatology",
-      "icon": "",
       "specialties": [
         "Dermatology"
       ],
+      "icon": "",
       "phone": "530-527-0414",
       "fax": "530-528-4423",
       "npi": "1407399678",
+      "website": "https://www.commonspirit.org/find-a-location/dignity-health-lassen-medical-clinic-red-bluff-376",
       "address": "2450 Sister Mary Columba Dr., Red Bluff, CA 96080",
+      "locations": [],
       "accepted": [
         "Partnership"
       ],
       "notAccepted": [],
       "services": [],
-      "locations": [],
       "notes": "",
       "status": "open",
-      "createdAt": "2026-11-03T23:37:14.837Z",
-      "updatedAt": "2026-11-05T22:38:55.634Z"
+      "updatedAt": "2026-11-06T18:47:38.939Z",
+      "createdAt": "2026-11-03T23:37:14.837Z"
     },
     {
       "id": "mw1bvftnzenn1",
       "name": "Mangrove Dermatology",
       "specialty": "Dermatology",
-      "icon": "",
       "specialties": [
         "Dermatology"
       ],
+      "icon": "",
       "phone": "530-809-1682",
       "fax": "530-965-5278",
       "npi": "",
+      "website": "https://www.mangrovedermatology.net/",
       "address": "1058 Mangrove Ave Ste. 2B, Chico, CA 95926",
+      "locations": [],
       "accepted": [],
       "notAccepted": [],
-      "services": [],
-      "locations": [],
+      "services": [
+        "Biologics",
+        "Botox",
+        "Mohs micrographic surgery",
+        "Sclerotherapy",
+        "Skin checks"
+      ],
       "notes": "",
       "status": "open",
-      "createdAt": "2026-11-03T23:37:33.659Z",
-      "updatedAt": "2026-11-05T22:39:13.616Z"
+      "updatedAt": "2026-11-06T18:48:31.937Z",
+      "createdAt": "2026-11-03T23:37:33.659Z"
     },
     {
       "id": "mw1bwel61uv5b",
       "name": "Oroville Hospital Dermatology",
       "specialty": "Dermatology",
-      "icon": "",
       "specialties": [
         "Dermatology"
       ],
+      "icon": "",
       "phone": "530-538-5650",
       "fax": "530-538-5655",
       "npi": "1962506295",
+      "website": "https://www.orovillehospital.com/health-services/dermatology",
       "address": "2809 Olive Hwy, #260, Oroville, CA 95966",
+      "locations": [],
       "accepted": [
         "Medi-Cal",
         "Medicare",
@@ -1572,49 +1786,97 @@
         "Private"
       ],
       "notAccepted": [],
-      "services": [],
-      "locations": [],
+      "services": [
+        "Acne",
+        "Allergy patch testing",
+        "Blistering disorders",
+        "Cancers of the skin",
+        "Dermatitis",
+        "Eczema",
+        "Inherited diseases of the skin",
+        "Pigment changes",
+        "Poison oak/ivy",
+        "Precancerous conditions",
+        "Psoriasis",
+        "Skin manifestations of internal diseases",
+        "Warts"
+      ],
       "notes": "Accepts patients living outside of Oroville.",
       "status": "open",
-      "createdAt": "2026-11-03T23:38:18.714Z",
-      "updatedAt": "2026-11-05T22:39:22.232Z"
+      "updatedAt": "2026-11-06T18:49:41.369Z",
+      "createdAt": "2026-11-03T23:38:18.714Z"
     },
     {
       "id": "mw1bwz5frck8t",
       "name": "Pacific Skin Institute",
       "specialty": "Dermatology",
-      "icon": "",
       "specialties": [
         "Dermatology"
       ],
+      "icon": "",
       "phone": "916-925-7020",
       "fax": "916-925-3680",
       "npi": "1184027104",
-      "address": "3301 C St. #1300, Sacramento, CA 95816",
+      "website": "https://psiderm.com/",
+      "address": "1495 River Park Dr., Ste. 200, Sacramento, CA 95815",
+      "locations": [
+        {
+          "name": "Folsom Location",
+          "address": "1710 Prairie City Rd., Ste. 100, Folsom, CA 95650",
+          "phone": "916-925-7020",
+          "fax": "916-925-3680"
+        },
+        {
+          "name": "Vacaville Location",
+          "address": "1010 Nut Tree Rd., Ste. 150, Vacaville, CA 95687",
+          "phone": "916-925-7020",
+          "fax": "916-925-3680"
+        },
+        {
+          "name": "Elk Grove Location",
+          "address": "9250 Big Horn Blvd., Ste. 100, Elk Grove, CA 95758",
+          "phone": "916-925-7020",
+          "fax": "916-925-3680"
+        },
+        {
+          "name": "Rocklin/Roseville",
+          "address": "6544 Lonetree Blvd., Rocklin, CA 95765",
+          "phone": "916-925-7020",
+          "fax": "916-925-3680"
+        }
+      ],
       "accepted": [
         "Partnership",
         "Private"
       ],
       "notAccepted": [],
-      "services": [],
-      "locations": [],
+      "services": [
+        "Medical Dermatology",
+        "PALLAS laser",
+        "Pediatric Dermatology",
+        "Photodynamic therapy",
+        "Phototherapy",
+        "Surgical Dermatology"
+      ],
       "notes": "",
       "status": "open",
-      "createdAt": "2026-11-03T23:38:45.363Z",
-      "updatedAt": "2026-11-05T22:39:28.049Z"
+      "updatedAt": "2026-11-06T18:54:26.958Z",
+      "createdAt": "2026-11-03T23:38:45.363Z"
     },
     {
       "id": "mw1bxn7ac6yaq",
       "name": "Sutter Health Dermatology",
       "specialty": "Dermatology",
-      "icon": "",
       "specialties": [
         "Dermatology"
       ],
+      "icon": "",
       "phone": "916-733-3792",
       "fax": "916-503-7632",
       "npi": "",
+      "website": "https://www.sutterhealth.org/services/dermatology",
       "address": "1020 29th St #570A, Sacramento, CA  95816",
+      "locations": [],
       "accepted": [
         "Medicare",
         "Private"
@@ -1623,24 +1885,25 @@
         "Partnership"
       ],
       "services": [],
-      "locations": [],
       "notes": "",
       "status": "open",
-      "createdAt": "2026-11-03T23:39:16.534Z",
-      "updatedAt": "2026-11-05T22:39:33.702Z"
+      "updatedAt": "2026-11-06T18:54:43.404Z",
+      "createdAt": "2026-11-03T23:39:16.534Z"
     },
     {
       "id": "mw1by7bnioyyu",
       "name": "UC Davis Dermatology",
       "specialty": "Dermatology",
-      "icon": "",
       "specialties": [
         "Dermatology"
       ],
+      "icon": "",
       "phone": "916-734-5111",
       "fax": "",
       "npi": "1710918545",
+      "website": "https://health.ucdavis.edu/dermatology/",
       "address": "3301 C St. #1300, Sacramento, CA 95816",
+      "locations": [],
       "accepted": [
         "Medi-Cal",
         "Medicare",
@@ -1649,24 +1912,25 @@
       ],
       "notAccepted": [],
       "services": [],
-      "locations": [],
       "notes": "Referrals must be submitted electronically or via portal.",
       "status": "open",
-      "createdAt": "2026-11-03T23:39:42.611Z",
-      "updatedAt": "2026-11-05T22:39:41.017Z"
+      "updatedAt": "2026-11-06T18:54:54.511Z",
+      "createdAt": "2026-11-03T23:39:42.611Z"
     },
     {
       "id": "mw1bzdraoa29r",
       "name": "Oroville Hospital ENT",
       "specialty": "ENT",
-      "icon": "",
       "specialties": [
         "ENT"
       ],
+      "icon": "",
       "phone": "530-538-5634",
       "fax": "530-538-5638",
       "npi": "1013933167",
+      "website": "https://www.orovillehospital.com/health-services/ear-nose-and-throat",
       "address": "2780 Oro Dam Blvd E. #F2, Oroville, CA 95966",
+      "locations": [],
       "accepted": [
         "Medi-Cal",
         "Medicare",
@@ -1674,25 +1938,40 @@
         "Private"
       ],
       "notAccepted": [],
-      "services": [],
-      "locations": [],
+      "services": [
+        "Balance disorders or vertigo",
+        "Difficulty smelling or breathing",
+        "Difficulty speaking eating or swallowing",
+        "Ear infection",
+        "Excessive wax buildup",
+        "Hearing impairment",
+        "Nosebleeds",
+        "Reconstruction for facial defects due to skin cancer",
+        "Sinus infections",
+        "Thyroid and parathyroid tumors",
+        "Tinnitus",
+        "Transoral robotic surgery",
+        "Tumors or trauma to the head neck & face"
+      ],
       "notes": "",
       "status": "open",
-      "createdAt": "2026-11-03T23:40:37.606Z",
-      "updatedAt": "2026-11-05T22:41:58.571Z"
+      "updatedAt": "2026-11-06T19:02:55.207Z",
+      "createdAt": "2026-11-03T23:40:37.606Z"
     },
     {
       "id": "mw1c04rpeezjr",
       "name": "Sacramento ENT",
       "specialty": "ENT",
-      "icon": "",
       "specialties": [
         "ENT"
       ],
+      "icon": "",
       "phone": "916-736-3399",
       "fax": "916-736-3350",
       "npi": "1497758155",
+      "website": "https://sacent.com/",
       "address": "1111 Exposition Blvd. Bldg. 700, Sacramento, CA 95815",
+      "locations": [],
       "accepted": [
         "Medi-Cal",
         "Medicare",
@@ -1700,51 +1979,71 @@
         "Private"
       ],
       "notAccepted": [],
-      "services": [],
-      "locations": [],
+      "services": [
+        "Allergy & sinus",
+        "Audiology & hearing",
+        "Ear nose & throat care",
+        "Neurotology & CI"
+      ],
       "notes": "Some private insurance plans may require prior auth, use CPT codes 99245, 99215 x1",
       "status": "open",
-      "createdAt": "2026-11-03T23:41:12.613Z",
-      "updatedAt": "2026-11-05T22:42:05.843Z"
+      "updatedAt": "2026-11-06T19:06:58.685Z",
+      "createdAt": "2026-11-03T23:41:12.613Z"
     },
     {
       "id": "mw1c0yn0dwcb7",
       "name": "Stanford ENT",
       "specialty": "ENT",
-      "icon": "",
       "specialties": [
         "ENT"
       ],
+      "icon": "",
       "phone": "650-723-5281",
       "fax": "650-320-9443",
       "npi": "",
+      "website": "https://stanfordhealthcare.org/discover/stanford-health-care-ear-nose-and-throat.html",
       "address": "801 Welch Rd., Palo Alto, CA 94304",
+      "locations": [],
       "accepted": [
         "Medi-Cal",
         "Medicare",
-        "Partnership*",
+        "Partnership",
         "Private"
       ],
       "notAccepted": [],
-      "services": [],
-      "locations": [],
+      "services": [
+        "Comprehensive",
+        "Facial nerve center",
+        "Facial plastics & reconstructive surgery clinic",
+        "Head & neck cancer program",
+        "Hearing loss",
+        "Otolaryngology",
+        "Sinus center",
+        "Skull base surgery program",
+        "Sleep surgery clinic",
+        "Smell and taste disorders",
+        "Vestibular balance disorders program",
+        "Voice and swallowing center"
+      ],
       "notes": "Out of network with Partnership.",
       "status": "open",
-      "createdAt": "2026-11-03T23:41:51.324Z",
-      "updatedAt": "2026-11-05T22:42:11.977Z"
+      "updatedAt": "2026-11-06T19:08:31.914Z",
+      "createdAt": "2026-11-03T23:41:51.324Z"
     },
     {
       "id": "mw1c24fxlke7v",
       "name": "UC Davis ENT",
       "specialty": "ENT",
-      "icon": "",
       "specialties": [
         "ENT"
       ],
-      "phone": "(916) 734-5400",
-      "fax": "(916) 703-5126",
+      "icon": "",
+      "phone": "916-734-5400",
+      "fax": "916-703-5126",
       "npi": "1710918545",
+      "website": "https://health.ucdavis.edu/health-topics/ear-nose-throat",
       "address": "2521 Stockton Blvd., Suite 5200, Sacramento, CA 95817",
+      "locations": [],
       "accepted": [
         "Medi-Cal",
         "Medicare",
@@ -1752,25 +2051,33 @@
         "Private"
       ],
       "notAccepted": [],
-      "services": [],
-      "locations": [],
+      "services": [
+        "Airway swallowing & voice",
+        "Audiology",
+        "Cleft and craniofacial reconstruction",
+        "Digestion and swallowing",
+        "Facial plastic and reconstructive surgery",
+        "Head and neck surgery"
+      ],
       "notes": "Referrals must be submitted electronically or via portal.",
       "status": "open",
-      "createdAt": "2026-11-03T23:42:45.501Z",
-      "updatedAt": "2026-11-03T23:42:45.501Z"
+      "updatedAt": "2026-11-06T19:10:05.581Z",
+      "createdAt": "2026-11-03T23:42:45.501Z"
     },
     {
       "id": "mw1c2uhaypr5b",
       "name": "UCSF ENT",
       "specialty": "ENT",
-      "icon": "",
       "specialties": [
         "ENT"
       ],
-      "phone": "(415) 353-2757",
-      "fax": "(415) 353-2603",
+      "icon": "",
+      "phone": "415-353-2757",
+      "fax": "415-353-2603",
       "npi": "",
+      "website": "https://www.ucsfhealth.org/care/services/otolaryngology",
       "address": "San Francisco, CA",
+      "locations": [],
       "accepted": [
         "Medi-Cal",
         "Medicare",
@@ -1778,25 +2085,36 @@
         "Private"
       ],
       "notAccepted": [],
-      "services": [],
-      "locations": [],
+      "services": [
+        "Facial plastic & reconstructive surgery",
+        "Head & neck cancer",
+        "Otology neurotology & skull base surgery",
+        "Salivary gland surgery",
+        "Sinus care",
+        "Snoring & sleep apnea surgery",
+        "Speech-language pathology",
+        "Thyroid & parathyroid surgery",
+        "Voice & swallowing"
+      ],
       "notes": "",
       "status": "open",
-      "createdAt": "2026-11-03T23:43:19.246Z",
-      "updatedAt": "2026-11-03T23:43:19.246Z"
+      "updatedAt": "2026-11-06T19:11:29.733Z",
+      "createdAt": "2026-11-03T23:43:19.246Z"
     },
     {
       "id": "mw1c3kpqdpf75",
       "name": "Northern CA Fertility Medical Center",
       "specialty": "Fertility",
-      "icon": "clinical_notes",
       "specialties": [
         "Fertility"
       ],
-      "phone": "(916) 773-2229",
-      "fax": "(916) 773-8391",
+      "icon": "clinical_notes",
+      "phone": "916-773-2229",
+      "fax": "916-773-8391",
       "npi": "",
+      "website": "https://ncfmc.com/",
       "address": "4320 Auburn Blvd, Sacramento, CA 95841",
+      "locations": [],
       "accepted": [
         "Private"
       ],
@@ -1805,12 +2123,19 @@
         "Medicare",
         "Partnership"
       ],
-      "services": [],
-      "locations": [],
+      "services": [
+        "Egg donor services",
+        "Egg freezing",
+        "Genetic testing",
+        "IUI",
+        "IVF",
+        "Male fertility",
+        "Recurrent pregnancy loss"
+      ],
       "notes": "",
       "status": "open",
-      "createdAt": "2026-11-03T23:43:53.246Z",
-      "updatedAt": "2026-11-04T19:17:46.966Z"
+      "updatedAt": "2026-11-06T19:12:48.830Z",
+      "createdAt": "2026-11-03T23:43:53.246Z"
     },
     {
       "id": "mw1c4ab3w62gg",
@@ -1824,6 +2149,7 @@
       "fax": "530-529-4500",
       "npi": "",
       "address": "2440 Sister Mary Columba Dr., Ste. 100, Red Bluff, CA 96080",
+      "website": "",
       "accepted": [
         "Medi-Cal",
         "Medicare",
@@ -1842,14 +2168,16 @@
       "id": "mw1c56jwxmiyq",
       "name": "Oroville Hospital Gastroenterology",
       "specialty": "Gastroenterology",
-      "icon": "",
       "specialties": [
         "Gastroenterology"
       ],
+      "icon": "",
       "phone": "530-532-8071",
       "fax": "530-538-5640",
       "npi": "1992768360",
+      "website": "https://www.orovillehospital.com/health-services/gastroenterology",
       "address": "2721 Olive Hwy. Ste. 9D, Oroville, CA 95966",
+      "locations": [],
       "accepted": [
         "Medi-Cal",
         "Medicare",
@@ -1857,74 +2185,86 @@
         "Private"
       ],
       "notAccepted": [],
-      "services": [],
-      "locations": [],
+      "services": [
+        "Capsule endoscopy",
+        "Colonoscopy/Colon cancer screening",
+        "EGD",
+        "ERCP",
+        "Esophageal motility and pH testing",
+        "Hemorrhoid banding",
+        "Hepatitis-C diagnosis and treatment",
+        "PEG tube placement"
+      ],
       "notes": "",
       "status": "open",
-      "createdAt": "2026-11-03T23:45:08.204Z",
-      "updatedAt": "2026-11-05T22:42:42.711Z"
+      "updatedAt": "2026-11-06T19:16:51.378Z",
+      "createdAt": "2026-11-03T23:45:08.204Z"
     },
     {
       "id": "mw1c66ntqhbx8",
       "name": "Redding Endoscopy Center",
       "specialty": "Gastroenterology",
-      "icon": "",
       "specialties": [
         "Gastroenterology"
       ],
+      "icon": "",
       "phone": "530-410-0830",
       "fax": "530-319-3256",
       "npi": "",
+      "website": "https://www.reddingendoscopy.com/",
       "address": "2179 Court St., Redding CA 96001",
+      "locations": [],
       "accepted": [
         "Private"
       ],
       "notAccepted": [],
       "services": [],
-      "locations": [],
       "notes": "",
       "status": "open",
-      "createdAt": "2026-11-03T23:45:55.001Z",
-      "updatedAt": "2026-11-05T22:42:49.145Z"
+      "updatedAt": "2026-11-06T19:17:28.586Z",
+      "createdAt": "2026-11-03T23:45:55.001Z"
     },
     {
       "id": "mw1c6uu0ust5b",
       "name": "Stanford Gastroenterology",
       "specialty": "Gastroenterology",
-      "icon": "",
       "specialties": [
         "Gastroenterology"
       ],
+      "icon": "",
       "phone": "650-736-5555",
       "fax": "650-320-9443",
       "npi": "1437292927",
+      "website": "https://stanfordhealthcare.org/medical-clinics/general-gastroenterology-clinic.html",
       "address": "420 Broadway St. Pavilion D, 2nd Fl., Redwood City, CA 94063",
+      "locations": [],
       "accepted": [
         "Medi-Cal",
         "Medicare",
-        "Partnership*",
+        "Partnership",
         "Private"
       ],
       "notAccepted": [],
       "services": [],
-      "locations": [],
       "notes": "Out of network with Partnership.",
       "status": "open",
-      "createdAt": "2026-11-03T23:46:26.328Z",
-      "updatedAt": "2026-11-05T22:42:59.172Z"
+      "updatedAt": "2026-11-06T19:17:52.822Z",
+      "createdAt": "2026-11-03T23:46:26.328Z"
     },
     {
       "id": "mw1c7oh2ka7f2",
       "name": "Sutter Gastroenterology",
       "specialty": "Gastroenterology",
-      "icon": "",
       "specialties": [
         "Gastroenterology"
       ],
+      "icon": "",
       "phone": "916-262-9370",
       "fax": "916-503-7632",
       "npi": "",
+      "website": "https://www.sutterhealth.org/services/gastroenterology",
       "address": "2725 Capitol Ave, Sacramento, CA 95816",
+      "locations": [],
       "accepted": [
         "Medi-Cal",
         "Medicare",
@@ -1933,24 +2273,25 @@
       ],
       "notAccepted": [],
       "services": [],
-      "locations": [],
       "notes": "Locations in Roseville, Rocklin and Fairfield as well.\nFairfield NPI: 1184859894",
       "status": "open",
-      "createdAt": "2026-11-03T23:47:04.742Z",
-      "updatedAt": "2026-11-05T22:43:05.058Z"
+      "updatedAt": "2026-11-06T19:18:24.397Z",
+      "createdAt": "2026-11-03T23:47:04.742Z"
     },
     {
       "id": "mw1c8l64ghwg7",
       "name": "UC Davis GI",
       "specialty": "Gastroenterology",
-      "icon": "",
       "specialties": [
         "Gastroenterology"
       ],
-      "phone": "(916) 734-8616",
-      "fax": "(916) 703-7946",
+      "icon": "",
+      "phone": "916-734-8616",
+      "fax": "916-703-7946",
       "npi": "1710918545",
+      "website": "https://health.ucdavis.edu/internal-medicine/gastroenterology-hepatology/",
       "address": "Sacramento, CA",
+      "locations": [],
       "accepted": [
         "Medi-Cal",
         "Medicare",
@@ -1959,24 +2300,25 @@
       ],
       "notAccepted": [],
       "services": [],
-      "locations": [],
       "notes": "Referrals must be submitted electronically or via portal.",
       "status": "open",
-      "createdAt": "2026-11-03T23:47:47.116Z",
-      "updatedAt": "2026-11-03T23:47:47.116Z"
+      "updatedAt": "2026-11-06T19:18:41.909Z",
+      "createdAt": "2026-11-03T23:47:47.116Z"
     },
     {
       "id": "mw1c9sxj7pj0e",
       "name": "UC Davis Hepatology / Liver Transport",
       "specialty": "Hepatology",
-      "icon": "",
       "specialties": [
         "Hepatology"
       ],
-      "phone": "(916) 734-7870",
-      "fax": "(916) 734-5194",
+      "icon": "",
+      "phone": "916-734-7870",
+      "fax": "916-734-5194",
       "npi": "1710918545",
+      "website": "https://health.ucdavis.edu/surgery/specialties/transplant/liver/index.html",
       "address": "Sacramento, CA",
+      "locations": [],
       "accepted": [
         "Medi-Cal",
         "Medicare",
@@ -1985,11 +2327,10 @@
       ],
       "notAccepted": [],
       "services": [],
-      "locations": [],
       "notes": "Referrals must be submitted electronically or via portal.",
       "status": "open",
-      "createdAt": "2026-11-03T23:48:43.831Z",
-      "updatedAt": "2026-11-03T23:48:43.831Z"
+      "updatedAt": "2026-11-06T19:26:51.535Z",
+      "createdAt": "2026-11-03T23:48:43.831Z"
     },
     {
       "id": "mw1caitca77n1",
@@ -2003,6 +2344,7 @@
       "fax": "",
       "npi": "1710918545",
       "address": "2521 Stockton Blvd. 2nd Fl., Sacramento, CA",
+      "website": "",
       "accepted": [
         "Medi-Cal",
         "Medicare",
@@ -2021,14 +2363,16 @@
       "id": "mw1cb47yylr4h",
       "name": "UCSF Gastroenterology",
       "specialty": "Gastroenterology",
-      "icon": "",
       "specialties": [
         "Gastroenterology"
       ],
-      "phone": "(415) 502-4444",
-      "fax": "(415) 502-2249",
+      "icon": "",
+      "phone": "415-502-4444",
+      "fax": "415-502-2249",
       "npi": "1639278369",
+      "website": "https://www.ucsfhealth.org/care/services/gastroenterology",
       "address": "San Francisco, CA",
+      "locations": [],
       "accepted": [
         "Medi-Cal",
         "Medicare",
@@ -2037,24 +2381,25 @@
       ],
       "notAccepted": [],
       "services": [],
-      "locations": [],
       "notes": "Not accepting out of area referrals at this time.",
       "status": "closed",
-      "createdAt": "2026-11-03T23:49:45.118Z",
-      "updatedAt": "2026-11-03T23:49:45.118Z"
+      "updatedAt": "2026-11-06T19:18:59.252Z",
+      "createdAt": "2026-11-03T23:49:45.118Z"
     },
     {
       "id": "mw1cc5ws15baa",
       "name": "UCSF Gender Affirming Health Program",
       "specialty": "Gender Affirming Care",
-      "icon": "self_improvement",
       "specialties": [
         "Gender Affirming Care"
       ],
+      "icon": "self_improvement",
       "phone": "415-885-7770",
       "fax": "415-353-3399",
       "npi": "1164512851",
+      "website": "https://transcare.ucsf.edu/",
       "address": "1725 Montgomery St. Ste. 250, San Francisco, CA 94111",
+      "locations": [],
       "accepted": [
         "Medi-Cal",
         "Medicare",
@@ -2063,95 +2408,104 @@
       ],
       "notAccepted": [],
       "services": [],
-      "locations": [],
       "notes": "Scheduling several months out.",
       "status": "open",
-      "createdAt": "2026-11-03T23:50:33.964Z",
-      "updatedAt": "2026-11-05T22:43:22.034Z"
+      "updatedAt": "2026-11-06T19:20:02.691Z",
+      "createdAt": "2026-11-03T23:50:33.964Z"
     },
     {
       "id": "mw1ccsjqewx41",
       "name": "Align Surgical Associates",
       "specialty": "Gender Affirming Care",
-      "icon": "self_improvement",
       "specialties": [
         "Gender Affirming Care"
       ],
+      "icon": "self_improvement",
       "phone": "415-530-5335",
       "fax": "415-530-5336",
       "npi": "1104391705",
+      "website": "https://alignsurgical.com/",
       "address": "2299 Post St. Ste. 207, San Francisco, CA 94115",
+      "locations": [],
       "accepted": [
-        "Partnership*",
+        "Partnership",
         "Private"
       ],
       "notAccepted": [],
-      "services": [],
-      "locations": [],
+      "services": [
+        "Body surgery",
+        "Bottom surgery",
+        "Chest surgery",
+        "Face surgery"
+      ],
       "notes": "Out of network with Partnership.",
       "status": "open",
-      "createdAt": "2026-11-03T23:51:03.302Z",
-      "updatedAt": "2026-11-05T22:43:15.019Z"
+      "updatedAt": "2026-11-06T19:19:39.726Z",
+      "createdAt": "2026-11-03T23:51:03.302Z"
     },
     {
       "id": "mw1cdq0v34p2f",
       "name": "Stanford Genetics",
       "specialty": "Genetic Testing",
-      "icon": "",
       "specialties": [
         "Genetic Testing"
       ],
+      "icon": "",
       "phone": "650-721-5804",
       "fax": "650-498-4555",
       "npi": "",
+      "website": "https://med.stanford.edu/genetics.html",
       "address": "730 Welch Rd., Palo Alto, CA 94304",
+      "locations": [],
       "accepted": [
         "Medi-Cal",
         "Medicare",
-        "Partnership*",
+        "Partnership",
         "Private"
       ],
       "notAccepted": [],
       "services": [],
-      "locations": [],
       "notes": "Out of network with Partnership.",
       "status": "open",
-      "createdAt": "2026-11-03T23:51:46.687Z",
-      "updatedAt": "2026-11-05T22:43:47.506Z"
+      "updatedAt": "2026-11-06T19:24:42.711Z",
+      "createdAt": "2026-11-03T23:51:46.687Z"
     },
     {
       "id": "mw1cejndh0gk5",
       "name": "UC Davis Mind Institute",
       "specialty": "Genetic Testing",
-      "icon": "",
       "specialties": [
         "Genetic Testing"
       ],
+      "icon": "",
       "phone": "916-703-0300",
       "fax": "",
       "npi": "1427266055",
+      "website": "https://health.ucdavis.edu/mind-institute/",
       "address": "2825 50th St., Sacramento, CA 95817",
+      "locations": [],
       "accepted": [],
       "notAccepted": [],
       "services": [],
-      "locations": [],
       "notes": "Referrals must be submitted electronically or via portal. 1 year waitlist for scheduling.",
       "status": "open",
-      "createdAt": "2026-11-03T23:52:25.080Z",
-      "updatedAt": "2026-11-05T22:43:53.329Z"
+      "updatedAt": "2026-11-06T19:24:52.478Z",
+      "createdAt": "2026-11-03T23:52:25.080Z"
     },
     {
       "id": "mw1cfcn2z8sd3",
       "name": "UCSF Benioff Children's Hospital",
       "specialty": "Genetic Testing",
-      "icon": "",
       "specialties": [
         "Genetic Testing"
       ],
+      "icon": "",
       "phone": "415-476-2757",
       "fax": "415-353-4395",
       "npi": "",
+      "website": "https://www.ucsfbenioffchildrens.org/clinics/medical-genetics-and-genomics-clinic",
       "address": "1825 Fourth St. Sixth Fl., San Francisco, CA 94158",
+      "locations": [],
       "accepted": [
         "Medi-Cal",
         "Medicare",
@@ -2160,24 +2514,25 @@
       ],
       "notAccepted": [],
       "services": [],
-      "locations": [],
       "notes": "Clinic fax: 415-353-4485",
       "status": "open",
-      "createdAt": "2026-11-03T23:53:02.654Z",
-      "updatedAt": "2026-11-05T22:44:02.479Z"
+      "updatedAt": "2026-11-06T19:25:07.581Z",
+      "createdAt": "2026-11-03T23:53:02.654Z"
     },
     {
       "id": "mw1cfyqv18buq",
       "name": "UCSF Cancer Genetics and Prevention Program",
       "specialty": "Genetic Testing",
-      "icon": "",
       "specialties": [
         "Genetic Testing"
       ],
+      "icon": "",
       "phone": "415-885-7779",
       "fax": "415-885-3787",
       "npi": "",
+      "website": "https://www.ucsfhealth.org/care/services/cancer-genetics-and-prevention",
       "address": "1600 Divisadero St., San Francisco, CA 94115",
+      "locations": [],
       "accepted": [
         "Medi-Cal",
         "Medicare",
@@ -2186,37 +2541,37 @@
       ],
       "notAccepted": [],
       "services": [],
-      "locations": [],
       "notes": "",
       "status": "open",
-      "createdAt": "2026-11-03T23:53:31.303Z",
-      "updatedAt": "2026-11-05T22:44:14.887Z"
+      "updatedAt": "2026-11-06T19:25:19.525Z",
+      "createdAt": "2026-11-03T23:53:31.303Z"
     },
     {
       "id": "mw1ch0yjq8ght",
       "name": "Stanford Liver Clinic",
       "specialty": "Hepatology",
-      "icon": "",
       "specialties": [
         "Hepatology"
       ],
+      "icon": "",
       "phone": "650-498-7999",
       "fax": "650-320-9443",
       "npi": "1437292927",
+      "website": "https://stanfordhealthcare.org/medical-clinics/hepatology-liver-clinic.html",
       "address": "900 Blake Wilbur Dr., Palo Alto, CA 94304",
+      "locations": [],
       "accepted": [
         "Medi-Cal",
         "Medicare",
-        "Partnership*",
+        "Partnership",
         "Private"
       ],
       "notAccepted": [],
       "services": [],
-      "locations": [],
       "notes": "Out of network with Partnership.",
       "status": "open",
-      "createdAt": "2026-11-03T23:54:20.827Z",
-      "updatedAt": "2026-11-05T22:44:26.311Z"
+      "updatedAt": "2026-11-06T19:26:22.785Z",
+      "createdAt": "2026-11-03T23:54:20.827Z"
     },
     {
       "id": "mw1chmoxfvodt",
@@ -2230,6 +2585,7 @@
       "fax": "650-725-4085",
       "npi": "",
       "address": "Folsom, CA, Turlock, CA",
+      "website": "",
       "accepted": [
         "Medi-Cal",
         "Medicare",
@@ -2248,114 +2604,38 @@
       "id": "mw1ci4lb7cng8",
       "name": "Butte Home Health & Hospice",
       "specialty": "Home Health",
-      "icon": "",
       "specialties": [
         "Home Health"
       ],
-      "phone": "(530) 895-0462",
-      "fax": "(877) 828-5960",
+      "icon": "",
+      "phone": "530-895-0462",
+      "fax": "877-828-5960",
       "npi": "",
+      "website": "https://www.buttehomehealth.com/",
       "address": "10 Constitution Dr. Ste. A, Chico, CA 95973",
+      "locations": [],
       "accepted": [],
       "notAccepted": [],
       "services": [],
-      "locations": [],
       "notes": "",
       "status": "open",
-      "createdAt": "2026-11-03T23:55:12.191Z",
-      "updatedAt": "2026-11-03T23:55:12.191Z"
+      "updatedAt": "2026-11-06T19:27:14.262Z",
+      "createdAt": "2026-11-03T23:55:12.191Z"
     },
     {
       "id": "mw1cjnguq3i6j",
       "name": "Adventist Health and Rideout Infusion Center",
       "specialty": "Infusion Therapy",
-      "icon": "vaccines",
       "specialties": [
         "Infusion Therapy"
       ],
-      "phone": "(530) 749-4400",
-      "fax": "(530) 749-6643",
+      "icon": "vaccines",
+      "phone": "530-749-4400",
+      "fax": "530-749-6643",
       "npi": "",
+      "website": "https://www.adventisthealth.org/rideout/locations/adventist-health-cancer-care-4455/",
       "address": "Yuba City, CA",
-      "accepted": [
-        "Medi-Cal",
-        "Medicare",
-        "Partnership",
-        "Private"
-      ],
-      "notAccepted": [],
-      "services": [],
       "locations": [],
-      "notes": "Ext: 1645\nForms required.",
-      "status": "open",
-      "createdAt": "2026-11-03T23:56:23.310Z",
-      "updatedAt": "2026-11-04T19:33:09.014Z"
-    },
-    {
-      "id": "mw1cl4p0iauuq",
-      "name": "Enloe Infusion Therapy Clinic",
-      "specialty": "Infusion Therapy",
-      "icon": "vaccines",
-      "specialties": [
-        "Infusion Therapy"
-      ],
-      "phone": "(530) 332-3834",
-      "fax": "(530) 893-6880",
-      "npi": "1588385454",
-      "address": "265 Cohasset Rd., Chico, CA 95926",
-      "accepted": [
-        "Medi-Cal",
-        "Medicare",
-        "Partnership",
-        "Private"
-      ],
-      "notAccepted": [],
-      "services": [],
-      "locations": [],
-      "notes": "Form required. Prolia and Zoledronic Acid (Reclast).",
-      "status": "open",
-      "createdAt": "2026-11-03T23:57:32.292Z",
-      "updatedAt": "2026-11-04T19:19:47.631Z"
-    },
-    {
-      "id": "mw1cm25mn7v74",
-      "name": "Adventist Health - Feather River Nephrology",
-      "specialty": "Nephrology",
-      "icon": "",
-      "specialties": [
-        "Nephrology"
-      ],
-      "phone": "(530) 872-2000",
-      "fax": "(530) 332-1049",
-      "npi": "1912092792",
-      "address": "5125 Skyway, Paradise, CA 95969",
-      "accepted": [
-        "Medi-Cal",
-        "Medicare",
-        "Partnership",
-        "Private"
-      ],
-      "notAccepted": [],
-      "services": [],
-      "locations": [],
-      "notes": "Current labs required (no older than 6 months).",
-      "status": "open",
-      "createdAt": "2026-11-03T23:58:15.658Z",
-      "updatedAt": "2026-11-03T23:58:15.658Z"
-    },
-    {
-      "id": "mw1cnm82grqic",
-      "name": "Interventional Pain Solutions",
-      "specialty": "Pain Management",
-      "icon": "",
-      "specialties": [
-        "Pain Management",
-        "Neurodiagnostic"
-      ],
-      "phone": "530-343-4757",
-      "fax": "530-466-2167",
-      "npi": "1538487608",
-      "address": "647 W. East Ave, Chico, CA 95926",
       "accepted": [
         "Medi-Cal",
         "Medicare",
@@ -2364,33 +2644,39 @@
       ],
       "notAccepted": [],
       "services": [
-        "EMG/NCS"
+        "Antibiotics",
+        "Blood products",
+        "Chemotherapy",
+        "Genetic screening",
+        "Hydration",
+        "Immunotherapy",
+        "Infusions",
+        "Injections",
+        "Medical oncology",
+        "Non-chemotherapy",
+        "Nurse navigation",
+        "PICC line placement",
+        "Radiation oncology"
       ],
-      "locations": [
-        {
-          "name": "Redding Location",
-          "address": "2439 Sonoma St., Ste. 101, Redding, CA 96001",
-          "phone": "530-768-1722",
-          "fax": "530-466-2167"
-        }
-      ],
-      "notes": "Partnership referrals ON HOLD until Jan. 2027.\nReferrals Dept. at 530-343-4757 x219\nRecords request fax to 530-722-4121",
-      "status": "limited",
-      "createdAt": "2026-11-03T23:59:28.322Z",
-      "updatedAt": "2026-11-05T22:53:58.448Z"
+      "notes": "Ext: 1645\nForms required.",
+      "status": "open",
+      "updatedAt": "2026-11-06T19:28:15.440Z",
+      "createdAt": "2026-11-03T23:56:23.310Z"
     },
     {
-      "id": "mw1cp83x7ygns",
-      "name": "Catalyst Neuromedical Center",
-      "specialty": "Neurology",
-      "icon": "",
+      "id": "mw1cl4p0iauuq",
+      "name": "Enloe Infusion Therapy Clinic",
+      "specialty": "Infusion Therapy",
       "specialties": [
-        "Neurology"
+        "Infusion Therapy"
       ],
-      "phone": "530-999-2533",
-      "fax": "530-999-2532",
-      "npi": "1558973792",
-      "address": "2420 Sonoma St., Redding, CA 96001",
+      "icon": "vaccines",
+      "phone": "530-332-3834",
+      "fax": "530-893-6880",
+      "npi": "1588385454",
+      "website": "https://www.enloe.org/care-treatment/cancer-care/treatment/chemotherapy-infusion/",
+      "address": "265 Cohasset Rd., Chico, CA 95926",
+      "locations": [],
       "accepted": [
         "Medi-Cal",
         "Medicare",
@@ -2399,11 +2685,122 @@
       ],
       "notAccepted": [],
       "services": [],
-      "locations": [],
-      "notes": "EMG/NCS as well.\nAllow up to 6 weeks for processing/review.",
+      "notes": "Form required. Prolia and Zoledronic Acid (Reclast).",
       "status": "open",
-      "createdAt": "2026-11-04T00:00:43.341Z",
-      "updatedAt": "2026-11-05T22:45:59.641Z"
+      "updatedAt": "2026-11-06T19:28:43.969Z",
+      "createdAt": "2026-11-03T23:57:32.292Z"
+    },
+    {
+      "id": "mw1cm25mn7v74",
+      "name": "Adventist Health - Feather River Nephrology",
+      "specialty": "Nephrology",
+      "specialties": [
+        "Nephrology"
+      ],
+      "icon": "",
+      "phone": "530-872-2000",
+      "fax": "530-332-1049",
+      "npi": "1912092792",
+      "website": "https://www.adventisthealth.org/feather-river/services/kidney-care/",
+      "address": "5125 Skyway, Paradise, CA 95969",
+      "locations": [],
+      "accepted": [
+        "Medi-Cal",
+        "Medicare",
+        "Partnership",
+        "Private"
+      ],
+      "notAccepted": [],
+      "services": [
+        "Chronic kidney diseases",
+        "Hemolytic uremic syndrome",
+        "Inflammation of the kidneys",
+        "Kidney cancer",
+        "Kidney failure acute and chronic",
+        "Kidney infections",
+        "Kidney stones",
+        "Nephrotic syndrome",
+        "Renal artery stenosis"
+      ],
+      "notes": "Current labs required (no older than 6 months).",
+      "status": "open",
+      "updatedAt": "2026-11-06T19:30:45.714Z",
+      "createdAt": "2026-11-03T23:58:15.658Z"
+    },
+    {
+      "id": "mw1cnm82grqic",
+      "name": "Interventional Pain Solutions",
+      "specialty": "Pain Management",
+      "specialties": [
+        "Pain Management",
+        "Neurodiagnostic"
+      ],
+      "icon": "",
+      "phone": "530-343-4757",
+      "fax": "530-466-2167",
+      "npi": "1538487608",
+      "website": "https://norcalpaindocs.com/",
+      "address": "647 W. East Ave, Chico, CA 95926",
+      "locations": [
+        {
+          "name": "Redding Location",
+          "address": "2439 Sonoma St., Ste. 101, Redding, CA 96001",
+          "phone": "530-768-1722",
+          "fax": "530-466-2167"
+        }
+      ],
+      "accepted": [
+        "Medi-Cal",
+        "Medicare",
+        "Partnership",
+        "Private"
+      ],
+      "notAccepted": [],
+      "services": [
+        "EMG/NCS",
+        "Injections",
+        "Nerve blocks",
+        "Pain management",
+        "Spinal cord stimulation"
+      ],
+      "notes": "Partnership referrals ON HOLD until Jan. 2027.\nReferrals Dept. at 530-343-4757 x219\nRecords request fax to 530-722-4121",
+      "status": "limited",
+      "updatedAt": "2026-11-06T19:36:38.958Z",
+      "createdAt": "2026-11-03T23:59:28.322Z"
+    },
+    {
+      "id": "mw1cp83x7ygns",
+      "name": "Catalyst Neuromedical Center",
+      "specialty": "Neurology",
+      "specialties": [
+        "Neurology"
+      ],
+      "icon": "",
+      "phone": "530-999-2533",
+      "fax": "530-999-2532",
+      "npi": "1558973792",
+      "website": "https://www.catalystneuromedical.com/",
+      "address": "2420 Sonoma St., Redding, CA 96001",
+      "locations": [],
+      "accepted": [
+        "Medi-Cal",
+        "Medicare",
+        "Partnership",
+        "Private"
+      ],
+      "notAccepted": [],
+      "services": [
+        "Botox injections",
+        "Deep brain stimulation",
+        "EEG",
+        "EMG/NCS",
+        "Neurologic consultation & treatment",
+        "Superficial skin biopsies"
+      ],
+      "notes": "Allow up to 6 weeks for processing/review.",
+      "status": "open",
+      "updatedAt": "2026-11-06T19:39:59.525Z",
+      "createdAt": "2026-11-04T00:00:43.341Z"
     },
     {
       "id": "mw1cqghf08pil",
@@ -2417,6 +2814,7 @@
       "fax": "916-649-9801",
       "npi": "1952468258",
       "address": "1 Scripts Dr. Ste. 303, Sacramento, CA 95815",
+      "website": "",
       "accepted": [
         "Medi-Cal",
         "Partnership",
@@ -2442,6 +2840,7 @@
       "fax": "530-674-7657",
       "npi": "",
       "address": "1290 Lincoln Rd. Ste. 2, Yuba City, CA 95991",
+      "website": "",
       "accepted": [
         "Medi-Cal",
         "Medicare",
@@ -2468,6 +2867,7 @@
       "fax": "530-809-0486",
       "npi": "",
       "address": "1645 Esplanade Ste. 2, Chico, CA 95926",
+      "website": "",
       "accepted": [
         "Medicare*",
         "Private"
@@ -2495,6 +2895,7 @@
       "fax": "530-896-0287",
       "npi": "",
       "address": "130 Independence Cir. #5, Chico, CA 95973",
+      "website": "",
       "accepted": [
         "Medicare",
         "Private"
@@ -2514,14 +2915,16 @@
       "id": "mw1cu3wr6frb9",
       "name": "Oroville Hospital Neurology",
       "specialty": "Neurology",
-      "icon": "",
       "specialties": [
         "Neurology"
       ],
+      "icon": "",
       "phone": "530-538-5680",
       "fax": "530-538-5685",
       "npi": "1740583095",
+      "website": "https://web.orovillehospital.org/health-services/neurology",
       "address": "2721 Olive Hwy., Oroville, CA 95966",
+      "locations": [],
       "accepted": [
         "Medi-Cal",
         "Medicare",
@@ -2529,25 +2932,36 @@
         "Private"
       ],
       "notAccepted": [],
-      "services": [],
-      "locations": [],
+      "services": [
+        "Headache disorders",
+        "Movement disorders",
+        "Neurodegenerative disorders",
+        "Peripheral Neuropathy",
+        "Seizures",
+        "Speech and language disorders",
+        "Spinal cord disorders",
+        "Stroke",
+        "Teleneurology"
+      ],
       "notes": "No outside referrals. Only accepting internal referrals from Oroville Hospital at this time.",
       "status": "closed",
-      "createdAt": "2026-11-04T00:04:31.179Z",
-      "updatedAt": "2026-11-05T22:46:28.286Z"
+      "updatedAt": "2026-11-06T19:41:19.745Z",
+      "createdAt": "2026-11-04T00:04:31.179Z"
     },
     {
       "id": "mw1cv10md0jk9",
       "name": "Redding Rancheria",
       "specialty": "Neurology",
-      "icon": "",
       "specialties": [
         "Neurology"
       ],
+      "icon": "",
       "phone": "530-225-6805 Opt. 4",
       "fax": "530-262-6592",
       "npi": "1780423244",
+      "website": "https://www.rrths.org/redding-rancheria-center-for-advanced-care/",
       "address": "3305 Placer St. Ste. B, Redding, CA 96001",
+      "locations": [],
       "accepted": [
         "Medi-Cal",
         "Partnership"
@@ -2557,50 +2971,52 @@
         "Private"
       ],
       "services": [],
-      "locations": [],
       "notes": "",
       "status": "open",
-      "createdAt": "2026-11-04T00:05:14.086Z",
-      "updatedAt": "2026-11-05T22:46:35.539Z"
+      "updatedAt": "2026-11-06T19:42:05.244Z",
+      "createdAt": "2026-11-04T00:05:14.086Z"
     },
     {
       "id": "mw1cvyp3cxboq",
       "name": "Stanford Neurology",
       "specialty": "Neurology",
-      "icon": "",
       "specialties": [
         "Neurology"
       ],
+      "icon": "",
       "phone": "650-723-6469",
       "fax": "650-320-9443",
       "npi": "1437292927",
+      "website": "https://stanfordhealthcare.org/medical-clinics/comprehensive-neurology.html",
       "address": "5800 Hollis St., Emeryville, CA 94608",
+      "locations": [],
       "accepted": [
         "Medi-Cal",
         "Medicare",
-        "Partnership*",
+        "Partnership",
         "Private"
       ],
       "notAccepted": [],
       "services": [],
-      "locations": [],
       "notes": "Out of network with Partnership.",
       "status": "open",
-      "createdAt": "2026-11-04T00:05:57.735Z",
-      "updatedAt": "2026-11-05T22:46:41.740Z"
+      "updatedAt": "2026-11-06T19:42:23.518Z",
+      "createdAt": "2026-11-04T00:05:57.735Z"
     },
     {
       "id": "mw1cx1iavwol3",
       "name": "Sutter Neuroscience Institute",
       "specialty": "Neurology",
-      "icon": "",
       "specialties": [
         "Neurology"
       ],
+      "icon": "",
       "phone": "916-454-6850",
       "fax": "916-503-7632",
       "npi": "",
+      "website": "https://www.sutterhealth.org/campaign/neuroscience?utm_source=google&utm_medium=cpc&utm_campaign=N1-a1-valley_cid_23963559039&utm_content=general&utm_term=sutter%20neurology",
       "address": "2800 L St., Sacramento, CA, 95816",
+      "locations": [],
       "accepted": [
         "Medi-Cal",
         "Medicare",
@@ -2608,25 +3024,37 @@
         "Private"
       ],
       "notAccepted": [],
-      "services": [],
-      "locations": [],
+      "services": [
+        "ALS & neuromuscular disorders",
+        "Alzheimer's disease",
+        "Concussion",
+        "Dementia",
+        "Epilepsy",
+        "Mild cognitive changes",
+        "Multiple sclerosis",
+        "Neurosurgery",
+        "Parkinson's disease",
+        "Stroke & neurovascular care"
+      ],
       "notes": "Referral reason should include: 1) Reason for referral, 2) Clinical question for Neurologist",
       "status": "open",
-      "createdAt": "2026-11-04T00:06:48.034Z",
-      "updatedAt": "2026-11-05T22:46:47.341Z"
+      "updatedAt": "2026-11-06T19:43:29.862Z",
+      "createdAt": "2026-11-04T00:06:48.034Z"
     },
     {
       "id": "mw1cy3dir0st0",
       "name": "UC Davis Neurology",
       "specialty": "Neurology",
-      "icon": "",
       "specialties": [
         "Neurology"
       ],
-      "phone": "(916) 734-3588",
-      "fax": "(916) 734-4958",
+      "icon": "",
+      "phone": "916-734-3588",
+      "fax": "916-734-4958",
       "npi": "1356330203",
+      "website": "https://health.ucdavis.edu/neurology/",
       "address": "3160 Folsom Blvd, Sacramento, CA 95816",
+      "locations": [],
       "accepted": [
         "Medi-Cal",
         "Medicare",
@@ -2635,24 +3063,25 @@
       ],
       "notAccepted": [],
       "services": [],
-      "locations": [],
       "notes": "Referrals must be submitted electronically or via portal.\nReferral acceptance depends on diagnosis.",
       "status": "limited",
-      "createdAt": "2026-11-04T00:07:37.110Z",
-      "updatedAt": "2026-11-04T00:07:37.110Z"
+      "updatedAt": "2026-11-06T19:43:50.087Z",
+      "createdAt": "2026-11-04T00:07:37.110Z"
     },
     {
       "id": "mw1cz3od7o3jf",
       "name": "UCSF Neurology",
       "specialty": "Neurology",
-      "icon": "",
       "specialties": [
         "Neurology"
       ],
+      "icon": "",
       "phone": "415-353-2273",
       "fax": "415-353-2898",
       "npi": "1164512851",
+      "website": "https://www.ucsfhealth.org/care/services/general-neurology",
       "address": "400 Parnassus Ave, 8th Fl., San Francisco, CA 94143",
+      "locations": [],
       "accepted": [
         "Medi-Cal",
         "Medicare",
@@ -2661,11 +3090,10 @@
       ],
       "notAccepted": [],
       "services": [],
-      "locations": [],
       "notes": "May not be taking out of area referrals at this time.",
       "status": "limited",
-      "createdAt": "2026-11-04T00:08:24.157Z",
-      "updatedAt": "2026-11-05T22:47:01.049Z"
+      "updatedAt": "2026-11-06T19:44:17.602Z",
+      "createdAt": "2026-11-04T00:08:24.157Z"
     },
     {
       "id": "mw1d5p5mquszl",
@@ -2679,6 +3107,7 @@
       "fax": "530-399-3279",
       "npi": "",
       "address": "344 Flume St STE I, Chico, CA 95928",
+      "website": "",
       "accepted": [
         "Medi-Cal",
         "Medi/Medi",
@@ -2699,14 +3128,16 @@
       "id": "mw1d6fueu09c2",
       "name": "Higher Ground Counseling",
       "specialty": "Behavioral Health",
-      "icon": "",
       "specialties": [
         "Behavioral Health"
       ],
+      "icon": "",
       "phone": "530-413-0032",
       "fax": "530-231-0355",
       "npi": "",
+      "website": "https://www.chicocounselor.com/",
       "address": "3 Governors Ln., Chico, CA",
+      "locations": [],
       "accepted": [
         "Partnership"
       ],
@@ -2714,24 +3145,25 @@
         "Private"
       ],
       "services": [],
-      "locations": [],
       "notes": "",
       "status": "open",
-      "createdAt": "2026-11-04T00:14:06.518Z",
-      "updatedAt": "2026-11-05T22:33:28.057Z"
+      "updatedAt": "2026-11-06T18:16:32.518Z",
+      "createdAt": "2026-11-04T00:14:06.518Z"
     },
     {
       "id": "mw1d7dziimrt2",
       "name": "Insights Counseling Group",
       "specialty": "Behavioral Health",
-      "icon": "",
       "specialties": [
         "Behavioral Health"
       ],
-      "phone": "(530) 887-1300",
-      "fax": "(530) 328-2811",
+      "icon": "",
+      "phone": "530-887-1300",
+      "fax": "530-328-2811",
       "npi": "",
+      "website": "https://insightscounselinggroup.org/",
       "address": "Roseville, CA",
+      "locations": [],
       "accepted": [
         "Anthem BC",
         "Cigna",
@@ -2741,48 +3173,53 @@
       "notAccepted": [
         "Medicare"
       ],
-      "services": [],
-      "locations": [],
-      "notes": "Telehealth & in-person (Roseville) available",
+      "services": [
+        "In-person",
+        "Telehealth"
+      ],
+      "notes": "",
       "status": "open",
-      "createdAt": "2026-11-04T00:14:50.766Z",
-      "updatedAt": "2026-11-04T00:14:50.766Z"
+      "updatedAt": "2026-11-06T18:17:56.365Z",
+      "createdAt": "2026-11-04T00:14:50.766Z"
     },
     {
       "id": "mw1d837om6r07",
       "name": "North Valley Counseling",
       "specialty": "Behavioral Health",
-      "icon": "",
       "specialties": [
         "Behavioral Health"
       ],
+      "icon": "",
       "phone": "530-636-6363",
       "fax": "888-524-1238",
       "npi": "",
+      "website": "https://www.northvalleycounseling.com/",
       "address": "1430 East Ave Ste. 2B, Chico, CA 95926",
+      "locations": [],
       "accepted": [
         "Partnership"
       ],
       "notAccepted": [],
       "services": [],
-      "locations": [],
       "notes": "Out of network w/ Blue Shield",
       "status": "open",
-      "createdAt": "2026-11-04T00:15:23.460Z",
-      "updatedAt": "2026-11-05T22:34:56.541Z"
+      "updatedAt": "2026-11-06T18:18:38.106Z",
+      "createdAt": "2026-11-04T00:15:23.460Z"
     },
     {
       "id": "mw1d9c49yn7b8",
       "name": "Parish Health & Wellness",
       "specialty": "Behavioral Health",
-      "icon": "",
       "specialties": [
         "Behavioral Health"
       ],
+      "icon": "",
       "phone": "530-528-2342",
       "fax": "530-690-5457",
       "npi": "",
+      "website": "https://www.phwcare.com/",
       "address": "22525 Sunbright Ave, Red Bluff, CA 96080",
+      "locations": [],
       "accepted": [
         "AARP",
         "Aetna",
@@ -2795,25 +3232,29 @@
         "Partnership"
       ],
       "notAccepted": [],
-      "services": [],
-      "locations": [],
-      "notes": "Telehealth & in-person (Red Bluff) available",
+      "services": [
+        "In-person",
+        "Telehealth"
+      ],
+      "notes": "",
       "status": "open",
-      "createdAt": "2026-11-04T00:16:21.657Z",
-      "updatedAt": "2026-11-05T22:33:58.020Z"
+      "updatedAt": "2026-11-06T18:19:08.840Z",
+      "createdAt": "2026-11-04T00:16:21.657Z"
     },
     {
       "id": "mw1daaf32xsth",
       "name": "Stonebridge Counseling",
       "specialty": "Behavioral Health",
-      "icon": "",
       "specialties": [
         "Behavioral Health"
       ],
+      "icon": "",
       "phone": "310-210-8147",
       "fax": "530-466-3154",
       "npi": "",
+      "website": "https://stonebridgecounselingca.com/?gad_source=1&gad_campaignid=15929141242&gbraid=0AAAAAoY6nTKMZXlPNDWcFiPCWaqOO_Bom&gclid=CjwKCAiAkrbXBhB2EiwA2y1E3hqbkQwTTIO7kgvkv2zOLnLLxV11RqPW59XTpGsIYvPhMJzPUxhGdRoCQ6AQAvD_BwE",
       "address": "2050 Talbert Dr., Chico, CA 95928",
+      "locations": [],
       "accepted": [
         "Aetna",
         "Anthem BC",
@@ -2826,47 +3267,49 @@
         "Medicare"
       ],
       "services": [],
-      "locations": [],
       "notes": "",
       "status": "open",
-      "createdAt": "2026-11-04T00:17:06.111Z",
-      "updatedAt": "2026-11-05T22:34:09.023Z"
+      "updatedAt": "2026-11-06T18:19:38.532Z",
+      "createdAt": "2026-11-04T00:17:06.111Z"
     },
     {
       "id": "mw1db93t01kcu",
       "name": "The Growing Place",
       "specialty": "Behavioral Health",
-      "icon": "",
       "specialties": [
         "Behavioral Health"
       ],
+      "icon": "",
       "phone": "530-588-0448",
       "fax": "530-636-4888",
       "npi": "",
+      "website": "https://growingplacechico.org/",
       "address": "1074 East Ave, Ste. A-4, Chico, CA 95926",
+      "locations": [],
       "accepted": [
         "Partnership"
       ],
       "notAccepted": [],
       "services": [],
-      "locations": [],
       "notes": "Waitlist. Will not release any referral status or appointment information.",
       "status": "limited",
-      "createdAt": "2026-11-04T00:17:51.065Z",
-      "updatedAt": "2026-11-05T22:34:24.244Z"
+      "updatedAt": "2026-11-06T18:19:52.455Z",
+      "createdAt": "2026-11-04T00:17:51.065Z"
     },
     {
       "id": "mw1dbwkjsa0qh",
       "name": "Three Rivers Counseling",
       "specialty": "Behavioral Health",
-      "icon": "",
       "specialties": [
         "Behavioral Health"
       ],
+      "icon": "",
       "phone": "530-431-2110",
       "fax": "530-203-5302",
       "npi": "",
+      "website": "https://3riverscounselingca.com/",
       "address": "2062 Talbert Dr. Ste. 100, Chico, CA 95928",
+      "locations": [],
       "accepted": [
         "Medi-Cal",
         "Partnership"
@@ -2876,25 +3319,26 @@
         "Private"
       ],
       "services": [],
-      "locations": [],
       "notes": "",
       "status": "open",
-      "createdAt": "2026-11-04T00:18:21.475Z",
-      "updatedAt": "2026-11-05T22:35:07.890Z"
+      "updatedAt": "2026-11-06T18:20:06.231Z",
+      "createdAt": "2026-11-04T00:18:21.475Z"
     },
     {
       "id": "mw1dd7ofjuc0t",
       "name": "Community Behavioral Health",
       "specialty": "Behavioral Health",
-      "icon": "",
       "specialties": [
         "Behavioral Health",
         "Psychiatry & Psychology"
       ],
+      "icon": "",
       "phone": "530-392-4399",
       "fax": "530-927-5353",
       "npi": "",
+      "website": "https://www.cbh.us/",
       "address": "415 Knollcrest DR. Ste. 101, Redding, CA 96002",
+      "locations": [],
       "accepted": [
         "Partnership"
       ],
@@ -2903,12 +3347,16 @@
         "Medicare",
         "Private"
       ],
-      "services": [],
-      "locations": [],
-      "notes": "Telehealth & in-person (Redding) available. Therapy & psychiatry.",
+      "services": [
+        "In-person",
+        "Psychiatry",
+        "Telehealth",
+        "Therapy"
+      ],
+      "notes": "",
       "status": "open",
-      "createdAt": "2026-11-04T00:19:22.527Z",
-      "updatedAt": "2026-11-05T22:33:01.179Z"
+      "updatedAt": "2026-11-06T18:18:03.119Z",
+      "createdAt": "2026-11-04T00:19:22.527Z"
     },
     {
       "id": "mw1dex60lub6x",
@@ -2922,6 +3370,7 @@
       "fax": "916-351-9449",
       "npi": "",
       "address": "Folsom, Roseville, Telehealth",
+      "website": "",
       "accepted": [
         "Aetna",
         "Anthem BC",
@@ -2956,6 +3405,7 @@
       "fax": "(530) 332-1049",
       "npi": "1912092792",
       "address": "5125 Skyway, Paradise, CA 95969",
+      "website": "",
       "accepted": [
         "Medi-Cal",
         "Medicare",
@@ -2982,6 +3432,7 @@
       "fax": "866-656-5932",
       "npi": "1275921587",
       "address": "870 Market St. Ste. 401, San Francisco, CA 94102",
+      "website": "",
       "accepted": [
         "Partnership*"
       ],
@@ -3005,6 +3456,7 @@
       "fax": "530-891-2773",
       "npi": "",
       "address": "560 Cohasset Rd, Ste. 175, Chico, CA 95926",
+      "website": "",
       "accepted": [
         "Medi-Cal",
         "Medicare",
@@ -3031,6 +3483,7 @@
       "fax": "209-584-0829",
       "npi": "",
       "address": "900 Howe Ave., Ste. 230, Sacramento, CA",
+      "website": "",
       "accepted": [
         "Aetna",
         "BS",
@@ -3064,6 +3517,7 @@
       "fax": "530-894-4030",
       "npi": "",
       "address": "1660 Humboldt Rd, Ste. 3, Chico, CA 95928",
+      "website": "",
       "accepted": [
         "Medicare",
         "Private"
@@ -3091,6 +3545,7 @@
       "fax": "855-201-8470",
       "npi": "",
       "address": "2561 California Park Dr., Ste. 300, Chico, CA",
+      "website": "",
       "accepted": [
         "Medi-Cal",
         "Partnership",
@@ -3118,6 +3573,7 @@
       "fax": "978-416-8198",
       "npi": "",
       "address": "706 Peach St., Corning, CA 96021",
+      "website": "",
       "accepted": [
         "Medi-Cal",
         "Medicare",
@@ -3145,6 +3601,7 @@
       "fax": "844-722-9257",
       "npi": "",
       "address": "Folsom, Rocklin",
+      "website": "",
       "accepted": [
         "Anthem BC (PPO/HMO)",
         "BS",
@@ -3177,6 +3634,7 @@
       "fax": "530-899-3160",
       "npi": "",
       "address": "3247 Esplanade, Chico, CA 95973",
+      "website": "",
       "accepted": [
         "BC",
         "BS",
@@ -3205,6 +3663,7 @@
       "fax": "(916) 703-0350",
       "npi": "",
       "address": "Sacramento, CA",
+      "website": "",
       "accepted": [
         "Medicare",
         "Private"
@@ -3232,6 +3691,7 @@
       "fax": "530-891-8226",
       "npi": "",
       "address": "125 Raley Blvd., Chico, CA 95928",
+      "website": "",
       "accepted": [
         "Private"
       ],
@@ -3259,6 +3719,7 @@
       "fax": "530-891-0950",
       "npi": "",
       "address": "260 Cohasset Rd, Ste. 185, Chico, CA 95926",
+      "website": "",
       "accepted": [
         "Medicare",
         "Private"
@@ -3285,6 +3746,7 @@
       "fax": "530-824-5061",
       "npi": "",
       "address": "710 Solano St., Corning, CA 96021",
+      "website": "",
       "accepted": [
         "Medi-Cal",
         "Medicare",
@@ -3311,6 +3773,7 @@
       "fax": "530-762-0496",
       "npi": "",
       "address": "6460 Pentz Rd. Ste. C, Paradise, CA",
+      "website": "",
       "accepted": [
         "Private"
       ],
@@ -3336,6 +3799,7 @@
       "fax": "530-846-8019",
       "npi": "",
       "address": "1516 State Hwy 99 Ste. G, Gridley, CA 95948",
+      "website": "",
       "accepted": [],
       "notAccepted": [],
       "services": [],
@@ -3357,6 +3821,7 @@
       "fax": "888-511-3977",
       "npi": "",
       "address": "552 Vallombrosa Ave, Chico, CA 95926",
+      "website": "",
       "accepted": [
         "Private"
       ],
@@ -3383,6 +3848,7 @@
       "fax": "530-865-8462",
       "npi": "",
       "address": "1351 Cortina Dr #110, Orland, CA 95963",
+      "website": "",
       "accepted": [
         "Medicare",
         "Private"
@@ -3410,6 +3876,7 @@
       "fax": "530-897-0997",
       "npi": "",
       "address": "1031 Village Ln., Chico, CA 95926",
+      "website": "",
       "accepted": [
         "Partnership",
         "Private"
@@ -3439,6 +3906,7 @@
       "fax": "530-990-7416",
       "npi": "",
       "address": "2224 5th Ave, Oroville, CA 95965",
+      "website": "",
       "accepted": [
         "Medi-Cal",
         "Medicare",
@@ -3467,6 +3935,7 @@
       "fax": "530-343-2738",
       "npi": "",
       "address": "2623 Forest Ave, Ste. 130, Chico, CA 95928",
+      "website": "",
       "accepted": [
         "Anthem Blue Cross PPO",
         "Blue Shield PPO",
@@ -3505,6 +3974,7 @@
       "fax": "978-416-8198",
       "npi": "",
       "address": "2540 Sister Mary Columba Dr., Red Bluff, CA 96080",
+      "website": "",
       "accepted": [
         "Partnership"
       ],
@@ -3528,6 +3998,7 @@
       "fax": "530-384-8042",
       "npi": "",
       "address": "555 Flying V St., Ste. 5, Chico, CA 95928",
+      "website": "",
       "accepted": [
         "Blue Cross",
         "Blue Shield",
@@ -3560,6 +4031,7 @@
       "fax": "530-533-2243",
       "npi": "",
       "address": "2000 5th Ave, Oroville, CA 95965",
+      "website": "",
       "accepted": [
         "Medicare",
         "Private"
@@ -3587,6 +4059,7 @@
       "fax": "530-605-2062",
       "npi": "",
       "address": "1430 Esplanade Ste. 8, Chico, CA 95926",
+      "website": "",
       "accepted": [
         "Medicare",
         "Partnership",
@@ -3614,6 +4087,7 @@
       "fax": "530-822-0898",
       "npi": "",
       "address": "950 Tharp Rd. Ste. 903, Yuba City, CA 95993",
+      "website": "",
       "accepted": [
         "Blue Cross/Blue Shield",
         "Champ VA",
@@ -3648,6 +4122,7 @@
       "fax": "530-751-4921",
       "npi": "1700384708",
       "address": "370 Del Norte Ave, Ste. 201, Yuba City, CA",
+      "website": "",
       "accepted": [
         "Medi-Cal",
         "Medicare",
@@ -3674,6 +4149,7 @@
       "fax": "530-712-2149",
       "npi": "",
       "address": "2450 Oro Dam Blvd. E, Oroville, CA 95966",
+      "website": "",
       "accepted": [
         "Private"
       ],
@@ -3701,6 +4177,7 @@
       "fax": "530-893-1128",
       "npi": "1184624769",
       "address": "572 Rio Lindo Ave, Ste. 201, Chico, CA 95926",
+      "website": "",
       "accepted": [
         "Medicare",
         "Private"
@@ -3730,6 +4207,7 @@
       "fax": "530-538-3230",
       "npi": "1679581557",
       "address": "2721 Olive Hwy., Ste. 10B, Oroville, CA 95966",
+      "website": "",
       "accepted": [
         "Medi-Cal",
         "Medicare",
@@ -3757,6 +4235,7 @@
       "fax": "530-241-6319",
       "npi": "",
       "address": "2626 Edith Ave, Ste. C, Redding, CA 96001",
+      "website": "",
       "accepted": [
         "Aetna",
         "Covered CA Blue Cross/Blue Shield",
@@ -3785,6 +4264,7 @@
       "fax": "",
       "npi": "1710918545",
       "address": "4860 Y St., Sacramento, CA 95817",
+      "website": "",
       "accepted": [
         "Medi-Cal",
         "Medicare",
@@ -3811,6 +4291,7 @@
       "fax": "415-353-2641",
       "npi": "",
       "address": "400 Parnassus Ave, 6th Fl., San Francisco, CA 94143",
+      "website": "",
       "accepted": [
         "Medi-Cal",
         "Medicare",
@@ -3837,6 +4318,7 @@
       "fax": "(530) 538-3230",
       "npi": "",
       "address": "Oroville, CA",
+      "website": "",
       "accepted": [
         "Private"
       ],
@@ -3860,6 +4342,7 @@
       "fax": "916-734-6110",
       "npi": "1477753457",
       "address": "4860 Y St., Sacramento, CA 95817",
+      "website": "",
       "accepted": [
         "Medi-Cal",
         "Medicare",
@@ -3886,6 +4369,7 @@
       "fax": "916-772-5530",
       "npi": "1750323119",
       "address": "5 Medical Plaza Dr., Ste. 290, Roseville, CA 95661",
+      "website": "",
       "accepted": [
         "Medi-Cal",
         "Medicare",
@@ -3912,6 +4396,7 @@
       "fax": "530-899-8854",
       "npi": "1538564463",
       "address": "35 Jan Court Ste. 150, Chico, CA 95928",
+      "website": "",
       "accepted": [
         "Medicare",
         "Partnership",
@@ -3952,6 +4437,7 @@
       "fax": "530-532-8129",
       "npi": "1154790905",
       "address": "2770 Olive Hwy. #C, Oroville, CA 95966",
+      "website": "",
       "accepted": [
         "Medi-Cal",
         "Medicare",
@@ -3978,6 +4464,7 @@
       "fax": "916-503-7632",
       "npi": "1811946734",
       "address": "1625 Stockton Blvd., Ste. 111, Sacramento, CA 95816",
+      "website": "",
       "accepted": [
         "Medi-Cal",
         "Medicare",
@@ -4004,6 +4491,7 @@
       "fax": "(661) 637-8879",
       "npi": "",
       "address": "Bakersfield, CA",
+      "website": "",
       "accepted": [
         "Medi-Cal",
         "Medicare",
@@ -4030,6 +4518,7 @@
       "fax": "530-669-5684",
       "npi": "1144497678",
       "address": "632 W Gibson Rd., Woodland, CA 95695",
+      "website": "",
       "accepted": [
         "Medi-Cal",
         "Medicare",
@@ -4056,6 +4545,7 @@
       "fax": "530-342-1327",
       "npi": "",
       "address": "1488 East Ave Ste. 130, Chico, CA 95926",
+      "website": "",
       "accepted": [
         "Medicare",
         "Private"
@@ -4083,6 +4573,7 @@
       "fax": "650-721-2884",
       "npi": "",
       "address": "900 Blake Wilbur Dr. 2nd Fl., Room W208, Palo Alto, CA 94304",
+      "website": "",
       "accepted": [
         "Medi-Cal",
         "Medicare",
@@ -4109,6 +4600,7 @@
       "fax": "916-503-7632",
       "npi": "",
       "address": "1020 29th St. #270, Sacramento, CA 95816",
+      "website": "",
       "accepted": [
         "Covered CA Blue Cross/Blue Shield",
         "Medicare",
@@ -4137,6 +4629,7 @@
       "fax": "916-734-4958",
       "npi": "1902080625",
       "address": "2516  Stockton Blvd., Sacramento, CA 95817",
+      "website": "",
       "accepted": [
         "Medi-Cal",
         "Medicare",
@@ -4163,6 +4656,7 @@
       "fax": "916-734-0811",
       "npi": "1710918545",
       "address": "4860 Y St. Ste. 400, Sacramento, CA 95817",
+      "website": "",
       "accepted": [
         "Medi-Cal",
         "Medicare",
@@ -4189,6 +4683,7 @@
       "fax": "415-353-2530",
       "npi": "1235244963",
       "address": "400 Pamassus Ave, Fl. B1, San Francisco, CA 94143",
+      "website": "",
       "accepted": [
         "Medi-Cal",
         "Medicare",
@@ -4215,6 +4710,7 @@
       "fax": "530-898-0533",
       "npi": "",
       "address": "1720 Esplanade, Chico, CA 95926",
+      "website": "",
       "accepted": [
         "Medi-Cal",
         "Medicare",
@@ -4252,6 +4748,7 @@
       "fax": "(530) 532-8416",
       "npi": "",
       "address": "Oroville, CA",
+      "website": "",
       "accepted": [
         "Medi-Cal",
         "Medicare",
@@ -4278,6 +4775,7 @@
       "fax": "415-681-6661",
       "npi": "",
       "address": "470 Plumas Blvd. #101, Yuba city, CA 95991",
+      "website": "",
       "accepted": [
         "Medi-Cal",
         "Medicare",
@@ -4305,6 +4803,7 @@
       "fax": "530-343-6106",
       "npi": "1346339785",
       "address": "130 Independence Cir. #1, Chico, CA 95973",
+      "website": "",
       "accepted": [
         "Medi-Cal",
         "Medicare",
@@ -4334,6 +4833,7 @@
       "fax": "530-538-3393",
       "npi": "1679581557",
       "address": "2809 Olive Hwy, #350, Oroville, CA 95966",
+      "website": "",
       "accepted": [
         "Medi-Cal",
         "Medicare",
@@ -4360,6 +4860,7 @@
       "fax": "916-669-4100",
       "npi": "1407880719",
       "address": "5 Medical Plaza, Ste. 190, Roseville, CA 95661",
+      "website": "",
       "accepted": [
         "Medi-Cal",
         "Medicare",
@@ -4395,6 +4896,7 @@
       "fax": "",
       "npi": "1710918545",
       "address": "2516  Stockton Blvd., Sacramento, CA 95817",
+      "website": "",
       "accepted": [
         "Medi-Cal",
         "Medicare",
@@ -4421,6 +4923,7 @@
       "fax": "",
       "npi": "1710918545",
       "address": "2825 J Ste. 400, Sacramento, CA 95816",
+      "website": "",
       "accepted": [
         "Medi-Cal",
         "Medicare",
@@ -4447,6 +4950,7 @@
       "fax": "415-353-9525",
       "npi": "1689772592",
       "address": "400 Parnassus Ave, 6th Fl. Rm. A6114, San Francisco, CA 94143",
+      "website": "",
       "accepted": [
         "Medi-Cal",
         "Medicare",
@@ -4473,6 +4977,7 @@
       "fax": "530-237-0766",
       "npi": "",
       "address": "1166 Esplanade #3, Chico, CA 95926",
+      "website": "",
       "accepted": [
         "Partnership",
         "Private"
@@ -4497,6 +5002,7 @@
       "fax": "530-345-5995",
       "npi": "1346339785",
       "address": "1260 East Avenue Ste. #100, Chico, CA 95926",
+      "website": "",
       "accepted": [
         "Medi-Cal",
         "Medicare",
@@ -4523,6 +5029,7 @@
       "fax": "530-749-3481",
       "npi": "",
       "address": "460 Plumas Blvd #203, Yuba City, CA 95991",
+      "website": "",
       "accepted": [
         "Medi-Cal",
         "Medicare",
@@ -4549,6 +5056,7 @@
       "fax": "916-710-8113",
       "npi": "",
       "address": "670 Rio Lindo Ave Ste. 900, Chico, CA 95926",
+      "website": "",
       "accepted": [
         "Medi-Cal",
         "Partnership",
@@ -4574,6 +5082,7 @@
       "fax": "(530) 332-1049",
       "npi": "1912092792",
       "address": "5125 Skyway, Paradise, CA 95969",
+      "website": "",
       "accepted": [
         "Medi-Cal",
         "Medicare",
@@ -4600,6 +5109,7 @@
       "fax": "530-538-5625",
       "npi": "",
       "address": "1611 Feather River Blvd., Oroville CA, 95966",
+      "website": "",
       "accepted": [
         "Medi-Cal",
         "Medicare",
@@ -4628,6 +5138,7 @@
       "fax": "530-712-2189",
       "npi": "1679581557",
       "address": "2450 Oro Dam Blvd. E, Oroville, CA 95966",
+      "website": "",
       "accepted": [
         "Private"
       ],
@@ -4651,6 +5162,7 @@
       "fax": "530-434-6798",
       "npi": "1902859416",
       "address": "1528 Plumas St. #100, Yuba City, CA 95991",
+      "website": "",
       "accepted": [
         "Medi-Cal",
         "Medicare",
@@ -4681,6 +5193,7 @@
       "fax": "530-528-8612",
       "npi": "",
       "address": "1425 Montgomery Rd., Red Bluff, CA 96080",
+      "website": "",
       "accepted": [
         "Medi-Cal",
         "Medicare",
@@ -4709,6 +5222,7 @@
       "fax": "605-799-8184",
       "npi": "",
       "address": "2111 Airpark Dr., Redding, CA 96001",
+      "website": "",
       "accepted": [
         "Med/Medi",
         "Medi-Cal Secondary",
@@ -4737,6 +5251,7 @@
       "fax": "530-343-2609",
       "npi": "1861548208",
       "address": "552 Vallombrosa Ave, Chico, CA 95926",
+      "website": "",
       "accepted": [
         "Anthem Blue Cross",
         "Blue Shield",
@@ -4766,6 +5281,7 @@
       "fax": "",
       "npi": "1710918545",
       "address": "4860 Y St #2700, Sacramento, CA 95817",
+      "website": "",
       "accepted": [
         "Medi-Cal",
         "Medicare",
@@ -4792,6 +5308,7 @@
       "fax": "916-244-4804",
       "npi": "1336963321",
       "address": "3823 V St., Sacramento, CA 95820",
+      "website": "",
       "accepted": [
         "Partnership",
         "Private"
@@ -4818,6 +5335,7 @@
       "fax": "(530) 893-6010",
       "npi": "",
       "address": "Chico, CA",
+      "website": "",
       "accepted": [
         "Medi-Cal",
         "Medicare",
@@ -4846,6 +5364,7 @@
       "fax": "530-222-8908",
       "npi": "",
       "address": "1377 E. Lassen Ave, Chico, CA 95973",
+      "website": "",
       "accepted": [
         "Medi-Cal",
         "Medicare",
@@ -4864,14 +5383,16 @@
       "id": "mw2cbgklrofff",
       "name": "Adventist Health - Feather River Orthopedics",
       "specialty": "Orthopedics",
-      "icon": "personal_injury",
       "specialties": [
         "Orthopedics"
       ],
-      "phone": "(530) 872-2000",
-      "fax": "(530) 332-1049",
+      "icon": "personal_injury",
+      "phone": "530-872-2000",
+      "fax": "530-332-1049",
       "npi": "1912092792",
+      "website": "https://www.adventisthealth.org/feather-river/services/orthopedics/",
       "address": "5125 Skyway, Paradise, CA 95969",
+      "locations": [],
       "accepted": [
         "Medi-Cal",
         "Medicare",
@@ -4879,25 +5400,48 @@
         "Private"
       ],
       "notAccepted": [],
-      "services": [],
-      "locations": [],
+      "services": [
+        "Achilles tendon issues",
+        "ACL/MCL injuries",
+        "Arthritis & osteoarthritis",
+        "Broken bones & fractures",
+        "Bursitis",
+        "Cubital & carpal tunnel syndrome",
+        "Dislocations",
+        "Foot pain & injuries",
+        "Frozen shoulder",
+        "Hand/wrist injuries",
+        "Hip pain or fractures",
+        "Joint pain",
+        "Knee pain & problems",
+        "Lower back pain",
+        "Osteoporosis",
+        "Rheumatoid arthritis",
+        "Rotator cuff tears",
+        "Sciatica",
+        "Spinal stenosis",
+        "Sprains & strains",
+        "Tendonitis"
+      ],
       "notes": "",
       "status": "open",
-      "createdAt": "2026-11-04T16:37:47.301Z",
-      "updatedAt": "2026-11-04T19:29:34.724Z"
+      "updatedAt": "2026-11-06T20:16:03.994Z",
+      "createdAt": "2026-11-04T16:37:47.301Z"
     },
     {
       "id": "mw2cc2xier3f0",
       "name": "Adventist Health & Rideout Orthopedics",
       "specialty": "Orthopedics",
-      "icon": "personal_injury",
       "specialties": [
         "Orthopedics"
       ],
-      "phone": "(530) 751-7201",
-      "fax": "(530) 751-2704",
+      "icon": "personal_injury",
+      "phone": "530-751-7201",
+      "fax": "530-751-2704",
       "npi": "1700384708",
+      "website": "https://www.adventisthealth.org/rideout/services/orthopedics/",
       "address": "370 Del Norte Ave, Ste 201, Yuba City, CA 95991",
+      "locations": [],
       "accepted": [
         "Medi-Cal",
         "Medicare",
@@ -4905,25 +5449,34 @@
         "Private"
       ],
       "notAccepted": [],
-      "services": [],
-      "locations": [],
+      "services": [
+        "Arthroscopic shoulder & knee treatment",
+        "Fracture repair & other general orthopedics",
+        "Hip knee & shoulder replacement & revision",
+        "Shoulder & elbow surgery",
+        "Soft tissue repair (joint & non-joint)",
+        "Sports medicine",
+        "Trauma orthopedic care"
+      ],
       "notes": "",
       "status": "open",
-      "createdAt": "2026-11-04T16:38:16.278Z",
-      "updatedAt": "2026-11-04T19:29:42.124Z"
+      "updatedAt": "2026-11-06T20:26:04.111Z",
+      "createdAt": "2026-11-04T16:38:16.278Z"
     },
     {
       "id": "mw2ccofoxluw3",
       "name": "Epic Orthopedics",
       "specialty": "Orthopedics",
-      "icon": "personal_injury",
       "specialties": [
         "Orthopedics"
       ],
+      "icon": "personal_injury",
       "phone": "530-395-0340",
       "fax": "530-255-6107",
       "npi": "1518549534",
+      "website": "https://www.epicorthopedics.com/",
       "address": "2662 Edith Ave, Redding, CA 96001",
+      "locations": [],
       "accepted": [
         "Medi-Cal",
         "Medicare",
@@ -4931,25 +5484,33 @@
         "Private"
       ],
       "notAccepted": [],
-      "services": [],
-      "locations": [],
+      "services": [
+        "Arthroscopy",
+        "Knee pain",
+        "Pediatric care",
+        "Shoulder pain",
+        "Trauma & fracture care",
+        "Wrist and elbow pain"
+      ],
       "notes": "",
       "status": "open",
-      "createdAt": "2026-11-04T16:38:44.148Z",
-      "updatedAt": "2026-11-05T22:51:17.821Z"
+      "updatedAt": "2026-11-06T20:29:10.019Z",
+      "createdAt": "2026-11-04T16:38:44.148Z"
     },
     {
       "id": "mw2cdkqu1pkem",
       "name": "Orthopedic Associates",
       "specialty": "Orthopedics",
-      "icon": "personal_injury",
       "specialties": [
         "Orthopedics"
       ],
+      "icon": "personal_injury",
       "phone": "530-897-4500",
       "fax": "530-897-4544",
       "npi": "1235108077",
+      "website": "https://www.oanc.org/",
       "address": "131 Raley Blvd., Chico, CA 95928",
+      "locations": [],
       "accepted": [
         "Medicare",
         "Private"
@@ -4966,11 +5527,10 @@
         "Radiology",
         "Viscosupplementation"
       ],
-      "locations": [],
       "notes": "",
       "status": "open",
-      "createdAt": "2026-11-04T16:39:26.022Z",
-      "updatedAt": "2026-11-05T22:51:24.156Z"
+      "updatedAt": "2026-11-06T20:29:34.011Z",
+      "createdAt": "2026-11-04T16:39:26.022Z"
     },
     {
       "id": "mw2cee7o6dk8o",
@@ -4984,6 +5544,7 @@
       "fax": "916-732-3022",
       "npi": "",
       "address": "2801 K #330, Sacramento, CA",
+      "website": "",
       "accepted": [
         "Private"
       ],
@@ -5010,6 +5571,7 @@
       "fax": "530-232-9205",
       "npi": "1750493979",
       "address": "1255 Liberty St., Redding, CA 96001",
+      "website": "",
       "accepted": [
         "Medi-Cal",
         "Medicare",
@@ -5051,6 +5613,7 @@
       "fax": "916-503-7632",
       "npi": "1659447472",
       "address": "3 Medical Plaza Dr. #110, Roseville, CA 95661",
+      "website": "",
       "accepted": [
         "Medi-Cal",
         "Medicare",
@@ -5077,6 +5640,7 @@
       "fax": "",
       "npi": "1710918545",
       "address": "4860 Y Street Ste. 1700, Sacramento, CA  95817",
+      "website": "",
       "accepted": [
         "Medi-Cal",
         "Medicare",
@@ -5103,6 +5667,7 @@
       "fax": "",
       "npi": "",
       "address": "3301 C St. Ste 1600, Sacramento, CA 95816",
+      "website": "",
       "accepted": [
         "Medi-Cal",
         "Medicare",
@@ -5129,6 +5694,7 @@
       "fax": "415-885-3862",
       "npi": "1639278369",
       "address": "1500 Owens St., San Francisco, CA 94158",
+      "website": "",
       "accepted": [
         "Medi-Cal",
         "Medicare",
@@ -5155,6 +5721,7 @@
       "fax": "(415) 476-0665",
       "npi": "",
       "address": "1590 Webster St, Ste E, Fairfield, CA 94533",
+      "website": "",
       "accepted": [
         "Medi-Cal",
         "Partnership*",
@@ -5174,15 +5741,18 @@
       "id": "mw2cjqevssygh",
       "name": "Landis Facial Surgery",
       "specialty": "Oral Surgery",
-      "icon": "",
       "specialties": [
         "Oral Surgery"
       ],
+      "icon": "",
       "phone": "530-533-7900",
       "fax": "530-533-3457",
       "npi": "",
+      "website": "https://www.landisfacialsurgery.com/",
       "address": "2990 Oro Dam Blvd East, Ste. C, Oroville, CA 95966",
+      "locations": [],
       "accepted": [
+        "Private",
         "Private Dental"
       ],
       "notAccepted": [
@@ -5190,25 +5760,31 @@
         "Medicare",
         "Partnership"
       ],
-      "services": [],
-      "locations": [],
+      "services": [
+        "Facial cosmetic surgery",
+        "Jaw & mouth surgery",
+        "Reconstructive surgery",
+        "Wisdom tooth removal"
+      ],
       "notes": "",
       "status": "open",
-      "createdAt": "2026-11-04T16:44:13.303Z",
-      "updatedAt": "2026-11-05T22:50:39.998Z"
+      "updatedAt": "2026-11-06T20:10:57.682Z",
+      "createdAt": "2026-11-04T16:44:13.303Z"
     },
     {
       "id": "mw2ckas22ugty",
       "name": "Stanford Oral Medicine and Maxillofacial Surgery",
       "specialty": "Oral Surgery",
-      "icon": "",
       "specialties": [
         "Oral Surgery"
       ],
+      "icon": "",
       "phone": "650-723-7001",
       "fax": "650-320-9443",
       "npi": "",
+      "website": "https://stanfordhealthcare.org/medical-clinics/oral-medicine-maxillofacial-surgery-clinic.html",
       "address": "1000 Welch Rd. #100, Palo Alto, CA 94304",
+      "locations": [],
       "accepted": [
         "Private"
       ],
@@ -5217,48 +5793,65 @@
         "Medicare",
         "Partnership"
       ],
-      "services": [],
-      "locations": [],
+      "services": [
+        "Facial trauma",
+        "Major bone grafting",
+        "Oral pathology (cysts & lesions)",
+        "Oral surgery",
+        "Orthognathic surgery",
+        "Sleep surgery"
+      ],
       "notes": "",
       "status": "open",
-      "createdAt": "2026-11-04T16:44:39.698Z",
-      "updatedAt": "2026-11-05T22:50:53.371Z"
+      "updatedAt": "2026-11-06T20:12:01.124Z",
+      "createdAt": "2026-11-04T16:44:39.698Z"
     },
     {
       "id": "mw2ckztgl8d7q",
       "name": "UCSF Sol Silverman Oral Medicine Clinic",
       "specialty": "Oral Surgery",
-      "icon": "",
       "specialties": [
         "Oral Surgery"
       ],
+      "icon": "",
       "phone": "415-476-2045",
       "fax": "415-514-2862",
       "npi": "",
+      "website": "https://dentistry.ucsf.edu/dental-center/clinics/sol-silverman-oral-medicine-clinic",
       "address": "513 Parnassus Ave, Ste. S722, San Francisco, CA 94143",
+      "locations": [],
       "accepted": [
         "Partnership"
       ],
       "notAccepted": [],
-      "services": [],
-      "locations": [],
+      "services": [
+        "Biopsy of oral lesions",
+        "Management for oral lesions & orofacial pain",
+        "Management of sleep apnea by sleep appliances",
+        "Oral appliances",
+        "Outpatient & inpatient oral medicine consultations",
+        "Pre-head-and-neck radiation oral health consultations",
+        "Trigger point injections"
+      ],
       "notes": "",
-      "status": "",
-      "createdAt": "2026-11-04T16:45:12.148Z",
-      "updatedAt": "2026-11-05T22:50:59.629Z"
+      "status": "open",
+      "updatedAt": "2026-11-06T20:13:52.987Z",
+      "createdAt": "2026-11-04T16:45:12.148Z"
     },
     {
       "id": "mw2clwemgdwf2",
       "name": "Chico Eye Center",
       "specialty": "Ophthalmology",
-      "icon": "visibility",
       "specialties": [
         "Ophthalmology"
       ],
+      "icon": "visibility",
       "phone": "530-895-1727",
       "fax": "530-767-6833",
       "npi": "",
+      "website": "https://chicoeye.com/?scid=4677254&kw=44039576&pub_cr_id=707645550901&device=c&network=g&targetid=kwd-539680424358&loc_interest_ms&loc_physical_ms=9032568&tc=CjwKCAiAkrbXBhB2EiwA2y1E3lhvka2U0nLFuzPQnvPVNX_tVFTzamzHy_jYBx1Dj_fHRv7NJsR0rBoCsBgQAvD_BwE&rl_key=3c01ea2e69bb6c2cc3b22d8a9da9f00a",
       "address": "605 West East Ave, Chico, CA 95926",
+      "locations": [],
       "accepted": [
         "Medicare",
         "Private"
@@ -5267,25 +5860,38 @@
         "Medi-Cal",
         "Partnership"
       ],
-      "services": [],
-      "locations": [],
+      "services": [
+        "Age-related macular degeneration",
+        "Cataract surgery",
+        "Corneal services",
+        "Cosmetic services",
+        "Diabetic retinopathy",
+        "Dry eye",
+        "Glaucoma",
+        "LASIK/PRK",
+        "Optical",
+        "Pediatric eye care",
+        "RLE"
+      ],
       "notes": "Medical records fax: 530-895-1506",
       "status": "open",
-      "createdAt": "2026-11-04T16:45:54.382Z",
-      "updatedAt": "2026-11-05T22:49:31.432Z"
+      "updatedAt": "2026-11-06T19:58:49.816Z",
+      "createdAt": "2026-11-04T16:45:54.382Z"
     },
     {
       "id": "mw2cmtmjm3tj5",
       "name": "Family Eye Care",
       "specialty": "Ophthalmology",
-      "icon": "visibility",
       "specialties": [
         "Ophthalmology"
       ],
+      "icon": "visibility",
       "phone": "530-899-3939",
       "fax": "530-343-9207",
       "npi": "1417056896",
+      "website": "https://www.chicofamilyeye.com/",
       "address": "2565 Ceanothus Ave Ste. 155, Chico, CA",
+      "locations": [],
       "accepted": [
         "Anthem Blue Cross",
         "Blue Shield",
@@ -5297,25 +5903,42 @@
         "Medi-Cal",
         "Partnership"
       ],
-      "services": [],
-      "locations": [],
+      "services": [
+        "Cataracts",
+        "Comprehensive eye exams",
+        "Computer vision syndrome",
+        "Contact lens exams",
+        "Diabetic eye exams",
+        "Dry eye treatment",
+        "Eye emergencies",
+        "Glaucoma",
+        "LASIK evaluation",
+        "Macular degeneration",
+        "Myopia management",
+        "Pediatric eye exams",
+        "Seasonal allergies",
+        "Seleral contact lenses",
+        "Specialty contact lenses"
+      ],
       "notes": "",
       "status": "open",
-      "createdAt": "2026-11-04T16:46:37.435Z",
-      "updatedAt": "2026-11-05T22:49:40.948Z"
+      "updatedAt": "2026-11-06T20:00:41.070Z",
+      "createdAt": "2026-11-04T16:46:37.435Z"
     },
     {
       "id": "mw2cning7n2pg",
       "name": "North Valley Eye Care",
       "specialty": "Ophthalmology",
-      "icon": "visibility",
       "specialties": [
         "Ophthalmology"
       ],
+      "icon": "visibility",
       "phone": "530-891-1900",
       "fax": "530-895-1531",
       "npi": "",
+      "website": "https://www.northvalleyeyecare.com/",
       "address": "1700 Bruce Rd., Chico, CA 95928",
+      "locations": [],
       "accepted": [
         "Medi-Cal",
         "Medicare",
@@ -5323,50 +5946,71 @@
         "Private"
       ],
       "notAccepted": [],
-      "services": [],
-      "locations": [],
+      "services": [
+        "Cataracts",
+        "Diabetic eye exam",
+        "Dry eye treatment",
+        "EVO ICL",
+        "Eye allergies",
+        "General eye care",
+        "Glaucoma",
+        "Lasik",
+        "Macular degeneration"
+      ],
       "notes": "No Partnership for Optometry/glasses.\nAlt fax: 530-420-3738",
       "status": "open",
-      "createdAt": "2026-11-04T16:47:09.868Z",
-      "updatedAt": "2026-11-05T22:49:49.861Z"
+      "updatedAt": "2026-11-06T20:01:36.755Z",
+      "createdAt": "2026-11-04T16:47:09.868Z"
     },
     {
       "id": "mw2co3wz1fubs",
       "name": "Peach Tree Vision",
       "specialty": "Ophthalmology",
-      "icon": "visibility",
       "specialties": [
         "Ophthalmology"
       ],
+      "icon": "visibility",
       "phone": "530-634-7647",
       "fax": "530-343-3886",
       "npi": "1922598226",
+      "website": "https://pickpeach.org/vision/",
       "address": "114 Mission Ranch Blvd Ste. 50, Chico, CA 95926",
+      "locations": [],
       "accepted": [
         "Medi-Cal",
         "Medicare",
         "Partnership"
       ],
       "notAccepted": [],
-      "services": [],
-      "locations": [],
+      "services": [
+        "Cataracts",
+        "Diabetic retinopathy",
+        "Dry eyes",
+        "Glaucoma",
+        "Macular degeneration",
+        "Onsite Optical department",
+        "Optometry",
+        "Routine check-ups"
+      ],
       "notes": "",
       "status": "open",
-      "createdAt": "2026-11-04T16:47:37.427Z",
-      "updatedAt": "2026-11-05T22:49:57.617Z"
+      "updatedAt": "2026-11-06T20:02:40.702Z",
+      "createdAt": "2026-11-04T16:47:37.427Z"
     },
     {
       "id": "mw2cosmt1edp8",
       "name": "Reeve Woods Eye Center",
       "specialty": "Ophthalmology",
-      "icon": "visibility",
       "specialties": [
         "Ophthalmology"
       ],
+      "icon": "visibility",
       "phone": "530-694-4040",
       "fax": "530-899-9331",
       "npi": "1598874505",
+      "website": "https://www.reevewoods.com/",
       "address": "280 Cohasset Rd., Chico, CA 95928",
+      "locations": [],
       "accepted": [
         "Medi-Cal",
         "Medicare",
@@ -5374,25 +6018,40 @@
         "Private"
       ],
       "notAccepted": [],
-      "services": [],
-      "locations": [],
+      "services": [
+        "Cataract surgery",
+        "Comprehensive eye exams",
+        "Contact lenses",
+        "Emergency & medical eye exams",
+        "Eyelid surgery",
+        "Eyewear",
+        "Glaucoma",
+        "ICL",
+        "Lasik",
+        "Light adjustable lens",
+        "Light therapy for macular degenerative",
+        "Optical services",
+        "Panoptix multifocal lens"
+      ],
       "notes": "",
       "status": "open",
-      "createdAt": "2026-11-04T16:48:09.461Z",
-      "updatedAt": "2026-11-05T22:50:03.573Z"
+      "updatedAt": "2026-11-06T20:04:33.589Z",
+      "createdAt": "2026-11-04T16:48:09.461Z"
     },
     {
       "id": "mw2cpevcvvmqm",
-      "name": "Retinal Consultants",
+      "name": "Retinal Consultants Medical Group",
       "specialty": "Ophthalmology",
-      "icon": "visibility",
       "specialties": [
         "Ophthalmology"
       ],
+      "icon": "visibility",
       "phone": "530-899-2251",
       "fax": "530-894-6122",
       "npi": "1770646119",
+      "website": "https://www.retinalmd.com/retina-centers/chico",
       "address": "19 Ilahee Ln., Chico, CA 95973",
+      "locations": [],
       "accepted": [
         "Medi-Cal",
         "Medicare",
@@ -5400,36 +6059,49 @@
         "Private"
       ],
       "notAccepted": [],
-      "services": [],
-      "locations": [],
+      "services": [
+        "Flashes and floaters",
+        "Macular conditions",
+        "Macular degeneration",
+        "Tears & detachments",
+        "Vein occlusion"
+      ],
       "notes": "",
       "status": "open",
-      "createdAt": "2026-11-04T16:48:38.280Z",
-      "updatedAt": "2026-11-05T22:50:08.898Z"
+      "updatedAt": "2026-11-06T20:05:30.316Z",
+      "createdAt": "2026-11-04T16:48:38.280Z"
     },
     {
       "id": "mw2cpx5s6r4u8",
       "name": "Ridge Eye Institute",
       "specialty": "Ophthalmology",
-      "icon": "visibility",
       "specialties": [
         "Ophthalmology"
       ],
+      "icon": "visibility",
       "phone": "530-877-2020",
       "fax": "530-877-4641",
       "npi": "",
+      "website": "https://www.ridgeeyeinstitute.com/",
       "address": "5889 Clark Rd., Paradise, CA",
+      "locations": [],
       "accepted": [
         "Partnership",
         "Private"
       ],
       "notAccepted": [],
-      "services": [],
-      "locations": [],
+      "services": [
+        "Diabetic eye health",
+        "Dry eye",
+        "Eye allergies",
+        "Glaucoma",
+        "Lensx cataract surgery",
+        "Macular degeneration"
+      ],
       "notes": "",
       "status": "open",
-      "createdAt": "2026-11-04T16:49:01.984Z",
-      "updatedAt": "2026-11-05T22:50:14.384Z"
+      "updatedAt": "2026-11-06T20:06:49.099Z",
+      "createdAt": "2026-11-04T16:49:01.984Z"
     },
     {
       "id": "mw2cqi7pwpy5l",
@@ -5443,6 +6115,7 @@
       "fax": "530-892-4816",
       "npi": "1073576328",
       "address": "2109 Forest Ave, Ste. 20, Chico, CA 95928",
+      "website": "",
       "accepted": [
         "Medi-Cal",
         "Medicare",
@@ -5461,14 +6134,16 @@
       "id": "mw2cr2lbrw36m",
       "name": "Table Mountain Eye Care",
       "specialty": "Ophthalmology",
-      "icon": "visibility",
       "specialties": [
         "Ophthalmology"
       ],
+      "icon": "visibility",
       "phone": "530-922-2020",
       "fax": "530-922-2021",
       "npi": "1073090346",
+      "website": "https://www.tablemountaineyecare.com/",
       "address": "2585 Oro Dam Blvd. E, Oroville, CA 95966",
+      "locations": [],
       "accepted": [
         "Medi-Cal",
         "Medicare",
@@ -5476,25 +6151,33 @@
         "Private"
       ],
       "notAccepted": [],
-      "services": [],
-      "locations": [],
+      "services": [
+        "Diabetic eye health",
+        "Dry eye",
+        "Eye allergies",
+        "Glaucoma",
+        "Lensx cataract surgery",
+        "Macular degeneration"
+      ],
       "notes": "Alt fax (Chico): 530-895-1531",
       "status": "open",
-      "createdAt": "2026-11-04T16:49:55.679Z",
-      "updatedAt": "2026-11-05T22:50:28.407Z"
+      "updatedAt": "2026-11-06T20:08:07.803Z",
+      "createdAt": "2026-11-04T16:49:55.679Z"
     },
     {
       "id": "mw2cs2p2mpf6w",
       "name": "Adventist Health - Feather River Women's Health",
       "specialty": "Obstetrics & Gynecology",
-      "icon": "",
       "specialties": [
         "Obstetrics & Gynecology"
       ],
-      "phone": "(530) 872-2000",
-      "fax": "(530) 872-8135",
+      "icon": "",
+      "phone": "530-872-2000",
+      "fax": "530-872-8135",
       "npi": "1912092792",
+      "website": "https://www.adventisthealth.org/feather-river/services/womens-health/",
       "address": "6283 Clark Rd., #5, Paradise, CA 95969",
+      "locations": [],
       "accepted": [
         "Medi-Cal",
         "Medicare",
@@ -5502,46 +6185,62 @@
         "Private"
       ],
       "notAccepted": [],
-      "services": [],
-      "locations": [],
+      "services": [
+        "Birth control & family planning",
+        "Cancer screening",
+        "Clinical breast exams",
+        "Mammograms",
+        "Menopause treatment",
+        "Post-partum care",
+        "Pregnancy care",
+        "STD testing"
+      ],
       "notes": "",
       "status": "open",
-      "createdAt": "2026-11-04T16:50:42.470Z",
-      "updatedAt": "2026-11-04T16:50:42.470Z"
+      "updatedAt": "2026-11-06T19:50:01.210Z",
+      "createdAt": "2026-11-04T16:50:42.470Z"
     },
     {
       "id": "mw2csr1vkdfyi",
       "name": "Dignity Health Women's Health",
       "specialty": "Obstetrics & Gynecology",
-      "icon": "",
       "specialties": [
         "Obstetrics & Gynecology"
       ],
+      "icon": "",
       "phone": "530-529-2966",
       "fax": "530-528-9063",
       "npi": "",
+      "website": "https://www.commonspirit.org/find-a-location/dignity-health-womens-health-services-3382",
       "address": "2490 Sister Mary Columba Dr., Red Bluff, CA 96080",
+      "locations": [],
       "accepted": [],
       "notAccepted": [],
-      "services": [],
-      "locations": [],
+      "services": [
+        "Annual screenings",
+        "Breast exams",
+        "Pap smears",
+        "Reproductive health services"
+      ],
       "notes": "",
       "status": "open",
-      "createdAt": "2026-11-04T16:51:14.035Z",
-      "updatedAt": "2026-11-05T22:48:33.576Z"
+      "updatedAt": "2026-11-06T19:50:53.814Z",
+      "createdAt": "2026-11-04T16:51:14.035Z"
     },
     {
       "id": "mw2cteafhvgyf",
-      "name": "Dr. Sloop",
+      "name": "Sloop & Sloop",
       "specialty": "Obstetrics & Gynecology",
-      "icon": "",
       "specialties": [
         "Obstetrics & Gynecology"
       ],
+      "icon": "",
       "phone": "530-809-0009",
       "fax": "530-513-5498",
       "npi": "",
+      "website": "https://www.sloopchico.com/",
       "address": "2575 Forest Ave, Chico, CA 95928",
+      "locations": [],
       "accepted": [
         "Private"
       ],
@@ -5550,24 +6249,25 @@
         "Partnership"
       ],
       "services": [],
-      "locations": [],
       "notes": "",
       "status": "open",
-      "createdAt": "2026-11-04T16:51:44.151Z",
-      "updatedAt": "2026-11-05T22:48:40.613Z"
+      "updatedAt": "2026-11-06T19:51:32.398Z",
+      "createdAt": "2026-11-04T16:51:44.151Z"
     },
     {
       "id": "mw2cu3abs2ya6",
       "name": "Oroville Women's Health",
       "specialty": "Obstetrics & Gynecology",
-      "icon": "",
       "specialties": [
         "Obstetrics & Gynecology"
       ],
+      "icon": "",
       "phone": "530-532-8181",
       "fax": "530-538-3083",
       "npi": "1679581557",
+      "website": "https://www.orovillehospital.com/obgyn/gynecology",
       "address": "2809 Olive Hwy #310, Oroville, CA 95966",
+      "locations": [],
       "accepted": [
         "Medi-Cal",
         "Medicare",
@@ -5575,33 +6275,31 @@
         "Private"
       ],
       "notAccepted": [],
-      "services": [],
-      "locations": [],
+      "services": [
+        "Family planning",
+        "Gynecologic surgery",
+        "Infertility testing treatment & surgery",
+        "Menopausal & post-menopausal care",
+        "Women's wellness checks"
+      ],
       "notes": "",
       "status": "open",
-      "createdAt": "2026-11-04T16:52:16.547Z",
-      "updatedAt": "2026-11-05T22:49:04.878Z"
+      "updatedAt": "2026-11-06T19:54:51.706Z",
+      "createdAt": "2026-11-04T16:52:16.547Z"
     },
     {
       "id": "mw2cv0dq072af",
       "name": "Women's Health Specialists",
       "specialty": "Obstetrics & Gynecology",
-      "icon": "",
       "specialties": [
         "Obstetrics & Gynecology"
       ],
+      "icon": "",
       "phone": "530-891-1911",
       "fax": "530-893-9347",
       "npi": "",
+      "website": "https://www.womenshealthspecialists.org/",
       "address": "1469 Humboldt Rd #200, Chico, CA 95928",
-      "accepted": [
-        "Medi-Cal",
-        "Medicare",
-        "Partnership",
-        "Private"
-      ],
-      "notAccepted": [],
-      "services": [],
       "locations": [
         {
           "name": "Red Bluff Location",
@@ -5610,23 +6308,42 @@
           "fax": "530-528-9063"
         }
       ],
+      "accepted": [
+        "Medi-Cal",
+        "Medicare",
+        "Partnership",
+        "Private"
+      ],
+      "notAccepted": [],
+      "services": [
+        "Abortion",
+        "Annual exams",
+        "Birth control",
+        "Educational programs",
+        "Pregnancy tests",
+        "STI testing & treatment",
+        "UTI testing & treatment",
+        "Well woman care"
+      ],
       "notes": "",
       "status": "open",
-      "createdAt": "2026-11-04T16:52:59.438Z",
-      "updatedAt": "2026-11-05T23:09:44.407Z"
+      "updatedAt": "2026-11-06T19:55:54.377Z",
+      "createdAt": "2026-11-04T16:52:59.438Z"
     },
     {
       "id": "mw2cvzlhi5qq9",
       "name": "Nutrition for Daily Living",
       "specialty": "Nutrition/Diabetes Education",
-      "icon": "nutrition",
       "specialties": [
         "Nutrition/Diabetes Education"
       ],
+      "icon": "nutrition",
       "phone": "530-588-0655",
       "fax": "530-267-8313",
       "npi": "1619005873",
+      "website": "https://www.nutritionfordailyliving.com/",
       "address": "15 Ilahee Lane, Ste. 150, Chico, CA 95973",
+      "locations": [],
       "accepted": [
         "Anthem Blue Cross",
         "Blue Shield",
@@ -5635,24 +6352,25 @@
       ],
       "notAccepted": [],
       "services": [],
-      "locations": [],
       "notes": "",
       "status": "open",
-      "createdAt": "2026-11-04T16:53:45.077Z",
-      "updatedAt": "2026-11-05T22:48:19.688Z"
+      "updatedAt": "2026-11-06T19:49:13.028Z",
+      "createdAt": "2026-11-04T16:53:45.077Z"
     },
     {
       "id": "mw2cwrjf1uwuu",
       "name": "Sutter Health Neurosurgery",
       "specialty": "Neurosurgery",
-      "icon": "",
       "specialties": [
         "Neurosurgery"
       ],
+      "icon": "",
       "phone": "916-454-6850",
       "fax": "916-503-7632",
       "npi": "",
+      "website": "https://www.sutterhealth.org/services/neurosurgery",
       "address": "1625 Stockton Blvd. Ste. 104, Sacramento, CA 95816",
+      "locations": [],
       "accepted": [
         "Medi-Cal",
         "Medicare",
@@ -5660,25 +6378,38 @@
         "Private"
       ],
       "notAccepted": [],
-      "services": [],
-      "locations": [],
+      "services": [
+        "Brain injury",
+        "Chordoma",
+        "Craniopharyngioma",
+        "Deep brain stimulation",
+        "Epilepsy",
+        "Glioma",
+        "Hydrocephalus",
+        "Skull base surgery",
+        "Spinal cord tumor",
+        "Spine injury",
+        "Surgical oncology"
+      ],
       "notes": "",
       "status": "open",
-      "createdAt": "2026-11-04T16:54:21.291Z",
-      "updatedAt": "2026-11-05T22:47:17.971Z"
+      "updatedAt": "2026-11-06T19:47:19.098Z",
+      "createdAt": "2026-11-04T16:54:21.291Z"
     },
     {
       "id": "mw2cxjchw03ea",
       "name": "UC Davis Spine Center",
       "specialty": "Neurosurgery",
-      "icon": "",
       "specialties": [
         "Neurosurgery"
       ],
+      "icon": "",
       "phone": "916-734-7463",
       "fax": "916-703-5368",
       "npi": "1710918545",
+      "website": "https://health.ucdavis.edu/spine/",
       "address": "3301 C St. Ste. 1500, Sacramento, CA",
+      "locations": [],
       "accepted": [
         "Medi-Cal",
         "Medicare",
@@ -5686,25 +6417,29 @@
         "Private"
       ],
       "notAccepted": [],
-      "services": [],
-      "locations": [],
+      "services": [
+        "Minimally invasive surgeries",
+        "Spine surgeries"
+      ],
       "notes": "Referrals must be submitted electronically or via portal.",
       "status": "open",
-      "createdAt": "2026-11-04T16:54:57.329Z",
-      "updatedAt": "2026-11-05T22:47:24.399Z"
+      "updatedAt": "2026-11-06T19:48:02.115Z",
+      "createdAt": "2026-11-04T16:54:57.329Z"
     },
     {
       "id": "mw2cy54lfeb1l",
       "name": "UCSF Neurosurgery",
       "specialty": "Neurosurgery",
-      "icon": "",
       "specialties": [
         "Neurosurgery"
       ],
+      "icon": "",
       "phone": "415-353-7500",
       "fax": "415-353-2889",
       "npi": "",
+      "website": "https://www.ucsfhealth.org/care/services/neurosurgery",
       "address": "400 Parnassus Ave, Fl. 8, San Francisco, CA 94143",
+      "locations": [],
       "accepted": [
         "Medi-Cal",
         "Medicare",
@@ -5713,24 +6448,25 @@
       ],
       "notAccepted": [],
       "services": [],
-      "locations": [],
       "notes": "",
       "status": "open",
-      "createdAt": "2026-11-04T16:55:25.556Z",
-      "updatedAt": "2026-11-05T22:47:35.404Z"
+      "updatedAt": "2026-11-06T19:48:30.781Z",
+      "createdAt": "2026-11-04T16:55:25.556Z"
     },
     {
       "id": "mw2d06xb95upl",
       "name": "TeleMed2U",
       "specialty": "Multidisciplinary",
-      "icon": "clinical_notes",
       "specialties": [
         "Multidisciplinary"
       ],
+      "icon": "clinical_notes",
       "phone": "855-446-8628",
       "fax": "916-527-0770",
       "npi": "1326338237",
+      "website": "https://www.telemed2u.com/",
       "address": "3400 Douglas Blvd. Suite 170, Roseville, CA 95661",
+      "locations": [],
       "accepted": [
         "Partnership",
         "Private"
@@ -5761,37 +6497,10 @@
         "Telehealth",
         "Urology"
       ],
-      "locations": [],
       "notes": "Telehealth only. Certain specialties may have different insurance acceptance.",
       "status": "open",
-      "createdAt": "2026-11-04T16:57:01.199Z",
-      "updatedAt": "2026-11-05T22:45:31.655Z"
-    },
-    {
-      "id": "mw2d1qpbiqom1",
-      "name": "Adventist Health Telehealth",
-      "specialty": "Endocrinology",
-      "icon": "",
-      "specialties": [
-        "Endocrinology"
-      ],
-      "phone": "(866) 832-8218",
-      "fax": "(661) 637-8879",
-      "npi": "",
-      "address": "Bakersfield, CA",
-      "accepted": [
-        "Medi-Cal",
-        "Medicare",
-        "Partnership",
-        "Private"
-      ],
-      "notAccepted": [],
-      "services": [],
-      "locations": [],
-      "notes": "Telehealth only.",
-      "status": "open",
-      "createdAt": "2026-11-04T16:58:13.487Z",
-      "updatedAt": "2026-11-04T16:58:13.487Z"
+      "updatedAt": "2026-11-06T19:29:19.562Z",
+      "createdAt": "2026-11-04T16:57:01.199Z"
     },
     {
       "id": "mw2d2g8n5zauq",
@@ -5805,6 +6514,7 @@
       "fax": "530-342-1327",
       "npi": "",
       "address": "1488 East Ave, Chico, CA 95926",
+      "website": "",
       "accepted": [
         "Private"
       ],
@@ -5823,14 +6533,16 @@
       "id": "mw2d38mhq8t3r",
       "name": "Oroville Endocrinology",
       "specialty": "Endocrinology",
-      "icon": "",
       "specialties": [
         "Endocrinology"
       ],
+      "icon": "",
       "phone": "530-990-7430",
       "fax": "530-990-7434",
       "npi": "",
+      "website": "https://www.orovillehospital.com/health-services/endocrinology",
       "address": "2450 Oro Dam Blvd., Oroville, CA 95966",
+      "locations": [],
       "accepted": [
         "Medi-Cal",
         "Medicare",
@@ -5838,25 +6550,34 @@
         "Private"
       ],
       "notAccepted": [],
-      "services": [],
-      "locations": [],
+      "services": [
+        "Adrenal disorders",
+        "Diabetes",
+        "Metabolic disorders",
+        "Osteoporosis",
+        "Parathyroid disorders",
+        "Pituitary disorders",
+        "Thyroid disorders"
+      ],
       "notes": "Not accepting referrals for patients living outside of Oroville.",
       "status": "closed",
-      "createdAt": "2026-11-04T16:59:23.369Z",
-      "updatedAt": "2026-11-05T22:40:35.200Z"
+      "updatedAt": "2026-11-06T18:59:40.643Z",
+      "createdAt": "2026-11-04T16:59:23.369Z"
     },
     {
       "id": "mw2d42irnh29m",
       "name": "Stanford Endocrinology Clinic",
       "specialty": "Endocrinology",
-      "icon": "",
       "specialties": [
         "Endocrinology"
       ],
+      "icon": "",
       "phone": "650-721-1300",
       "fax": "650-320-9443",
       "npi": "",
+      "website": "https://stanfordhealthcare.org/medical-clinics/endocrinology-clinic.html",
       "address": "211 Quarry Rd. Fl. 2 Ste. 205, Palo Alto, CA 94304",
+      "locations": [],
       "accepted": [
         "Medi-Cal",
         "Medicare",
@@ -5865,24 +6586,25 @@
       ],
       "notAccepted": [],
       "services": [],
-      "locations": [],
       "notes": "Out of network w/ Partnership.",
       "status": "open",
-      "createdAt": "2026-11-04T17:00:02.115Z",
-      "updatedAt": "2026-11-05T22:40:49.193Z"
+      "updatedAt": "2026-11-06T18:59:59.681Z",
+      "createdAt": "2026-11-04T17:00:02.115Z"
     },
     {
       "id": "mw2d4remfctka",
       "name": "Sutter Endocrinology",
       "specialty": "Endocrinology",
-      "icon": "",
       "specialties": [
         "Endocrinology"
       ],
+      "icon": "",
       "phone": "530-749-3459",
       "fax": "530-749-5565",
       "npi": "1790800035",
+      "website": "https://www.sutterhealth.org/services/endocrinology",
       "address": "400 Plumas Blvd, Ste. 200, Yuba City, CA 95991",
+      "locations": [],
       "accepted": [
         "Medicare",
         "Private"
@@ -5892,32 +6614,24 @@
         "Partnership"
       ],
       "services": [],
-      "locations": [],
       "notes": "",
       "status": "open",
-      "createdAt": "2026-11-04T17:00:34.366Z",
-      "updatedAt": "2026-11-05T22:40:56.882Z"
+      "updatedAt": "2026-11-06T19:00:12.773Z",
+      "createdAt": "2026-11-04T17:00:34.366Z"
     },
     {
       "id": "mw2d6d7dmoemg",
       "name": "UC Davis Endocrinology",
       "specialty": "Endocrinology",
-      "icon": "",
       "specialties": [
         "Endocrinology"
       ],
+      "icon": "",
       "phone": "530-747-3000",
       "fax": "",
       "npi": "",
+      "website": "https://health.ucdavis.edu/internal-medicine/endocrinology/",
       "address": "2660 West Covell Blvd., Suites A, B, C, Davis, CA 95616",
-      "accepted": [
-        "Medi-Cal",
-        "Medicare",
-        "Partnership",
-        "Private"
-      ],
-      "notAccepted": [],
-      "services": [],
       "locations": [
         {
           "name": "Elk Grove Location",
@@ -5932,10 +6646,18 @@
           "fax": ""
         }
       ],
+      "accepted": [
+        "Medi-Cal",
+        "Medicare",
+        "Partnership",
+        "Private"
+      ],
+      "notAccepted": [],
+      "services": [],
       "notes": "Referrals must be submitted electronically or via portal.",
       "status": "open",
-      "createdAt": "2026-11-04T17:01:49.273Z",
-      "updatedAt": "2026-11-05T23:10:14.677Z"
+      "updatedAt": "2026-11-06T19:00:25.078Z",
+      "createdAt": "2026-11-04T17:01:49.273Z"
     },
     {
       "id": "mw2d7aktd5i6k",
@@ -5949,6 +6671,7 @@
       "fax": "916-734-4958",
       "npi": "",
       "address": "2516 Stockton Blvd., Sacramento, CA 95816",
+      "website": "",
       "accepted": [
         "Medi-Cal",
         "Medicare",
@@ -5967,14 +6690,16 @@
       "id": "mw2d9jmpagkfn",
       "name": "UCSF Endocrinology Clinic",
       "specialty": "Endocrinology",
-      "icon": "",
       "specialties": [
         "Endocrinology"
       ],
+      "icon": "",
       "phone": "415-353-2350",
       "fax": "415-353-2337",
       "npi": "",
+      "website": "https://www.ucsfhealth.org/care/services/endocrinology-diabetes-and-metabolism",
       "address": "400 Parnassus Ave. Ste. A-550, San Francisco, CA 94143",
+      "locations": [],
       "accepted": [
         "Medi-Cal",
         "Medicare",
@@ -5983,24 +6708,25 @@
       ],
       "notAccepted": [],
       "services": [],
-      "locations": [],
       "notes": "",
       "status": "open",
-      "createdAt": "2026-11-04T17:04:17.568Z",
-      "updatedAt": "2026-11-05T22:41:12.936Z"
+      "updatedAt": "2026-11-06T19:00:35.178Z",
+      "createdAt": "2026-11-04T17:04:17.568Z"
     },
     {
       "id": "mw2danm7agwcg",
       "name": "Enloe Anticoagulation Clinic",
       "specialty": "Cardiology",
-      "icon": "",
       "specialties": [
         "Cardiology"
       ],
+      "icon": "",
       "phone": "530-332-6816",
       "fax": "530-893-6856",
       "npi": "",
+      "website": "https://www.enloe.org/care-treatment/heart-vascular-care/treatments/anticoagulant-care/",
       "address": "888 Lakeside Village Cmns., Bldg. A, Chico, CA  95926",
+      "locations": [],
       "accepted": [
         "Medi-Cal",
         "Medicare",
@@ -6009,24 +6735,25 @@
       ],
       "notAccepted": [],
       "services": [],
-      "locations": [],
       "notes": "",
       "status": "open",
-      "createdAt": "2026-11-04T17:05:09.391Z",
-      "updatedAt": "2026-11-05T22:35:38.613Z"
+      "updatedAt": "2026-11-06T18:30:38.441Z",
+      "createdAt": "2026-11-04T17:05:09.391Z"
     },
     {
       "id": "mw2dcd5xxn5eh",
       "name": "Enloe Structural Heart & Valve Center",
       "specialty": "Cardiology",
-      "icon": "",
       "specialties": [
         "Cardiology"
       ],
-      "phone": "(530) 332-4433",
-      "fax": "(530) 893-6993",
+      "icon": "",
+      "phone": "530-332-4433",
+      "fax": "530-893-6993",
       "npi": "1588385454",
+      "website": "https://www.enloe.org/care-treatment/heart-vascular-care/",
       "address": "181 E. Seventh Ave, Chico, CA 95926",
+      "locations": [],
       "accepted": [
         "Medi-Cal",
         "Medicare",
@@ -6038,24 +6765,44 @@
         "Kaiser"
       ],
       "services": [],
-      "locations": [],
       "notes": "",
       "status": "open",
-      "createdAt": "2026-11-04T17:06:29.157Z",
-      "updatedAt": "2026-11-04T17:06:29.157Z"
+      "updatedAt": "2026-11-06T18:32:16.628Z",
+      "createdAt": "2026-11-04T17:06:29.157Z"
     },
     {
       "id": "mw2ddnj1wj2s3",
-      "name": "Bartlett's Hearing Aid Center/Audionova",
+      "name": "Bartlett's Hearing Aid Center",
       "specialty": "Audiology",
-      "icon": "",
       "specialties": [
         "Audiology"
       ],
-      "phone": "530-343-2350",
+      "icon": "",
+      "phone": "530-418-6478",
       "fax": "530-343-2505",
       "npi": "1760554000",
+      "website": "https://www.bartletthearing.com/",
       "address": "2201 Pillsbury Rd, Ste. 194, Chico, CA 95926",
+      "locations": [
+        {
+          "name": "Oroville Location",
+          "address": "2450 Oro Dam Blvd. E, Ste. C, Oroville, CA 95966",
+          "phone": "530-420-1962",
+          "fax": ""
+        },
+        {
+          "name": "Redding Location",
+          "address": "20 Hilltop Dr., Redding, CA 96003",
+          "phone": "530-999-0724",
+          "fax": ""
+        },
+        {
+          "name": "Red Bluff Location",
+          "address": "331 Elm St., Red Bluff, CA 96080",
+          "phone": "530-390-3754",
+          "fax": ""
+        }
+      ],
       "accepted": [
         "Anthem Blue Cross",
         "Blue Shield/Blue Cross",
@@ -6064,24 +6811,38 @@
       ],
       "notAccepted": [],
       "services": [],
-      "locations": [],
       "notes": "No pediatric.",
       "status": "open",
-      "createdAt": "2026-11-04T17:07:29.245Z",
-      "updatedAt": "2026-11-05T22:32:22.421Z"
+      "updatedAt": "2026-11-06T18:10:49.047Z",
+      "createdAt": "2026-11-04T17:07:29.245Z"
     },
     {
       "id": "mw2debq9htb9n",
       "name": "Digital Hearing Aid Center",
       "specialty": "Audiology",
-      "icon": "",
       "specialties": [
         "Audiology"
       ],
+      "icon": "",
       "phone": "530-898-9127",
       "fax": "530-898-8236",
       "npi": "",
-      "address": "1074 East Ave, Chico, CA 95926",
+      "website": "https://digitalhearingca.com/",
+      "address": "1074 East Ave., Ste. K-2, Chico, CA 95926",
+      "locations": [
+        {
+          "name": "Paradise Location",
+          "address": "6032 Clark Rd., Ste. C, Paradise, CA 95969",
+          "phone": "530-877-3808",
+          "fax": ""
+        },
+        {
+          "name": "Oroville Location",
+          "address": "2854 Olive Hwy., Ste. D, Oroville, CA 95966",
+          "phone": "",
+          "fax": ""
+        }
+      ],
       "accepted": [
         "Partnership"
       ],
@@ -6089,34 +6850,34 @@
         "Blue Cross Managed Care"
       ],
       "services": [],
-      "locations": [],
       "notes": "",
       "status": "open",
-      "createdAt": "2026-11-04T17:08:00.609Z",
-      "updatedAt": "2026-11-05T22:32:28.545Z"
+      "updatedAt": "2026-11-06T18:12:32.367Z",
+      "createdAt": "2026-11-04T17:08:00.609Z"
     },
     {
       "id": "mw2dewtp4axew",
       "name": "Sutter Health",
       "specialty": "Audiology",
-      "icon": "",
       "specialties": [
         "Audiology"
       ],
+      "icon": "",
       "phone": "530-749-3399",
       "fax": "916-503-7632",
       "npi": "",
+      "website": "https://www.sutterhealth.org/services/audiology",
       "address": "460 Plumas Blvd., Yuba City, CA 95991",
+      "locations": [],
       "accepted": [
         "Partnership"
       ],
       "notAccepted": [],
       "services": [],
-      "locations": [],
       "notes": "Clinic fax: 530-749-3490",
       "status": "open",
-      "createdAt": "2026-11-04T17:08:27.949Z",
-      "updatedAt": "2026-11-05T22:32:38.336Z"
+      "updatedAt": "2026-11-06T18:12:46.389Z",
+      "createdAt": "2026-11-04T17:08:27.949Z"
     },
     {
       "id": "mw2dghnspwoa1",
@@ -6130,6 +6891,7 @@
       "fax": "530-538-3270",
       "npi": "",
       "address": "2809 Olive Hwy, Ste. 220, Oroville, CA",
+      "website": "",
       "accepted": [
         "Medi-Cal",
         "Medicare",
@@ -6156,6 +6918,7 @@
       "fax": "530-244-3280",
       "npi": "1508912452",
       "address": "2202 194 Cohasset Rd., Ste B, Chico, CA",
+      "website": "",
       "accepted": [
         "Medi-Cal",
         "Medicare",
@@ -6189,6 +6952,7 @@
       "fax": "",
       "npi": "",
       "address": "4860 Y St. #2100, Sacramento, CA",
+      "website": "",
       "accepted": [
         "Medi-Cal",
         "Medicare",
@@ -6204,29 +6968,6 @@
       "updatedAt": "2026-11-05T23:08:02.562Z"
     },
     {
-      "id": "mw2dmsm0k7i1g",
-      "name": "Creekside Counseling",
-      "specialty": "Behavioral Health",
-      "icon": "",
-      "specialties": [
-        "Behavioral Health"
-      ],
-      "phone": "(530) 722-9957",
-      "fax": "(530) 722-9294",
-      "npi": "",
-      "address": "415 Knollcrest DR. Ste. 101, Redding, CA 96002",
-      "accepted": [
-        "Partnership"
-      ],
-      "notAccepted": [],
-      "services": [],
-      "locations": [],
-      "notes": "",
-      "status": "open",
-      "createdAt": "2026-11-04T17:14:35.736Z",
-      "updatedAt": "2026-11-04T17:14:35.736Z"
-    },
-    {
       "id": "mw2dodm5v5mwf",
       "name": "Heather Boggs, LMFT",
       "specialty": "Behavioral Health",
@@ -6238,6 +6979,7 @@
       "fax": "(530) 466-2659",
       "npi": "",
       "address": "15 Ilahee Ln. Ste. 100, Chico, CA 95973",
+      "website": "",
       "accepted": [
         "Anthem",
         "Blue Cross",
@@ -6262,14 +7004,16 @@
       "id": "mw2dptvtc06jl",
       "name": "Inspired Life Counseling",
       "specialty": "Behavioral Health",
-      "icon": "",
       "specialties": [
         "Behavioral Health"
       ],
-      "phone": "(530) 809-1702",
-      "fax": "(530) 433-5272",
+      "icon": "",
+      "phone": "530-809-1702",
+      "fax": "530-433-5272",
       "npi": "",
+      "website": "https://www.inspiredlifechico.com/",
       "address": "468 Manzanita Ave, Ste. 6 & 7, Chico, CA 95926",
+      "locations": [],
       "accepted": [
         "Partnership"
       ],
@@ -6277,11 +7021,10 @@
         "Medicare"
       ],
       "services": [],
-      "locations": [],
       "notes": "",
       "status": "closed",
-      "createdAt": "2026-11-04T17:16:57.353Z",
-      "updatedAt": "2026-11-04T17:16:57.353Z"
+      "updatedAt": "2026-11-06T18:18:25.184Z",
+      "createdAt": "2026-11-04T17:16:57.353Z"
     },
     {
       "id": "mw2ds240w9n7h",
@@ -6295,6 +7038,7 @@
       "fax": "530-255-2152",
       "npi": "",
       "address": "315 Wall St. Ste. 5, Chico, CA",
+      "website": "",
       "accepted": [
         "Private"
       ],
@@ -6318,6 +7062,7 @@
       "fax": "",
       "npi": "",
       "address": "383 Connors Court Ste. G, Chico, CA 95926",
+      "website": "",
       "accepted": [
         "Blue Cross",
         "Blue Shield",
@@ -6333,105 +7078,65 @@
     },
     {
       "id": "mw2dv6j5c08xn",
-      "name": "Adventist Health & Rideout Cardiothoracic",
+      "name": "Adventist Health & Rideout Cardiothoracic Surgery",
       "specialty": "Cardiology",
-      "icon": "",
       "specialties": [
         "Cardiology"
       ],
-      "phone": "(530) 743-5125",
-      "fax": "(800) 305-0456",
+      "icon": "",
+      "phone": "530-743-5125",
+      "fax": "530-743-4528",
       "npi": "",
+      "website": "https://www.adventisthealth.org/rideout/locations/adventist-health-cardiothoracic-surgery-4518/",
       "address": "401 I Street, Ste. A, Marysville, CA 95901",
+      "locations": [],
       "accepted": [
         "Partnership"
       ],
       "notAccepted": [],
       "services": [
-        "Cardiothoracic Surgery"
+        "Aortic valve surgery",
+        "Bronchoscopy",
+        "Cardiac surgery",
+        "Coronary artery bypass surgery",
+        "Lobectomy",
+        "MAZE procedures",
+        "Mediastinoscopy",
+        "Pneumonectomy",
+        "Thoracic aneurysm/dissection repairs",
+        "Thoracic surgery",
+        "TMR",
+        "Tricuspid valve surgery",
+        "VATS"
       ],
-      "locations": [],
       "notes": "",
       "status": "open",
-      "createdAt": "2026-11-04T17:21:07.025Z",
-      "updatedAt": "2026-11-04T17:21:07.025Z"
-    },
-    {
-      "id": "mw2dw9ex81he7",
-      "name": "Adventist Health & Rideout Heart Center",
-      "specialty": "Cardiology",
-      "icon": "",
-      "specialties": [
-        "Cardiology"
-      ],
-      "phone": "(530) 634-9988",
-      "fax": "(800) 305-0456",
-      "npi": "",
-      "address": "481 Plumas Boulevard, Ste. 201, Yuba City, CA 95991",
-      "accepted": [
-        "Medi-Cal",
-        "Medicare",
-        "Partnership",
-        "Private"
-      ],
-      "notAccepted": [],
-      "services": [
-        "General Cardiology"
-      ],
-      "locations": [],
-      "notes": "",
-      "status": "open",
-      "createdAt": "2026-11-04T17:21:57.417Z",
-      "updatedAt": "2026-11-04T19:13:29.808Z"
-    },
-    {
-      "id": "mw2dx6yhiu44v",
-      "name": "Adventist Health & Rideout Interventional Cardiology",
-      "specialty": "Cardiology",
-      "icon": "",
-      "specialties": [
-        "Cardiology"
-      ],
-      "phone": "(530) 844-5636",
-      "fax": "(800) 305-0456",
-      "npi": "",
-      "address": "481 Plumas Boulevard, Ste. 104, Yuba City, CA 95991",
-      "accepted": [
-        "Medi-Cal",
-        "Medicare",
-        "Partnership",
-        "Private"
-      ],
-      "notAccepted": [],
-      "services": [],
-      "locations": [],
-      "notes": "",
-      "status": "open",
-      "createdAt": "2026-11-04T17:22:40.889Z",
-      "updatedAt": "2026-11-04T17:22:40.889Z"
+      "updatedAt": "2026-11-06T18:24:57.442Z",
+      "createdAt": "2026-11-04T17:21:07.025Z"
     },
     {
       "id": "mw2dyezt39fyj",
       "name": "Bay Area Community Health",
       "specialty": "Chiropractic",
-      "icon": "physical_therapy",
       "specialties": [
         "Chiropractic"
       ],
-      "phone": "(510) 770-8133",
-      "fax": "(510) 770-8141",
+      "icon": "physical_therapy",
+      "phone": "510-770-8133",
+      "fax": "510-770-8141",
       "npi": "1780054379",
+      "website": "https://bach.health/chiropractic-care",
       "address": "Multiple locations",
+      "locations": [],
       "accepted": [
         "Partnership"
       ],
       "notAccepted": [],
       "services": [],
-      "locations": [],
       "notes": "",
       "status": "open",
-      "createdAt": "2026-11-04T17:23:37.961Z",
-      "updatedAt": "2026-11-04T19:14:39.667Z"
+      "updatedAt": "2026-11-06T18:37:28.668Z",
+      "createdAt": "2026-11-04T17:23:37.961Z"
     },
     {
       "id": "mw2e1h42urot0",
@@ -6445,6 +7150,7 @@
       "fax": "(530) 893-6906",
       "npi": "",
       "address": "265 Cohasset Rd. Ste. 150 & 170, Chico, CA 95926",
+      "website": "",
       "accepted": [
         "Medi-Cal",
         "Medicare",
@@ -6466,14 +7172,16 @@
       "id": "mw2e2nkxj79wp",
       "name": "Enloe Radiation Oncology",
       "specialty": "Oncology",
-      "icon": "",
       "specialties": [
         "Oncology"
       ],
-      "phone": "(530) 332-3917",
-      "fax": "(530) 893-6883",
+      "icon": "",
+      "phone": "530-332-3917",
+      "fax": "530-893-6883",
       "npi": "",
+      "website": "https://www.enloe.org/care-treatment/cancer-care/treatment/radiation-therapy/",
       "address": "265 Cohasset Road, Suite 140, Chico, CA 95926",
+      "locations": [],
       "accepted": [
         "Medi-Cal",
         "Medicare",
@@ -6485,11 +7193,10 @@
         "Kaiser"
       ],
       "services": [],
-      "locations": [],
       "notes": "",
       "status": "open",
-      "createdAt": "2026-11-04T17:26:55.713Z",
-      "updatedAt": "2026-11-04T17:29:09.536Z"
+      "updatedAt": "2026-11-06T19:56:41.443Z",
+      "createdAt": "2026-11-04T17:26:55.713Z"
     },
     {
       "id": "mw2e3u0uefc5y",
@@ -6503,6 +7210,7 @@
       "fax": "(916) 503-7632",
       "npi": "1952327256",
       "address": "1625 Stockton Blvd. Suite 104, Sacramento, CA 9581",
+      "website": "",
       "accepted": [
         "Medi-Cal",
         "Partnership",
@@ -6520,68 +7228,85 @@
       "id": "mw2e4u2exfrhc",
       "name": "UC Davis Comprehensive Cancer Center",
       "specialty": "Oncology",
-      "icon": "",
       "specialties": [
         "Oncology"
       ],
-      "phone": "(916) 734-5959",
-      "fax": "(916) 703-5266",
+      "icon": "",
+      "phone": "916-734-5959",
+      "fax": "916-703-5266",
       "npi": "",
+      "website": "https://health.ucdavis.edu/cancer/",
       "address": "2279 45th St., Sacramento, CA 95817",
-      "accepted": [],
+      "locations": [],
+      "accepted": [
+        "Medi-Cal",
+        "Medicare",
+        "Partnership",
+        "Private"
+      ],
       "notAccepted": [],
       "services": [],
-      "locations": [],
       "notes": "Referrals must be submitted electronically or via portal.",
       "status": "open",
-      "createdAt": "2026-11-04T17:28:37.430Z",
-      "updatedAt": "2026-11-04T17:28:57.267Z"
+      "updatedAt": "2026-11-06T19:57:00.286Z",
+      "createdAt": "2026-11-04T17:28:37.430Z"
     },
     {
       "id": "mw2ebgbwgubgz",
       "name": "Capital Nephrology",
       "specialty": "Nephrology",
-      "icon": "",
       "specialties": [
         "Nephrology"
       ],
-      "phone": "(916) 929-8564",
-      "fax": "(916) 929-4529",
+      "icon": "",
+      "phone": "916-929-8564",
+      "fax": "916-929-4529",
       "npi": "",
+      "website": "https://www.capitalnephrology.com/",
       "address": "333 University Ave. Ste. 120, Sacramento, CA 95825",
-      "accepted": [],
-      "notAccepted": [],
-      "services": [],
       "locations": [
         {
           "name": "Sacramento Location",
           "address": "1111 Exposition Blvd. Ste. 300, Sacramento, CA 95815",
-          "phone": "(916) 564-6232",
-          "fax": "(916) 564-6242"
+          "phone": "916-564-6232",
+          "fax": "916-564-6242"
         },
         {
           "name": "Elk Grove Location",
           "address": "2218 Kausen Dr. Ste. 103, Elk Grove, CA 95758",
-          "phone": "(916) 683-8774",
-          "fax": "(916) 683-8777"
+          "phone": "916-683-8774",
+          "fax": "916-683-8777"
         },
         {
           "name": "Folsom Location",
           "address": "1600 Creekside Dr. Ste. 3600\nFolsom, CA 95630",
-          "phone": "(916) 235-7790",
-          "fax": "(916) 235-7791"
+          "phone": "916-235-7790",
+          "fax": "916-235-7791"
         },
         {
           "name": "Woodland Location",
           "address": "520 Cottonwood St. Ste. 2, Woodland, CA 95695",
-          "phone": "(530) 668-3600",
-          "fax": "(530) 668-3601"
+          "phone": "530-668-3600",
+          "fax": "530-668-3601"
         }
+      ],
+      "accepted": [
+        "Medi-Cal",
+        "Medicare",
+        "Partnership",
+        "Private"
+      ],
+      "notAccepted": [],
+      "services": [
+        "Acute kidney failure/injury",
+        "Chronic kidney disease",
+        "High blood pressure",
+        "Surgery center"
       ],
       "notes": "",
       "status": "open",
-      "createdAt": "2026-11-04T17:33:46.220Z",
-      "updatedAt": "2026-11-04T17:33:46.220Z"
+      "updatedAt": "2026-11-06T19:32:38.728Z",
+      "createdAt": "2026-11-04T17:33:46.220Z"
     },
     {
       "id": "mw2ed011rbfey",
@@ -6595,6 +7320,7 @@
       "fax": "(530) 712-2149",
       "npi": "1467880583",
       "address": "2450 Oro Dam Blvd. E, Oroville, CA 95966",
+      "website": "",
       "accepted": [
         "Private"
       ],
@@ -6610,14 +7336,16 @@
       "id": "mw2eehsjpv4b7",
       "name": "UC Davis EMG Lab",
       "specialty": "Neurodiagnostic",
-      "icon": "",
       "specialties": [
         "Neurodiagnostic"
       ],
-      "phone": "(916) 734-7041",
+      "icon": "",
+      "phone": "916-734-7041",
       "fax": "",
       "npi": "",
+      "website": "https://health.ucdavis.edu/pmr/patient-services/clinic/electro.html",
       "address": "4860 Y Street, Tschannen Eye Institute Ste. 1E, Third Floor, Sacramento, CA 95817",
+      "locations": [],
       "accepted": [
         "Medi-Cal",
         "Medicare",
@@ -6626,11 +7354,10 @@
       ],
       "notAccepted": [],
       "services": [],
-      "locations": [],
       "notes": "Referrals must be submitted electronically or via portal.",
       "status": "open",
-      "createdAt": "2026-11-04T17:36:08.083Z",
-      "updatedAt": "2026-11-04T17:36:08.083Z"
+      "updatedAt": "2026-11-06T19:35:29.934Z",
+      "createdAt": "2026-11-04T17:36:08.083Z"
     },
     {
       "id": "mw2efrpe96lj1",
@@ -6644,6 +7371,7 @@
       "fax": "(530) 332-1049",
       "npi": "1912092792",
       "address": "5125 Skyway, Paradise, CA 95969",
+      "website": "",
       "accepted": [
         "Medi-Cal",
         "Medicare",
@@ -6670,6 +7398,7 @@
       "fax": "(530) 751-4255",
       "npi": "1619475613",
       "address": "370 Del Norte Ave # 203, Yuba City, CA 95991",
+      "website": "",
       "accepted": [
         "Medi-Cal",
         "Medicare",
@@ -6698,6 +7427,7 @@
       "fax": "(530) 895-1248",
       "npi": "",
       "address": "2103 Forest Avenue, Chico, CA 95928",
+      "website": "",
       "accepted": [
         "Private"
       ],
@@ -6725,6 +7455,7 @@
       "fax": "",
       "npi": "",
       "address": "578 Rio Lindo Ave #4, Chico, CA 95926",
+      "website": "",
       "accepted": [],
       "notAccepted": [],
       "services": [],
@@ -6738,15 +7469,17 @@
       "id": "mw2ekcvd1jj2x",
       "name": "Northstate Foot and Ankle Specialists",
       "specialty": "Podiatry",
-      "icon": "foot_bones",
       "specialties": [
         "Podiatry",
         "Neurodiagnostic"
       ],
-      "phone": "(530) 891-3338",
-      "fax": "(530) 894-5771",
+      "icon": "foot_bones",
+      "phone": "530-891-3338",
+      "fax": "530-894-5771",
       "npi": "",
+      "website": "https://northstatefootandankle.com/",
       "address": "1806 Foundation Ln., Chico, CA 95928",
+      "locations": [],
       "accepted": [
         "Covered CA Blue Cross",
         "Covered CA Blue Shield"
@@ -6755,13 +7488,18 @@
         "Partnership"
       ],
       "services": [
-        "EMG/NCS"
+        "Biomechanical analysis and prescription orthotics",
+        "Comprehensive foot & ankle care",
+        "Diagnostic modalities",
+        "EMG/NCS",
+        "Physical therapy",
+        "Reconstructive foot & ankle surgery",
+        "Regenerative medicine"
       ],
-      "locations": [],
       "notes": "",
       "status": "open",
-      "createdAt": "2026-11-04T17:40:41.641Z",
-      "updatedAt": "2026-11-04T19:28:29.343Z"
+      "updatedAt": "2026-11-06T19:38:07.926Z",
+      "createdAt": "2026-11-04T17:40:41.641Z"
     },
     {
       "id": "mw2elbhvqzm4j",
@@ -6775,6 +7513,7 @@
       "fax": "(530) 534-0116",
       "npi": "1679581557",
       "address": "2760 Oro Dam Blvd, #A, Oroville, CA 95966",
+      "website": "",
       "accepted": [
         "Medi-Cal",
         "Medicare",
@@ -6800,6 +7539,7 @@
       "fax": "(530) 538-5661",
       "npi": "1871606269",
       "address": "2721 Olive Hwy, #9B, Oroville, CA 95966",
+      "website": "",
       "accepted": [],
       "notAccepted": [],
       "services": [],
@@ -6821,6 +7561,7 @@
       "fax": "(530) 343-1625",
       "npi": "1689080251",
       "address": "670 Rio Lindo Ave, Ste. 1000, Chico, CA 95926",
+      "website": "",
       "accepted": [
         "Anthem Blue Cross",
         "Blue Shield",
@@ -6850,6 +7591,7 @@
       "fax": "(530) 244-1033",
       "npi": "",
       "address": "429 Redcliff Dr., Redding, CA 96002",
+      "website": "",
       "accepted": [
         "Medi/Medi"
       ],
@@ -6873,6 +7615,7 @@
       "fax": "(866) 562-7982",
       "npi": "",
       "address": "",
+      "website": "",
       "accepted": [
         "Medicare",
         "Private"
@@ -6892,35 +7635,6 @@
       "updatedAt": "2026-11-04T17:45:36.089Z"
     },
     {
-      "id": "mw2etxt72u8ik",
-      "name": "Enloe Multi Specialty Clinic",
-      "specialty": "Multidisciplinary",
-      "icon": "clinical_notes",
-      "specialties": [
-        "Multidisciplinary"
-      ],
-      "phone": "530-332-4200",
-      "fax": "530-893-6052",
-      "npi": "",
-      "address": "2390 E. 20th St., Chico, CA",
-      "accepted": [
-        "Medi-Cal",
-        "Medicare",
-        "Partnership",
-        "Private"
-      ],
-      "notAccepted": [
-        "Imperial Health Plan",
-        "Kaiser"
-      ],
-      "services": [],
-      "locations": [],
-      "notes": "",
-      "status": "",
-      "createdAt": "2026-11-04T17:48:08.683Z",
-      "updatedAt": "2026-11-05T22:45:24.216Z"
-    },
-    {
       "id": "mw2ew4vbuypsg",
       "name": "Enloe Symptom Management",
       "specialty": "Other",
@@ -6932,6 +7646,7 @@
       "fax": "530-893-6956",
       "npi": "",
       "address": "2390 E. 20th St., Chico, CA",
+      "website": "",
       "accepted": [
         "Medi-Cal",
         "Medicare",
@@ -6953,14 +7668,16 @@
       "id": "mw2exsfdw9kee",
       "name": "Enloe Cardiac Rehabilitation",
       "specialty": "Cardiology",
-      "icon": "",
       "specialties": [
         "Cardiology"
       ],
+      "icon": "",
       "phone": "530-332-6898",
       "fax": "530-893-6856",
       "npi": "",
+      "website": "https://www.enloe.org/care-treatment/heart-vascular-care/rehabilitation/",
       "address": "888 Lakeside Village Cmns., Bldg. C, Chico, CA",
+      "locations": [],
       "accepted": [
         "Medi-Cal",
         "Medicare",
@@ -6972,11 +7689,10 @@
         "Kaiser"
       ],
       "services": [],
-      "locations": [],
       "notes": "",
       "status": "open",
-      "createdAt": "2026-11-04T17:51:08.329Z",
-      "updatedAt": "2026-11-05T22:36:13.495Z"
+      "updatedAt": "2026-11-06T18:30:59.554Z",
+      "createdAt": "2026-11-04T17:51:08.329Z"
     },
     {
       "id": "mw2f2221tmrae",
@@ -6990,6 +7706,7 @@
       "fax": "530-893-6857",
       "npi": "",
       "address": "888 Lakeside Village Cmns., Bldg. A, Chico, CA 95928",
+      "website": "",
       "accepted": [
         "Medi-Cal",
         "Medicare",
@@ -7019,6 +7736,7 @@
       "fax": "(530) 893-6035",
       "npi": "",
       "address": "251 Cohasset Rd., Chico, CA 95926",
+      "website": "",
       "accepted": [
         "Medi-Cal",
         "Medicare",
@@ -7039,17 +7757,18 @@
     {
       "id": "mw2f5sqsxl29o",
       "name": "Enloe Cardiology Diagnostic Imaging",
-      "specialty": "Radiology",
-      "icon": "monitor_heart",
+      "specialty": "Cardiology",
       "specialties": [
-        "Radiology",
-        "Diagnostic",
-        "Cardiology"
+        "Cardiology",
+        "Diagnostic"
       ],
-      "phone": "(530) 332-4425",
-      "fax": "(530) 893-6993",
+      "icon": "monitor_heart",
+      "phone": "530-332-4425",
+      "fax": "530-893-6993",
       "npi": "",
+      "website": "https://www.enloe.org/care-treatment/heart-vascular-care/tests-diagnosis/",
       "address": "178 E. Seventh Ave., Chico, CA",
+      "locations": [],
       "accepted": [
         "Medi-Cal",
         "Medicare",
@@ -7060,12 +7779,18 @@
         "Imperial Health Plan",
         "Kaiser"
       ],
-      "services": [],
-      "locations": [],
+      "services": [
+        "Echocardiograms",
+        "Electrocardiograms",
+        "Exercise echocardiography",
+        "Exercise stress tests",
+        "Heart monitoring",
+        "Nuclear perfusion tests"
+      ],
       "notes": "",
       "status": "open",
-      "createdAt": "2026-11-04T17:57:21.988Z",
-      "updatedAt": "2026-11-04T19:27:59.882Z"
+      "updatedAt": "2026-11-06T18:36:27.540Z",
+      "createdAt": "2026-11-04T17:57:21.988Z"
     },
     {
       "id": "mw2f803niq139",
@@ -7080,6 +7805,7 @@
       "fax": "530-893-6981",
       "npi": "",
       "address": "888 Lakeside Village Cmns., Bldg. A, Chico, CA 95928",
+      "website": "",
       "accepted": [
         "Medi-Cal",
         "Medicare",
@@ -7109,6 +7835,7 @@
       "fax": "(530) 893-6939",
       "npi": "",
       "address": "1531 Esplanade, Chico, CA 95926",
+      "website": "",
       "accepted": [
         "Medi-Cal",
         "Medicare",
@@ -7145,6 +7872,7 @@
       "fax": "(530) 893-6854",
       "npi": "",
       "address": "340 W. East Ave., Chico, CA 95926",
+      "website": "",
       "accepted": [
         "Medi-Cal",
         "Medicare",
@@ -7163,14 +7891,16 @@
       "id": "mw2fkk3ufkz48",
       "name": "Enloe Orthopedic Specialty",
       "specialty": "Orthopedics",
-      "icon": "personal_injury",
       "specialties": [
         "Orthopedics"
       ],
-      "phone": "(530) 332-4469",
-      "fax": "(530) 893-6972",
+      "icon": "personal_injury",
+      "phone": "530-332-4469",
+      "fax": "530-893-6972",
       "npi": "",
+      "website": "https://www.enloe.org/care-treatment/ortho/",
       "address": "1600 Esplanade, Ste. C, Chico, CA 95926",
+      "locations": [],
       "accepted": [
         "Medi-Cal",
         "Medicare",
@@ -7178,12 +7908,16 @@
         "Private"
       ],
       "notAccepted": [],
-      "services": [],
-      "locations": [],
+      "services": [
+        "Arthroscopy",
+        "Foot & ankle",
+        "Hand & wrist",
+        "Sports medicine"
+      ],
       "notes": "",
       "status": "open",
-      "createdAt": "2026-11-04T18:08:50.634Z",
-      "updatedAt": "2026-11-04T19:29:51.980Z"
+      "updatedAt": "2026-11-06T20:27:31.498Z",
+      "createdAt": "2026-11-04T18:08:50.634Z"
     },
     {
       "id": "mw2fm17qe604n",
@@ -7197,6 +7931,7 @@
       "fax": "(530) 893-6885",
       "npi": "",
       "address": "1600 Esplanade, Ste. C, Chico, CA 95926",
+      "website": "",
       "accepted": [
         "Medi-Cal",
         "Medicare",
@@ -7223,6 +7958,7 @@
       "fax": "530-893-6863",
       "npi": "",
       "address": "888 Lakeside Village Cmns., Bldg. C, Chico, CA 95928",
+      "website": "",
       "accepted": [
         "Medi-Cal",
         "Medicare",
@@ -7252,6 +7988,7 @@
       "fax": "(530) 892-2929",
       "npi": "",
       "address": "1044 Mangrove Ave., Chico, CA 95926",
+      "website": "",
       "accepted": [
         "Medi-Cal",
         "Medicare",
@@ -7270,14 +8007,16 @@
       "id": "mw45yoymoce0x",
       "name": "UCSF Liver Disease Parnassus",
       "specialty": "Hepatology",
-      "icon": "",
       "specialties": [
         "Hepatology"
       ],
+      "icon": "",
       "phone": "415-353-2407",
       "fax": "415-353-2407",
       "npi": "",
+      "website": "https://www.ucsfhealth.org/locations/liver-disease-parnassus",
       "address": "400 Parnassus Ave., Fl. 7, San Francisco, CA 94143",
+      "locations": [],
       "accepted": [
         "Medi-Cal",
         "Medicare",
@@ -7286,24 +8025,79 @@
       ],
       "notAccepted": [],
       "services": [],
-      "locations": [],
       "notes": "",
       "status": "open",
-      "createdAt": "2026-11-05T23:15:26.301Z",
-      "updatedAt": "2026-11-05T23:15:26.301Z"
+      "updatedAt": "2026-11-06T19:27:01.347Z",
+      "createdAt": "2026-11-05T23:15:26.301Z"
     },
     {
       "id": "mw46vc87vdc16",
       "name": "UC Davis Pediatric Urology",
       "specialty": "Pediatric Urology",
+      "icon": "",
       "specialties": [
         "Pediatric Urology"
       ],
-      "icon": "",
       "phone": "916-734-2222",
       "fax": "916-734-7422",
       "npi": "",
       "address": "4860 Y St., Ste. 200, Sacramento, CA, 95817",
+      "website": "",
+      "accepted": [
+        "Medi-Cal",
+        "Medicare",
+        "Partnership",
+        "Private"
+      ],
+      "notAccepted": [],
+      "services": [],
+      "locations": [],
+      "notes": "Referrals must be submitted electronically or via portal.",
+      "status": "open",
+      "createdAt": "2026-11-05T23:40:49.447Z",
+      "updatedAt": "2026-11-05T23:40:49.447Z"
+    },
+    {
+      "id": "mw5adk9p3pjzv",
+      "name": "Oroville Hospital Allergy & Immunology",
+      "specialty": "Allergy & Immunology",
+      "specialties": [
+        "Allergy & Immunology"
+      ],
+      "icon": "",
+      "phone": "530-532-8220",
+      "fax": "530-538-3230",
+      "npi": "",
+      "website": "https://www.orovillehospital.com/health-services/allergy-and-immunology",
+      "address": "2767 Olive Highway, Oroville, CA 95966",
+      "locations": [],
+      "accepted": [
+        "Medi-Cal",
+        "Medicare",
+        "Partnership"
+      ],
+      "notAccepted": [
+        "Private"
+      ],
+      "services": [],
+      "notes": "",
+      "status": "open",
+      "updatedAt": "2026-11-06T18:06:44.701Z",
+      "createdAt": "2026-11-06T18:06:44.701Z"
+    },
+    {
+      "id": "mw5aomu6oornd",
+      "name": "Oroville Hospital Bariatric Surgery",
+      "specialty": "Bariatric Surgery",
+      "specialties": [
+        "Bariatric Surgery"
+      ],
+      "icon": "",
+      "phone": "530-712-2171",
+      "fax": "530-712-2149",
+      "npi": "",
+      "website": "https://web.orovillehospital.org/health-services/bariatric-surgery",
+      "address": "2450 Oro Dam Blvd., Oroville, CA 95966",
       "locations": [],
       "accepted": [
         "Medi-Cal",
@@ -7313,10 +8107,131 @@
       ],
       "notAccepted": [],
       "services": [],
-      "notes": "Referrals must be submitted electronically or via portal.",
+      "notes": "",
       "status": "open",
-      "updatedAt": "2026-11-05T23:40:49.447Z",
-      "createdAt": "2026-11-05T23:40:49.447Z"
+      "updatedAt": "2026-11-06T18:15:21.245Z",
+      "createdAt": "2026-11-06T18:15:21.245Z"
+    },
+    {
+      "id": "mw5b33crbu5jv",
+      "name": "Adventist Health & Rideout Heart Care",
+      "specialty": "Cardiology",
+      "specialties": [
+        "Cardiology"
+      ],
+      "icon": "",
+      "phone": "530-844-5648",
+      "fax": "916-406-2457",
+      "npi": "",
+      "website": "https://www.adventisthealth.org/rideout/locations/adventist-health-heart-care-4638",
+      "address": "414 G St., Ste. 106, Marysville, CA 95901",
+      "locations": [],
+      "accepted": [
+        "Medi-Cal",
+        "Medicare",
+        "Partnership",
+        "Private"
+      ],
+      "notAccepted": [],
+      "services": [
+        "Catheter ablation",
+        "Implantation and revision of cardiac rhythm devices",
+        "Left atrial appendage closure procedure",
+        "Non-invasive procedures"
+      ],
+      "notes": "",
+      "status": "open",
+      "updatedAt": "2026-11-06T18:26:35.834Z",
+      "createdAt": "2026-11-06T18:26:35.834Z"
+    },
+    {
+      "id": "mw5b4zsd2gk4d",
+      "name": "Adventist Health & Rideout Cardiology",
+      "specialty": "Cardiology",
+      "specialties": [
+        "Cardiology"
+      ],
+      "icon": "",
+      "phone": "530-749-6628",
+      "fax": "530-749-6627",
+      "npi": "",
+      "website": "https://www.adventisthealth.org/rideout/locations/adventist-health-cardiology-4514",
+      "address": "414 G St., Ste. 108, Marysville, CA 95901",
+      "locations": [
+        {
+          "name": "Yuba City Location",
+          "address": "481 Plumas Blvd., Ste. 104, Yuba City, CA 95991",
+          "phone": "530-844-5636",
+          "fax": ""
+        }
+      ],
+      "accepted": [
+        "Medi-Cal",
+        "Medicare",
+        "Partnership",
+        "Private"
+      ],
+      "notAccepted": [],
+      "services": [
+        "Cardiac and vascular procedures",
+        "Cardiac catheterization and angiography",
+        "Cardiac surgical procedures",
+        "Minimally invasive procedures",
+        "Radiologic imaging"
+      ],
+      "notes": "",
+      "status": "open",
+      "updatedAt": "2026-11-06T18:29:09.084Z",
+      "createdAt": "2026-11-06T18:28:04.525Z"
+    },
+    {
+      "id": "mw5c8b762k5tt",
+      "name": "Adventist Health - Feather River Endocrinology",
+      "specialty": "Endocrinology",
+      "specialties": [
+        "Endocrinology"
+      ],
+      "icon": "",
+      "phone": "530-872-2000",
+      "fax": "530-332-1049",
+      "npi": "",
+      "website": "",
+      "address": "5125 Skyway, Paradise, CA 95969",
+      "locations": [],
+      "accepted": [
+        "Medi-Cal",
+        "Medicare",
+        "Partnership",
+        "Private"
+      ],
+      "notAccepted": [],
+      "services": [],
+      "notes": "",
+      "status": "",
+      "updatedAt": "2026-11-06T18:58:38.898Z",
+      "createdAt": "2026-11-06T18:58:38.898Z"
+    },
+    {
+      "id": "mw5d4ckgctok3",
+      "name": "Oroville Hospital General Surgery",
+      "specialty": "General Surgery",
+      "specialties": [
+        "General Surgery"
+      ],
+      "icon": "",
+      "phone": "530-532-8161",
+      "fax": "530-538-3270",
+      "npi": "",
+      "website": "https://www.orovillehospital.com/health-services/surgical-services",
+      "address": "2809 Olive Hwy., #220, Oroville, CA 95966",
+      "locations": [],
+      "accepted": [],
+      "notAccepted": [],
+      "services": [],
+      "notes": "",
+      "status": "open",
+      "updatedAt": "2026-11-06T19:23:33.664Z",
+      "createdAt": "2026-11-06T19:23:33.664Z"
     }
   ]
 }
