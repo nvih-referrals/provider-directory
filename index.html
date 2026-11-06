@@ -448,6 +448,8 @@
   @media (max-width:760px){ .harvest{left:auto;right:12px;bottom:-4px;height:34px;opacity:.55} }
   @media (prefers-reduced-motion: reduce){ .leaf,.leaf svg{animation:none} .leaf{top:auto;bottom:6px} }
   .settings{max-height:calc(100vh - 80px);overflow:auto}
+  /* anything marked hidden stays hidden, whatever its button styling */
+  [hidden]{display:none !important}
 </style>
 <script>
   var FONTS = {
