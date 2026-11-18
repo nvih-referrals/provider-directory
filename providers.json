@@ -1,6 +1,6 @@
 {
   "app": "specialty-provider-directory",
-  "exportedAt": "2026-11-10T23:51:37.160Z",
+  "exportedAt": "2026-11-18T22:40:15.423Z",
   "providers": [
     {
       "id": "mw17vvayh700d",
@@ -71,23 +71,15 @@
       "id": "mw18x5w8u22dw",
       "name": "Enloe Cardiology",
       "specialty": "Cardiology",
+      "icon": "",
       "specialties": [
         "Cardiology"
       ],
-      "icon": "",
       "phone": "530-332-4400",
       "fax": "530-893-6993",
       "npi": "1720099328",
-      "website": "https://www.enloe.org/care-treatment/heart-vascular-care/",
       "address": "185 E. Seventh Ave., Chico, CA",
-      "locations": [
-        {
-          "name": "Esplanade Location",
-          "address": "1430 Esplanade, Ste. 6, Chico, CA",
-          "phone": "530-332-4600",
-          "fax": "530-893-6957"
-        }
-      ],
+      "website": "https://www.enloe.org/care-treatment/heart-vascular-care/",
       "accepted": [
         "Medi-Cal",
         "Medicare",
@@ -99,10 +91,18 @@
         "Kaiser"
       ],
       "services": [],
+      "locations": [
+        {
+          "name": "Esplanade Location",
+          "address": "1430 Esplanade, Ste. 6, Chico, CA",
+          "phone": "530-332-4600",
+          "fax": "530-893-6957"
+        }
+      ],
       "notes": "",
       "status": "open",
-      "updatedAt": "2026-11-07T00:22:13.059Z",
-      "createdAt": "2026-11-03T22:14:55.256Z"
+      "createdAt": "2026-11-03T22:14:55.256Z",
+      "updatedAt": "2026-11-07T00:22:13.059Z"
     },
     {
       "id": "mw191cp6bocyp",
@@ -1372,33 +1372,6 @@
       "updatedAt": "2026-11-06T18:37:07.998Z"
     },
     {
-      "id": "mw1bmgyartl0w",
-      "name": "Comprehensive Care Chiropractic",
-      "specialty": "Chiropractic",
-      "icon": "physical_therapy",
-      "specialties": [
-        "Chiropractic"
-      ],
-      "phone": "530-712-2380",
-      "fax": "530-712-2386",
-      "npi": "1316991508",
-      "address": "1611 Feather River Blvd. Ste. 6, Oroville, CA 95965",
-      "website": "",
-      "accepted": [
-        "Medi-Cal",
-        "Medicare",
-        "Partnership",
-        "Private"
-      ],
-      "notAccepted": [],
-      "services": [],
-      "locations": [],
-      "notes": "Referrals are only needed for Partnership patients.\nNot accepting patients living outside of Oroville.",
-      "status": "limited",
-      "createdAt": "2026-11-03T23:30:35.218Z",
-      "updatedAt": "2026-11-05T22:37:15.203Z"
-    },
-    {
       "id": "mw1bnczq27lgw",
       "name": "Joyce Family Chiropractic",
       "specialty": "Chiropractic",
@@ -1613,24 +1586,35 @@
       "id": "mw1bt7d217a39",
       "name": "CK Derm",
       "specialty": "Dermatology",
-      "icon": "",
       "specialties": [
         "Dermatology"
       ],
+      "icon": "",
       "phone": "530-767-3376",
       "fax": "530-767-3373",
       "npi": "1053300632",
-      "address": "1817 Concord Ave Ste. 100, Chico, CA 95928",
       "website": "https://www.ckderm.com/location/chico",
+      "address": "1817 Concord Ave Ste. 100, Chico, CA 95928",
+      "locations": [
+        {
+          "name": "Redding location",
+          "address": "2107 Airpark Drive, Redding, CA 96001",
+          "phone": "530-241-1111",
+          "fax": "530-241-4870"
+        }
+      ],
       "accepted": [
         "Anthem BC",
         "Covered CA BC",
         "Medi/Medi",
+        "Medicare",
+        "Private",
         "Tricare"
       ],
       "notAccepted": [
         "Covered CA BS",
-        "Medi-Cal"
+        "Medi-Cal",
+        "Partnership"
       ],
       "services": [
         "Biologics",
@@ -1642,18 +1626,10 @@
         "Skin radiation",
         "Surgical Dermatology"
       ],
-      "locations": [
-        {
-          "name": "Redding location",
-          "address": "2107 Airpark Drive, Redding, CA 96001",
-          "phone": "530-241-1111",
-          "fax": "530-241-4870"
-        }
-      ],
       "notes": "",
       "status": "open",
-      "createdAt": "2026-11-03T23:35:49.382Z",
-      "updatedAt": "2026-11-06T18:44:55.767Z"
+      "updatedAt": "2026-11-12T23:42:21.172Z",
+      "createdAt": "2026-11-03T23:35:49.382Z"
     },
     {
       "id": "mw1bujq3wn7lf",
@@ -3072,15 +3048,16 @@
       "id": "mw1cz3od7o3jf",
       "name": "UCSF Neurology",
       "specialty": "Neurology",
-      "icon": "",
       "specialties": [
         "Neurology"
       ],
+      "icon": "",
       "phone": "415-353-2273",
       "fax": "415-353-2898",
       "npi": "1164512851",
-      "address": "400 Parnassus Ave, 8th Fl., San Francisco, CA 94143",
       "website": "https://www.ucsfhealth.org/care/services/general-neurology",
+      "address": "400 Parnassus Ave, 8th Fl., San Francisco, CA 94143",
+      "locations": [],
       "accepted": [
         "Medi-Cal",
         "Medicare",
@@ -3089,11 +3066,10 @@
       ],
       "notAccepted": [],
       "services": [],
-      "locations": [],
-      "notes": "May not be taking out of area referrals at this time.",
-      "status": "limited",
-      "createdAt": "2026-11-04T00:08:24.157Z",
-      "updatedAt": "2026-11-06T19:44:17.602Z"
+      "notes": "",
+      "status": "open",
+      "updatedAt": "2026-11-13T17:13:52.424Z",
+      "createdAt": "2026-11-04T00:08:24.157Z"
     },
     {
       "id": "mw1d5p5mquszl",
@@ -3448,15 +3424,17 @@
       "id": "mw1dh30qgloji",
       "name": "Butte County Behavioral Health",
       "specialty": "Psychiatry & Psychology",
-      "icon": "",
       "specialties": [
-        "Psychiatry & Psychology"
+        "Psychiatry & Psychology",
+        "Behavioral Health"
       ],
+      "icon": "",
       "phone": "530-891-2810",
       "fax": "530-891-2773",
       "npi": "",
-      "address": "560 Cohasset Rd, Ste. 175, Chico, CA 95926",
       "website": "",
+      "address": "560 Cohasset Rd, Ste. 175, Chico, CA 95926",
+      "locations": [],
       "accepted": [
         "Medi-Cal",
         "Medicare",
@@ -3465,11 +3443,10 @@
       ],
       "notAccepted": [],
       "services": [],
-      "locations": [],
       "notes": "Number is also a 24h crisis line.",
       "status": "open",
-      "createdAt": "2026-11-04T00:22:23.114Z",
-      "updatedAt": "2026-11-05T22:59:16.043Z"
+      "updatedAt": "2026-11-17T19:01:59.758Z",
+      "createdAt": "2026-11-04T00:22:23.114Z"
     },
     {
       "id": "mw1di2cyux6z5",
@@ -4227,16 +4204,15 @@
       "id": "mw2an17t8mhzj",
       "name": "Redding Urologic Associates",
       "specialty": "Urology",
+      "icon": "",
       "specialties": [
         "Urology"
       ],
-      "icon": "",
       "phone": "530-241-3316",
       "fax": "530-241-6319",
       "npi": "",
-      "website": "",
       "address": "2626 Edith Ave, Ste. C, Redding, CA 96001",
-      "locations": [],
+      "website": "",
       "accepted": [
         "Aetna",
         "Covered CA Blue Cross/Blue Shield",
@@ -4247,10 +4223,11 @@
         "Medi/Medi"
       ],
       "services": [],
+      "locations": [],
       "notes": "",
       "status": "limited",
-      "updatedAt": "2026-11-06T23:30:50.937Z",
-      "createdAt": "2026-11-04T15:50:48.041Z"
+      "createdAt": "2026-11-04T15:50:48.041Z",
+      "updatedAt": "2026-11-06T23:30:50.937Z"
     },
     {
       "id": "mw2aoaxbdfh5q",
@@ -4537,29 +4514,30 @@
       "id": "mw2b5g2fjgqmp",
       "name": "Dr. Harchetan S Sandhu, MD",
       "specialty": "Rheumatology",
-      "icon": "",
       "specialties": [
         "Rheumatology"
       ],
+      "icon": "",
       "phone": "530-342-1310",
       "fax": "530-342-1327",
       "npi": "",
-      "address": "1488 East Ave Ste. 130, Chico, CA 95926",
       "website": "",
+      "address": "1488 East Ave Ste. 130, Chico, CA 95926",
+      "locations": [],
       "accepted": [
         "Medicare",
         "Private"
       ],
       "notAccepted": [
         "Medi-Cal",
+        "Medi-Cal Secondary",
         "Partnership"
       ],
       "services": [],
-      "locations": [],
       "notes": "Only accepting patients on a case-by-case basis.",
       "status": "limited",
-      "createdAt": "2026-11-04T16:05:07.095Z",
-      "updatedAt": "2026-11-05T23:03:55.800Z"
+      "updatedAt": "2026-11-13T22:41:16.548Z",
+      "createdAt": "2026-11-04T16:05:07.095Z"
     },
     {
       "id": "mw2b656vpz3xu",
@@ -5356,15 +5334,16 @@
       "id": "mw2cabdprlkjn",
       "name": "Far Northern Regional Center",
       "specialty": "Other",
-      "icon": "",
       "specialties": [
         "Other"
       ],
+      "icon": "",
       "phone": "530-895-8633",
-      "fax": "530-222-8908",
+      "fax": "530-332-1497",
       "npi": "",
-      "address": "1377 E. Lassen Ave, Chico, CA 95973",
       "website": "",
+      "address": "1377 E. Lassen Ave, Chico, CA 95973",
+      "locations": [],
       "accepted": [
         "Medi-Cal",
         "Medicare",
@@ -5373,11 +5352,10 @@
       ],
       "notAccepted": [],
       "services": [],
-      "locations": [],
-      "notes": "Intake line: 530-332-1529\nFor updates/status: 530-222-4791\nAlt fax: 530-332-1497",
+      "notes": "Intake line: 530-332-1529\nFor updates/status: 530-222-4791",
       "status": "open",
-      "createdAt": "2026-11-04T16:36:53.916Z",
-      "updatedAt": "2026-11-05T22:52:47.984Z"
+      "updatedAt": "2026-11-18T22:29:10.998Z",
+      "createdAt": "2026-11-04T16:36:53.916Z"
     },
     {
       "id": "mw2cbgklrofff",
@@ -5929,16 +5907,15 @@
       "id": "mw2cning7n2pg",
       "name": "North Valley Eye Care",
       "specialty": "Ophthalmology",
+      "icon": "visibility",
       "specialties": [
         "Ophthalmology"
       ],
-      "icon": "visibility",
       "phone": "530-891-1900",
       "fax": "530-420-3738",
       "npi": "",
-      "website": "https://www.northvalleyeyecare.com/",
       "address": "1700 Bruce Rd., Chico, CA 95928",
-      "locations": [],
+      "website": "https://www.northvalleyeyecare.com/",
       "accepted": [
         "Medi-Cal",
         "Medicare",
@@ -5957,10 +5934,11 @@
         "Lasik",
         "Macular degeneration"
       ],
+      "locations": [],
       "notes": "No Partnership for Optometry/glasses.\nAlt/old fax: 530-895-1531",
       "status": "open",
-      "updatedAt": "2026-11-10T18:11:25.901Z",
-      "createdAt": "2026-11-04T16:47:09.868Z"
+      "createdAt": "2026-11-04T16:47:09.868Z",
+      "updatedAt": "2026-11-10T18:11:25.901Z"
     },
     {
       "id": "mw2co3wz1fubs",
@@ -6910,23 +6888,15 @@
       "id": "mw2dhhp0gkpxl",
       "name": "Coronado Vein Center",
       "specialty": "Vascular Surgery",
+      "icon": "",
       "specialties": [
         "Vascular Surgery"
       ],
-      "icon": "",
       "phone": "530-343-7733",
       "fax": "530-244-3280",
       "npi": "1508912452",
-      "website": "https://www.coronadoveincenter.com/",
       "address": "2202 194 Cohasset Rd., Ste B, Chico, CA",
-      "locations": [
-        {
-          "name": "Redding Location",
-          "address": "2126 Eureka Way Redding CA, 96001",
-          "phone": "530-343-7733",
-          "fax": "530-244-3280"
-        }
-      ],
+      "website": "https://www.coronadoveincenter.com/",
       "accepted": [
         "Medi-Cal",
         "Medicare",
@@ -6935,10 +6905,18 @@
       ],
       "notAccepted": [],
       "services": [],
+      "locations": [
+        {
+          "name": "Redding Location",
+          "address": "2126 Eureka Way Redding CA, 96001",
+          "phone": "530-343-7733",
+          "fax": "530-244-3280"
+        }
+      ],
       "notes": "",
       "status": "open",
-      "updatedAt": "2026-11-10T16:06:44.869Z",
-      "createdAt": "2026-11-04T17:10:28.308Z"
+      "createdAt": "2026-11-04T17:10:28.308Z",
+      "updatedAt": "2026-11-10T16:06:44.869Z"
     },
     {
       "id": "mw2di4k02rpz6",
@@ -8237,15 +8215,103 @@
       "id": "mw9uxzcy5dh4e",
       "name": "Shriners Pediatric Urology",
       "specialty": "Pediatric Urology",
+      "icon": "",
       "specialties": [
         "Pediatric Urology"
       ],
-      "icon": "",
       "phone": "916-453-2191",
       "fax": "916-453-2395",
       "npi": "",
-      "website": "",
       "address": "2425 Stockton Blvd., Sacramento, CA 95817",
+      "website": "",
+      "accepted": [
+        "Medi-Cal",
+        "Medicare",
+        "Partnership",
+        "Private"
+      ],
+      "notAccepted": [],
+      "services": [],
+      "locations": [],
+      "notes": "",
+      "status": "open",
+      "createdAt": "2026-11-09T22:53:34.402Z",
+      "updatedAt": "2026-11-09T22:53:34.402Z"
+    },
+    {
+      "id": "mwfe7f8nm48ib",
+      "name": "Sutter Pediatric Neurology",
+      "specialty": "Pediatric Neurology",
+      "specialties": [
+        "Pediatric Neurology"
+      ],
+      "icon": "",
+      "phone": "916-454-6667",
+      "fax": "916-503-7632",
+      "npi": "",
+      "website": "",
+      "address": "1625 Stockton Blvd., Ste. 104, Sacramento, CA 95816",
+      "locations": [
+        {
+          "name": "Rocklin Location",
+          "address": "5800 Standford Ranch Rd., Ste. 800, Rocklin, CA 95765",
+          "phone": "916-259-1099",
+          "fax": "916-503-7632"
+        }
+      ],
+      "accepted": [
+        "Medi-Cal",
+        "Medicare",
+        "Partnership",
+        "Private"
+      ],
+      "notAccepted": [],
+      "services": [],
+      "notes": "",
+      "status": "open",
+      "updatedAt": "2026-11-13T19:52:49.438Z",
+      "createdAt": "2026-11-13T19:51:38.471Z"
+    },
+    {
+      "id": "mwfi83ku8a330",
+      "name": "Comprehensive Care Chiropractic",
+      "specialty": "Chiropractic",
+      "specialties": [
+        "Chiropractic"
+      ],
+      "icon": "",
+      "phone": "530-712-2380",
+      "fax": "530-712-2386",
+      "npi": "1013933167",
+      "website": "",
+      "address": "1611 Feather River Blvd., Oroville, CA 95965",
+      "locations": [],
+      "accepted": [
+        "Medi-Cal",
+        "Medicare",
+        "Partnership",
+        "Private"
+      ],
+      "notAccepted": [],
+      "services": [],
+      "notes": "Dr. Matthew Grove, DC",
+      "status": "limited",
+      "updatedAt": "2026-11-13T21:45:07.742Z",
+      "createdAt": "2026-11-13T21:44:08.478Z"
+    },
+    {
+      "id": "mwl81g3quzerm",
+      "name": "New Day Family Counseling Center",
+      "specialty": "Behavioral Health",
+      "specialties": [
+        "Behavioral Health"
+      ],
+      "icon": "",
+      "phone": "530-434-6515",
+      "fax": "530-763-5491",
+      "npi": "",
+      "website": "https://newdayfamilycounselingcenter.org/",
+      "address": "4583 State Hwy. 99, Oroville, CA 95965",
       "locations": [],
       "accepted": [
         "Medi-Cal",
@@ -8257,8 +8323,34 @@
       "services": [],
       "notes": "",
       "status": "open",
-      "updatedAt": "2026-11-09T22:53:34.402Z",
-      "createdAt": "2026-11-09T22:53:34.402Z"
+      "updatedAt": "2026-11-17T21:45:39.014Z",
+      "createdAt": "2026-11-17T21:45:39.014Z"
+    },
+    {
+      "id": "mwmgaq9gzp8yx",
+      "name": "Oroville Neuropsychiatric Outpatient Clinic",
+      "specialty": "Neuropsychiatry",
+      "specialties": [
+        "Neuropsychiatry"
+      ],
+      "icon": "",
+      "phone": "530-532-8523",
+      "fax": "530-538-5679",
+      "npi": "",
+      "website": "",
+      "address": "1611 Feather River Blvd., Ste. 6, Oroville, CA 95966",
+      "locations": [],
+      "accepted": [
+        "Medi-Cal",
+        "Medicare",
+        "Partnership"
+      ],
+      "notAccepted": [],
+      "services": [],
+      "notes": "",
+      "status": "open",
+      "updatedAt": "2026-11-18T18:24:35.187Z",
+      "createdAt": "2026-11-18T18:24:35.187Z"
     }
   ]
 }
